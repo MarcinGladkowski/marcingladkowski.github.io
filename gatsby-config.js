@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Think Big`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Marcin Gładkowski`,
+      summary: `My Awesome World About Programming`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `My blog about programming, my experiences, exercises, small thoughts`,
+    siteUrl: `https://marcingladkowski.pl`,
     social: {
-      twitter: `kylemathews`,
+      linkedin: `https://www.linkedin.com/in/marcingladkowski`
     },
   },
   plugins: [
