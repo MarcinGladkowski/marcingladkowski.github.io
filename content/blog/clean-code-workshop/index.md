@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Clean Code workshop"
-published: true
+date: "2021-01-24"
 ---
 At the 13Th of December I participated in Clean Code and Architecture workshops done by Docplanner. Yep, very relevant topic
 for each developer. The practicing of writing the clean code is the one of most grateful think for you, colic and your business.

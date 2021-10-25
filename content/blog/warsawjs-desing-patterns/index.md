@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "WarsawJs 44 Design patterns"
+date: "2020-05-24"
 ---
 
 Nadszedł czas na pierwszy wpis poza Hello World.

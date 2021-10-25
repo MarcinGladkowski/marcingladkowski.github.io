@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Python Crash Course (2nd Edition)"
-published: true
+date: "2021-03-06"
 ---
 
 ### Python Crash Course (2nd Edition) - Book review

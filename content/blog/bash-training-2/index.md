@@ -1,6 +1,7 @@
 ---
 layout: single
 title: Bash training 2
+date: "2020-05-31"
 ---
 
 ### Słowem wstępu

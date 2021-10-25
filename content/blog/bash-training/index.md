@@ -1,6 +1,7 @@
 ---
 layout: single
 title: Bash training
+date: "2020-05-28"
 ---
 
 I oto kolejny wpis. Tym razem o języku powłoki Bash. Nie będę rozpisywał się o jego historii czy specyfice. Wszystko można znaleźć bez problemu w internecie. 

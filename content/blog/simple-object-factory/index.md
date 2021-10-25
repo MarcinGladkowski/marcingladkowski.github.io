@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Simple test object factory"
-published: true
+date: "2021-05-08"
 ---
 
 

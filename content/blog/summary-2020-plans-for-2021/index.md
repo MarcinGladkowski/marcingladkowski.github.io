@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Summary 2020 - plans for 2021"
-published: true
+date: "2020-12-31"
 ---
 
 This year - i mean 2020 was an unusual year for everyone - I think.

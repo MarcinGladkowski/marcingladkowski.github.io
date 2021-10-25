@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Hello world"
+date: "2020-05-23"
 ---
 
 **Hello world**, to musi być zawartość każdego pierwszego wpisu. Nie raz już blogowałem, ale zawsze wydawało mi się, 
