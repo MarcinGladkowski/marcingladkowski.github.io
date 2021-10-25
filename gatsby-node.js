@@ -94,6 +94,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Social {
+      linkedin: String,
       twitter: String
     }
 

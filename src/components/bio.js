@@ -30,13 +30,15 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
+  console.log('test', social)
+
   return (
     <div className="bio">
       <StaticImage
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
+        src="../images/profile.png"
         width={50}
         height={50}
         quality={95}
@@ -46,7 +48,7 @@ const Bio = () => {
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
-          <a href={`https://twitter.com/${social?.linkedin || ``}`}>
+          <a href={`${social?.linkedin || ``}`}>
             My linkedin profile
           </a>
         </p>

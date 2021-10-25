@@ -8,6 +8,7 @@ module.exports = {
     description: `My blog about programming, my experiences, exercises, small thoughts`,
     siteUrl: `https://marcingladkowski.pl`,
     social: {
+      twitter: ``,
       linkedin: `https://www.linkedin.com/in/marcingladkowski`
     },
   },
@@ -120,7 +121,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.jpg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
