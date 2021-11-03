@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Think Big]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Nov 2021 18:42:24 GMT</lastBuildDate><item><title><![CDATA[Simple test object factory]]></title><description><![CDATA[Today I want to present you very simple idea to creating entities objects for your tests.
+In a lot of PHP projects we have entities in basic…]]></description><link>https://marcingladkowski.pl/simple-object-factory/</link><guid isPermaLink="false">https://marcingladkowski.pl/simple-object-factory/</guid><pubDate>Sat, 08 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Today I want to present you very simple idea to creating entities objects for your tests.
+In a lot of PHP projects we have entities in basic style. I mean these entities has many properties and getters,
+constuctor with many requirements parameters. To creating these entities for tests purposes you can create an
+instance using MockObject (from testing libraries like PHPunit), Object Mother or use simple static factory.&lt;/p&gt;
+&lt;p&gt;For example, we have an ‘classic’ entity.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;User&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// ... and more others&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword type-hint&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;string&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;setName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;self&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;getEmail&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;string&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;setEmail&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;self&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;bool&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;setIsActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;self&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Instead of creating and instance for testing in this way:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;customName&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;customEmail&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// ... over and over&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We can use and Builder pattern. The example is based on idea which I found in
+&lt;strong&gt;Domain-Driven Design in PHP Book by Carlos Buenosvinos, Christian Soronellas, and Keyvan Akbary&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;UserBuilder&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;CustomName&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;email&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;CustomEmail&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// ... &lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;withAnName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;self&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;withAnEmail&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;self&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;withAnIsActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;self&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;anUser&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;self&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name return-type&quot;&gt;User&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Example of usage&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token class-name static-context&quot;&gt;UserBuilder&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;anUser&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;withAnEmail&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;NewCustomEmail&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;withAnName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;NewCustomName&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;withAnIsActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It’s ok, but for me the biggest downsize is a duplication all properties from object with we want to prepare to tests. In this case, I should prefer using factories. I’m wondering about how to create
+it at the simplest and easiest way to achieve it. I set the &lt;code class=&quot;language-text&quot;&gt;consturctor&lt;/code&gt; as &lt;code class=&quot;language-text&quot;&gt;private&lt;/code&gt; to prevent
+try to initialize it directly by &lt;code class=&quot;language-text&quot;&gt;new&lt;/code&gt; keyword because it’s not necessary.&lt;/p&gt;
+&lt;p&gt;Look at this one idea:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;SimpleUserFactory&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name type-declaration&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$user&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+          &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;CustomName&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;CustomEmail&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token constant boolean&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// and other properties&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name return-type&quot;&gt;User&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name return-type&quot;&gt;User&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Example of usage&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;
+&lt;span class=&quot;token variable&quot;&gt;$user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name static-context&quot;&gt;SimpleUserFactory&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token variable&quot;&gt;$secondUser&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name static-context&quot;&gt;SimpleUserFactory&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;Marcin&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setEmail&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;custom.marcin@email.test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setIsActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Maybe, we want to generate other data in each case ? Not problem. The simple example with usage
+of &lt;code class=&quot;language-text&quot;&gt;Faker&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;token package&quot;&gt;Faker&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Factory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;SimpleFakerUserFactory&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name type-declaration&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$user&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$faker&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name static-context&quot;&gt;Factory&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;token variable&quot;&gt;$faker&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token variable&quot;&gt;$faker&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token constant boolean&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name return-type&quot;&gt;User&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name return-type&quot;&gt;User&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token class-name static-context&quot;&gt;SimpleFakerUserFactory&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And other issue. What with the relations between objects ? I think we can easily inject
+objects with some relations together. In example below I added some relation with other object
+&lt;code class=&quot;language-text&quot;&gt;Address&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$faker&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name static-context&quot;&gt;Factory&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;token variable&quot;&gt;$faker&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token variable&quot;&gt;$faker&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token constant boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token class-name static-context&quot;&gt;AddressSimpleFactory&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// ...    &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Of course, we can create this in many others ways. In this post I show how we can play with testing
+objects. The other thinks is creating more advanced factory to cover some object creation behind some
+interface to prevent some problems when the rules of initialization of tests object has change.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thanks you for reading this&lt;/em&gt; :)&lt;br&gt;
+&lt;em&gt;Marcin&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Crash Course (2nd Edition)]]></title><description><![CDATA[Python Crash Course (2nd Edition) - Book review From last few months I learn a Python. The first step of learning
+new programming language…]]></description><link>https://marcingladkowski.pl/python-crash-course/</link><guid isPermaLink="false">https://marcingladkowski.pl/python-crash-course/</guid><pubDate>Sat, 06 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Python Crash Course (2nd Edition) - Book review&lt;/h3&gt;
+&lt;p&gt;From last few months I learn a Python. The first step of learning
+new programming language was a watching some tutorials of basics.
+At first glance the Python have a plenty of good things like super
+simple syntax, code formatting, managing virtual environments.&lt;/p&gt;
+&lt;p&gt;Then I decided to get some simple projects. Thanks for my company for entertainment budget. I bought a this book.&lt;/p&gt;
+&lt;p&gt;The book has two main parts. At the first we learning about
+basic scripts. Just started form declaring variables, loops, imports.
+Basically, about syntax and types for very simple scripts. The language (I’ve got polish translation) of describing how to write a script is for people who never coding. I’ve just learn something new but describing by author over and over the same can be boring for
+someone who actually works as programmer. To be fair, I decided to
+buy this book and I’m very happy.&lt;/p&gt;
+&lt;p&gt;The second part is about projects. The main projects are game about shooting to aliens, analyzing data with visualization and web application. I’ve never wrote desktop game but game using PyGame
+library was very fun for me. There is the same point as in previous
+part. After numerous of pages the developing of game was a little boring.&lt;/p&gt;
+&lt;p&gt;Next part about visualizations data shows me why the Python is often using to this tasks. Libraries like matplotlib, plotly doing a great job and usage of them are not complicate but they have a lot of
+options.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/039cc2fc6e7fdb9afb2c780bb0800241/cfbfb/crash_course_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 49.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoklEQVQoz3WSS2/VMBCF+/9/CIg96gaxQWIDUlkgCkiIcnvvpUmcxI7fj7EPsp3bUiSONLJHznwzOfaVcR4hJlxUClCwR3nK/6fybFdwdaGUkpEzASW3fXmk9TMiQkoJqa2EnHOLelZFiXDz7ksHGuuwCI2Ja3DpwKWFNh5SG0jjMc4cP+6OuD8NGBaFcRYNzjeNTRlQzq3Jm+tPHSiUx69R4zg73D0IzFzChwjrKtThMErcTwrnkaNaVMUWgZ8nhsMg+tSUcf3+tgOV8TgxjRNTreujM/tSpzxPElKZltfiY20yCBweeJsuUsarm68dWP2JMWHhG1bef6c073pUhRAwLBLKhjbRKh2OzGJaVfM5EOHlt9snYOucEs6TAFvVbvhzKBMO51nvecHvRUMo2xtmwovD5w6sxReFSHAhNfi/qsV/PzG63HIpiJnwevzYgdZHCO0hdMBmAqQJrbA28iHB+di+4ZtCTAkxZWgXW2zagygjl4Tv/O3+bFzExA2YsJi4bft6u1JZMK4xbw6zsJi5xio0ls22nO1BVC0gWPMBfwCbzQeF3feMLgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;crash_course_1&quot;
+        title=&quot;crash_course_1&quot;
+        src=&quot;/static/039cc2fc6e7fdb9afb2c780bb0800241/f058b/crash_course_1.png&quot;
+        srcset=&quot;/static/039cc2fc6e7fdb9afb2c780bb0800241/c26ae/crash_course_1.png 158w,
+/static/039cc2fc6e7fdb9afb2c780bb0800241/6bdcf/crash_course_1.png 315w,
+/static/039cc2fc6e7fdb9afb2c780bb0800241/f058b/crash_course_1.png 630w,
+/static/039cc2fc6e7fdb9afb2c780bb0800241/40601/crash_course_1.png 945w,
+/static/039cc2fc6e7fdb9afb2c780bb0800241/78612/crash_course_1.png 1260w,
+/static/039cc2fc6e7fdb9afb2c780bb0800241/cfbfb/crash_course_1.png 3530w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The last project was a web application to monitors progress of learning. I’m a PHP developer and I was surprized how Django is similar to other frameworks from another programing language.
+There are the same ideas like cli commands, views, controllers. The
+last step was a developing this app on Heroku, and was very interesting for me.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/875aa321124570a4e3154738c7b65349/524c7/crash_course_2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuUlEQVQoz62RCQ7DIAwE8/+3hhzc2CZbQUWbo0kVtZZWlhEevLibphnGWsSYQMRQwwQ1jEiJIDmDWb6KVuqwi9H4CnTewycGi0CEITUftSzLpr8rB00lmBnzPMNah0hS6yu1vsY4AGOMUEpBawMbCETXyjlvgeuiREoJ4zhVy4Hk1OrecssHYJmw73toc3/Cj8BySWv9XsqNPzwFlqX4EF5LkV+AoVnWBsb/wXJ51Tn3nEBybbjSfsIH92UT2N+LifwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;crash_course_2&quot;
+        title=&quot;crash_course_2&quot;
+        src=&quot;/static/875aa321124570a4e3154738c7b65349/f058b/crash_course_2.png&quot;
+        srcset=&quot;/static/875aa321124570a4e3154738c7b65349/c26ae/crash_course_2.png 158w,
+/static/875aa321124570a4e3154738c7b65349/6bdcf/crash_course_2.png 315w,
+/static/875aa321124570a4e3154738c7b65349/f058b/crash_course_2.png 630w,
+/static/875aa321124570a4e3154738c7b65349/40601/crash_course_2.png 945w,
+/static/875aa321124570a4e3154738c7b65349/78612/crash_course_2.png 1260w,
+/static/875aa321124570a4e3154738c7b65349/524c7/crash_course_2.png 3676w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In summarize. The book is quite good but for beginners. If you have
+some experience in programming this lecture can be boring for you. The author elaborate some topis very wide - I mean a lot of times and many of pages.&lt;/p&gt;
+&lt;p&gt;Regards&lt;/p&gt;
+&lt;p&gt;Marcin&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Clean Code workshop]]></title><description><![CDATA[At the 13Th of December I participated in Clean Code and Architecture workshops done by Docplanner. Yep, very relevant topic
+for each…]]></description><link>https://marcingladkowski.pl/clean-code-workshop/</link><guid isPermaLink="false">https://marcingladkowski.pl/clean-code-workshop/</guid><pubDate>Sun, 24 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;At the 13Th of December I participated in Clean Code and Architecture workshops done by Docplanner. Yep, very relevant topic
+for each developer. The practicing of writing the clean code is the one of most grateful think for you, colic and your business.
+The clean code allows you to make easy changes, maintainable things which you have time to forget. This is the skill to practicing
+every day.&lt;/p&gt;
+&lt;p&gt;Let’s focus on workshop. The repository which was prepared by &lt;strong&gt;Docplanner Tech&lt;/strong&gt; you can find &lt;a href=&quot;https://github.com/MarcinGladkowski/clean-code-architecture&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Let’s focus on content!&lt;/p&gt;
+&lt;h1&gt;Object calisthenics&lt;/h1&gt;
+&lt;p&gt;To get more knowledge about that I found a great blog post of &lt;strong&gt;Willam Durand&lt;/strong&gt; -&gt; &lt;a href=&quot;https://williamdurand.fr/2013/06/03/object-calisthenics/&quot;&gt;here&lt;/a&gt;
+Each rule looks great, but using it can be more complicate.&lt;/p&gt;
+&lt;p&gt;In the shortest way. It’s about follow to 9 rules:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Only One Level Of Indentation Per Method&lt;/li&gt;
+&lt;li&gt;Don’t Use The ELSE Keyword&lt;/li&gt;
+&lt;li&gt;Wrap All Primitives And Strings&lt;/li&gt;
+&lt;li&gt;First Class Collections&lt;/li&gt;
+&lt;li&gt;One Dot Per Line&lt;/li&gt;
+&lt;li&gt;Don’t Abbreviate&lt;/li&gt;
+&lt;li&gt;Keep All Entities Small&lt;/li&gt;
+&lt;li&gt;No Classes With More Than Two Instance Variables&lt;/li&gt;
+&lt;li&gt;No Getters/Setters/Properties&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Below I described some examples of providing some of these rules on workshop and this test project.&lt;/p&gt;
+&lt;h3&gt;Only One Level Of Indentation Per Method&lt;/h3&gt;
+&lt;p&gt;It’s a great advises except SOLID, KISS etc. I always try to avoid to many levels and &lt;strong&gt;indentation&lt;/strong&gt; and
+using &lt;strong&gt;else&lt;/strong&gt; block.&lt;/p&gt;
+&lt;p&gt;Too long methods and functions are not a very simple and clear to read. We should to try to extract block of codes to
+simple methods. Looks simple but there is a lot of patterns of refactoring like &lt;strong&gt;extract function&lt;/strong&gt; from &lt;a href=&quot;https://refactoring.com/&quot;&gt;Refactoring Book&lt;/a&gt;
+(Martin Fowler).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pro tip: If you are using PhpStorm there is shortcut to &lt;a href=&quot;https://www.jetbrains.com/help/phpstorm/extract-method.html&quot;&gt;extract code as function&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Commit: &lt;a href=&quot;https://github.com/docplanner-workshop/clean-code-architecture/commit/acb1aea47fdbb802b2717b0c249ff6bcbeebedd5&quot;&gt;acb1aea&lt;/a&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 569px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 157.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAgCAYAAAASYli2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEqElEQVRIx5WUCY8jtxFG+///IQMBggRIAtvZdRx7Z0bakUZH3xfJvg/28QxSx2p21wjSwEMVqPq+rmJTdLpBMy/rO6ZpZhgnRj2h9cI4LjaadT0tDHpmmpdvdAZnWhbePytjP5DJAqEkZdUhpaasRuq+p2xaUlkyjCOrrX7/OGuuoOmgG6DroR9YuoEyFZRpjnAjxGZHtTuitgeaKINBwzjBOF/iTdv1OAe5Ja1jVC+QfY4acrI257P3RiA8ns4bfnz6Gx82/+Bfv/2VH/c/8UvwXz56/+Hf5w/8Hn5CtBlquOidioGRGc1yZ2ShnQa6SVPqgVzXCF2j5g6lG6TJdY0cK4qptfU3rbMWNQzjZQw7irZjT0WNjCpEJCnijMHUmfHmFaYF9PyFUd/1DvsjS5KxCnUHoVhyRb07MhxPiGNA6weMfow6+XRBxJLLa718p3XWtzNLKlhlAVdsbkxTiXxzEQeXxg/RSc4QZ4xxZg150NxwsIb53cRE2+XVeMoEhRvShQniHFKefIp9RnmKWIRgzpQ1N3VzJr9jeDO75aogO/iIU0B+DMgPLunngGzroQ4h+SZF7oPrS9OL4Xob+cHsS1Soc4i7OVhR6SWEuwNqH6BeM9QuRb0F15eXZg9P9w5XqR4omHPBmOZMuURnkjlXzA/jTam0I5u1m87h1YVEgCggvyIK2/Vi/hWphMwgIBU2Nx8L8w8T5UX3oHX87BVRxVSdpOoEZSeuuUR5B5T3hvR2KPc31PEj0v3E0+uWN3dH2V5qHzVOvChqesx5bxhsrNaesisoioxK17RzSzNVNLqk0RVqbCh0Q73edKONBseeer65cGCaWcv6cnG0HTQF1JK1KWmr+ttr5nbbqG6mG2f68Rr1TNOPNIO2uaEbpwuDpn3ArA3Tyjh/wdmLlVB2JKojKXpi1RJkFUFWWyLZEeYmtoSiJhSNJcgvuWxnygGKfrU43aht98tqWG3e1COlHKmUpio0Talp2sHW3C7VG/N6uamN1uAs5rYwP84L6/onG/N/PM5RB4ilpFxqiiq1qDqjqFOypiQuS6KyJKkq4rLAlRGuCi1elXMSIemgKGkp1gbnJ/2JwxziTgmnIeQ8RrhjZPPDEHEcYo59wkknnKeUo4446egSp8RGd07wyfDXDOejfuE0RUQIzrPgSZ3Ztz6bwmNXu5yMWZNyHmMi5FcIG0ME4SpsdD7oF45XQ3fKeE33HOWBTelxHkLcIWbXBpzGCH/JCdbvY8xMvHQ4R9c35Ph9zEuy51ke2VVnvDHh0EecdXwX3oiu8XHdGpoOjWFgDM3oU8q2cNl3EU/yxGvhsssTXgsfb07xdI4/Z7bOm7N3pvc9tIZm8frDs3LZNQHP8sxGnXhJAra5b01fs5hdFbCtPI599N7ww2OH10Uzyu/5kZ/9HdvSZVv6/Bp/5iU58xxEPAchm9y1WxR9PbI11NH9K3lLZo+Qv2ScdWqjGcuseTq7MBnSd53dO/x12eBj2pb4Zn/6EM+cOZ28+wDf49HsbvhD9sLfg4iE3G542HicmoBt6V0KHwR/dlQeX+L8RTzzzyggtoaZ7dQQXw/s14L/xR8XWok7BCWohgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;diff_3&quot;
+        title=&quot;diff_3&quot;
+        src=&quot;/static/220475983d0a56780bd9fdb586e4a2d8/854dc/diff_3.png&quot;
+        srcset=&quot;/static/220475983d0a56780bd9fdb586e4a2d8/c26ae/diff_3.png 158w,
+/static/220475983d0a56780bd9fdb586e4a2d8/6bdcf/diff_3.png 315w,
+/static/220475983d0a56780bd9fdb586e4a2d8/854dc/diff_3.png 569w&quot;
+        sizes=&quot;(max-width: 569px) 100vw, 569px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Don’t Use The ELSE Keyword&lt;/h3&gt;
+&lt;p&gt;This simple change cam simplify a code to read and testing it. Less cyclomatic and cognitive complexity.
+But we don’t forget about &lt;em&gt;return&lt;/em&gt; statement, because this technique allows us to safely execute code.&lt;/p&gt;
+&lt;p&gt;Commit: &lt;a href=&quot;https://github.com/docplanner-workshop/clean-code-architecture/commit/a566791fb121bc6469447a5ae400e682fe5a6bab&quot;&gt;a566791&lt;/a&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 591px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 99.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC00lEQVQ4y3WUi5abOAxA+f9PbHdPO50kEwIYg9+W7duDk51mZrpwLsK2JCQsa3jRjbc1MGnHreP5dVW8XhfO08Zl2jiPO5fJ8DpqfpxvnG+a823ndVQom7AZTGqdoYjw+dp2RwwR6xLeefwmRFswJqK3jeATwQo+JHLKd6N2F4MvkdyE0irSCqUKKQbGVaPtTqql69aHzf39v7v152FbuDN8kxcuMqGaYWFHtZ25aEY/McWZOc2sMqPSxCzzu87yhHrMHQwiQqvtQ9i0RvWesBmSMWzTFb9cMdOKs+HLL3oP/UhZitBae/hpdx56arOcRsV11syr4e2yoOYNoxNuF/Y1kCV/8N0jrJ8dPjzOauOflyt6t4yz5m0cmSfNcnVMZ8d83YkhI7kiUrrtUKQ8pfon5ZwzxoaO3h3OR3IW9GYIIeD2jDdCdAW/C97Fbjd8l1+8lZm1GRR3lmNTkmLFsWLRXd7fNxway4r5wmE7WPHEmnvJCIVUhegtYdPEHMlyROY7KXuCJHzOvdS6zSeGVspfdqyBCzQXwHuaXcEostGEkNhd5v+u4XVrTHtG28TqMst+P4bqMe7SC8oJqxOUiaz2IHXdY3zIgz1WhtNWmU1mcxn9QO2hG21euqF+WusfNpG9r0W0S33ucGwOh7WWv4bejlR9oIVD6p62+B0XIikLxnlCiARbcMfvedTaUEKkHaellI7EiMREy5mW5UGipUhNkZIzJQs5RnJISBCSD32eUhn4/oN6GUFp6qyQy5X070/kMtKuI/XtRL2ckcuFOM7YywLL2vW/sKwMRa1U6yAl6vEl56i7oW47dduoeukkrXDaYDdHDYEWIy08Ee8M3+orl7qgsMxtYzYji59Z/I3FnlD2xM29cQqKn3ZlPToLloU/B+GZIUikHEVZC7lI73FHf6vvHD3yzjH+uPaV3rH7DjX6AX9vRU8t6UPR85f5p8L+DUGeFTO8+sl/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;diff_2&quot;
+        title=&quot;diff_2&quot;
+        src=&quot;/static/83d1231b211c82617e1b824e1f34253f/e4c9a/diff_2.png&quot;
+        srcset=&quot;/static/83d1231b211c82617e1b824e1f34253f/c26ae/diff_2.png 158w,
+/static/83d1231b211c82617e1b824e1f34253f/6bdcf/diff_2.png 315w,
+/static/83d1231b211c82617e1b824e1f34253f/e4c9a/diff_2.png 591w&quot;
+        sizes=&quot;(max-width: 591px) 100vw, 591px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Another example of this technique. It’s mean to fast quit from method when relevant data are missing.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$params&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token class-name return-type&quot;&gt;someType&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$params&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Don’t Abbreviate&lt;/h3&gt;
+&lt;p&gt;Using a meaningful variables names can be very helpful. What’s we have done with code:
+&lt;a href=&quot;https://github.com/docplanner-workshop/clean-code-architecture/commit/0d1b74f3cb706a98f870421bba34061bcf5b1def?branch=0d1b74f3cb706a98f870421bba34061bcf5b1def&amp;#x26;diff=unified&quot;&gt;0d1b74f&lt;/a&gt;
+&lt;a href=&quot;https://github.com/docplanner-workshop/clean-code-architecture/commit/120a26ed7d1da0a31a983341419d2560b09ac52a?branch=120a26ed7d1da0a31a983341419d2560b09ac52a&amp;#x26;diff=unified&quot;&gt;120a26e&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Meaningful names changes a readability a lot:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 560px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/30ad31f500f906bf25a97b1381cc2c9b/b06ae/diff_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 120.25316455696202%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAADp0lEQVQ4y43U6W7cNhSAUb3/YxVt0SI/2jiJHcdjj2fRSooUV0nU8hUjJ46XFiiBg0tS91ICRTCbpol1hXVdSZ1hNobRJ2zXY61DtAatNc45hJAYG5D6aW6eZy5tfVpgi1lKiRVYloUppac4TczLwpgSwzByyUnTdykxjiPDOG7jdav+viiQvZy8NGU9ZVlSlBWyVVRCUVYNrbDIxtFKh2w1ddlRFxbTxe0l26KsZJxKkJpwfUf31xfy3z5g7x/phWKoJaPQjEKRGsPUWCZhSaLbxkt7GRtWbcB4MI7MHndEWRNFjWsqys/XuDynynPq04Hi8YGuLjGVpD03qLxBFxJd1fRGklzHaDSjUZvsz/kzd9OZnJYCzSe/5yresZ9qdjFn5498cwf2Q8lDqHnwT/ah4SGWnFfBGfksq6YWuwTCOmxOruGbPJBLzb4q2RVnzrLEjB7TR5QP6HAR6QaPX/vn2ouMaeZtS37G1J5BSfq2YbaK4DzBe8YxbUdnmd/XbX9Zx5kwTPTj/CRNKB2QIlBJTSk6amkopaFzkTAkfJ+I40T8XneZ69PMOK9kuV2pu0hrAq3tN6Lz1K1DdAHth2fSBBrlaG1EdoFGO6SJVK1BuYGQIJvm6d1nGxWpDoH67LF6IPp5O+D/p2VrmmFeYflpGWeWYWEZF6Z+Jm3Sq5z/ktl8T1SCYTtPCl9X7K4+ke9viVYxOs14eeY6Bqtfu8y9kT2kE82k0ItDL4Y2tnxsdvzdXiNGTYfHvHAZ2+9Rr+6dbJmX9xsxLTg70HWG4HqcSng90sdh28vOhKc9Xf9lD5dzwaI0QUhCI7c4645eKnohGVvNIDpGqbf+qDS91CTVsVr3TsbXPZSCtVGsdcvatCA7xqIhHAvCqcQ+nvCHknAsGfKauRLbhbIR+mdfarKquUN3FT5ofHziguZUncmLRw7FkcNpT34uOBdHVFfTGYHzCh8U7o3sj/Wa3VJwpn12ouXGnfnqDlzbE1ftjlt34lYX3JgDh0W8yn8p64NlSgPzlF7pY9yEEInGMvY9aRiZ0sgyp3f5P2Sy3GF1TXCa6C6XgNqiFwUirzk+Flx/+JXj/Q22E0T/lPMj763sMFW0i8WuEcsPgS5Z9kKybwUfxS1lUpg14ulx9C9yX8soGtbOgg/gXvCRIa9Ipxy9L9BXN6RKoHKBrxtm497XuED2Nd6RDxVyUsj5tUafEPWeL/U9v9z/zlkfua0P7NWBapDIWSPe1P0DW50x4idN+CYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;diff_1&quot;
+        title=&quot;diff_1&quot;
+        src=&quot;/static/30ad31f500f906bf25a97b1381cc2c9b/b06ae/diff_1.png&quot;
+        srcset=&quot;/static/30ad31f500f906bf25a97b1381cc2c9b/c26ae/diff_1.png 158w,
+/static/30ad31f500f906bf25a97b1381cc2c9b/6bdcf/diff_1.png 315w,
+/static/30ad31f500f906bf25a97b1381cc2c9b/b06ae/diff_1.png 560w&quot;
+        sizes=&quot;(max-width: 560px) 100vw, 560px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Wrap All Primitives And Strings&lt;/h3&gt;
+&lt;p&gt;When I heard this my first thought was - Value Object. The convention of &lt;a href=&quot;https://martinfowler.com/bliki/ValueObject.html&quot;&gt;Value Object&lt;/a&gt; comes from DDD (Domain Driven Design) techniques. Shortly, It’s about to wrap meaningful values - usually they can be store in primitive values.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token php language-php&quot;&gt;&lt;span class=&quot;token delimiter important&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;declare&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;strict_types&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;token package&quot;&gt;App&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;Specialization&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+     &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;string&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+     &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name type-declaration&quot;&gt;Specialization&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$specialization&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;bool&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$specialization&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;No Getters/Setters/Properties&lt;/h3&gt;
+&lt;p&gt;Since I trying to create immutable objects like &lt;strong&gt;VO&lt;/strong&gt; there are any getters and setters. The state is usually
+passing by &lt;em&gt;__constructor&lt;/em&gt;. The same thing is about to &lt;em&gt;wrapping all primitives&lt;/em&gt;. We can follow this rule by using DTOs.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;Doctor&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$firstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$lastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name type-declaration&quot;&gt;Specialization&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$specialization&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$firstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$lastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name type-declaration&quot;&gt;Specialization&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$specialization&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$firstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$lastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;specialization&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$specialization&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;string&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;string&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;specialization&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name return-type&quot;&gt;Specialization&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;specialization&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Some rules can be hard to follow them for example this one about &lt;em&gt;only two instance variables&lt;/em&gt;. Usually in bigger project exist specialized services
+doing to much things (the SRP - Single Responsibility Rule is break also) with a lot of some dependencies.&lt;/p&gt;
+&lt;h1&gt;Architecture&lt;/h1&gt;
+&lt;p&gt;I am sure, all web developers knows at least one architecture pattern MVC (Model-View-Controller). When I write my first
+code as a Junior developer I pasted a lot of code to controllers. I think a lot of developers made mistake like this.
+If you get some knowledge and experience, you will see the bad side of this solution. In my opinion each should meet this
+problem to saw what’s wrong with this architecture. I don’t say it’s bad patters but have some limitations. Many of developers
+cannot have idea &lt;em&gt;where should I put this code?&lt;/em&gt; because they have only three official layers: &lt;em&gt;model, controller, view&lt;/em&gt;.
+What’s the most dangerous to put all logic code into controller? Then developers put business logic also to controller,
+model and view!. Developing in this way makes a lot off mess in our code and if we want to apply some little change
+we have to look it very careful! The code isn’t reusable.&lt;/p&gt;
+&lt;p&gt;What we can do in this case ?&lt;/p&gt;
+&lt;p&gt;I hope you heard about &lt;strong&gt;SOLID&lt;/strong&gt; principles. These rules are independent from programming languages. Only interesting thing is
+this is the most popular requirement question for programmer. If you don’t know this rules, hurry up! You should memorize it.&lt;/p&gt;
+&lt;p&gt;Using SRP (Single Responsibility Principle) and DI (Dependency Inversion) we can easily decouple our logic and relation between
+classes.&lt;/p&gt;
+&lt;p&gt;Some steps of refactoring to make our code clean:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Moving methods to external class (service)&lt;/li&gt;
+&lt;li&gt;Not using lower level dependencies in a service&lt;/li&gt;
+&lt;li&gt;Depend in Abstractions, not on implementations (ex. create and interface)&lt;/li&gt;
+&lt;li&gt;Moving out Request handling out of the Controller&lt;/li&gt;
+&lt;li&gt;Entities refactoring (no getters/setters, guard invariants (valid domain state)…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Look at this example controller, please. Looks good, but can we do better ?&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;Controller&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AbstractController&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;JsonResponse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;ReallyDirty API v1.0&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;/**
+     * @Route(&quot;/doctor&quot;, methods={&quot;POST&quot;})
+     * @param Request $request
+     * @return JsonResponse
+     */&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;addDoctorAction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name type-declaration&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$doctor&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createDoctorFromRequest&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;token variable&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;firstName&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token variable&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;lastName&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token variable&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;specialization&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$doctor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;JsonResponse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;id&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$doctor&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;/**
+     * @Route(&quot;/doctor&quot;, methods={&quot;GET&quot;})
+     * @param Request $request
+     * @return JsonResponse
+     */&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;getDoctorAction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name type-declaration&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$doctor&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getDoctor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$doctor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;JsonResponse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;404&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;JsonResponse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+                &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;id&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$doctor&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;firstName&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$doctor&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getFirstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;lastName&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$doctor&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getLastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;specialization&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$doctor&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getSpecialization&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// and more and more...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;What the cons of this solution:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If have a lot of endpoints it can be verrryy long class (thousands lines of code…)&lt;/li&gt;
+&lt;li&gt;The controller depends of Request class.&lt;/li&gt;
+&lt;li&gt;We have to decide which type response we want JSON, XML or something else.&lt;/li&gt;
+&lt;li&gt;We have to parse incoming data, but maybe it not only from HTTP request ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is a time for &lt;strong&gt;Action Domain Responder&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This architecture pattern is quite new for me and was I found it isn’t very old (like MVC - 1979).
+But great to get new knowledge about architecture. Invited and described by &lt;a href=&quot;http://paul-m-jones.com/&quot;&gt;Paul M. Jones&lt;/a&gt;
+in 2014 using &lt;strong&gt;PHP&lt;/strong&gt;! oh yeah!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 528px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c7220b06b32003e6713307713bb26d22/4af8e/adr.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 36.708860759493675%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA6ElEQVQoz2VRi46EIAzk/3/QO3UTH6ugl6y6cjzVubSJF3SbEArtDMNUIInjOHhReO+h9S+stXi9JszzzPl7XT960xBn4Sye+77v2PcDWmtUVYWmaRBjhLXu0pfiaYn0lZS4rmuU5QMhRhhrmcgYi3EcYYy5kKZ4kRKRKgqlFLIsuwBT5cMwYFmW/3OKFcvyZr+ccwghYNUaRVFcXr3n27bh+ey43/sA6xzfKTVAkIq+7yGlRNu2XAghfvh695iEkC2EoR8pKZHnJcQ0zRjHH/5G13U8BJrkneBOTJMnIU3TsjLy9us7xx8EcyEU0za3xgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;adr&quot;
+        title=&quot;adr&quot;
+        src=&quot;/static/c7220b06b32003e6713307713bb26d22/4af8e/adr.png&quot;
+        srcset=&quot;/static/c7220b06b32003e6713307713bb26d22/c26ae/adr.png 158w,
+/static/c7220b06b32003e6713307713bb26d22/6bdcf/adr.png 315w,
+/static/c7220b06b32003e6713307713bb26d22/4af8e/adr.png 528w&quot;
+        sizes=&quot;(max-width: 528px) 100vw, 528px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+And the MVC pattern
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/35deb37d4147917f77b7b68ee9358fe5/13a9a/mvc.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABB0lEQVQoz42RYYuDMAyG9///mB/HtmNjOjadqxWc01aTpqm1BxbGHecd93wIbcpD3pJNCCE9nw77/cf+cLlcTsfjbrcrH48QwjzPsUbCDzYhBGsJAWkBF5g5PhtjrLXee+ccIq7Iq8RR4zjWdX2/34UQWutf5O+poum9l1Lebrc0TbMsE0I45/472VqrtVZKAUA8EJH3/i+ZF7quG4aBme1CbAJA27bxuiLP84yIxpjn82kW3r8gImtt3/fMjIje+xWZiK7Xa5IkRVEQ0Vtm5rZtt9ttVVXGmGmaVmIDgJQyz3MpZdM0MUjMMgxDWZZKKURcl8dx7PteKdV1HQB8jf16vWI/ru0TlQVEJgO2OEIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;mvc&quot;
+        title=&quot;mvc&quot;
+        src=&quot;/static/35deb37d4147917f77b7b68ee9358fe5/f058b/mvc.png&quot;
+        srcset=&quot;/static/35deb37d4147917f77b7b68ee9358fe5/c26ae/mvc.png 158w,
+/static/35deb37d4147917f77b7b68ee9358fe5/6bdcf/mvc.png 315w,
+/static/35deb37d4147917f77b7b68ee9358fe5/f058b/mvc.png 630w,
+/static/35deb37d4147917f77b7b68ee9358fe5/13a9a/mvc.png 637w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I am not a super expert in Symfony framework but some Docplanner created a blog post about
+implementation ADR &lt;a href=&quot;https://medium.com/swlh/implementing-action-domain-responder-pattern-with-symfony-606539eea3a7&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;But the main core of ADR is above. The main action class has a dependency injection with are &lt;em&gt;Doctors&lt;/em&gt; and &lt;em&gt;DoctorFactory&lt;/em&gt;.
+Focus on remember to using &lt;em&gt;interfaces&lt;/em&gt;. The one thing is strictly tie with framework is an this &lt;em&gt;annotation&lt;/em&gt;.
+This action looks very clear, the input and output are specified DTO classes.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 569px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2a2193cac7f6a7277975d49e771e51e7/854dc/add_doctor_action.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 144.9367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD8UlEQVRIx41V2W7cRhDUf2g503Pfw71XK8FQDMhwAsMvyb/rbxYVzJArUYlk+aHQXO6w2c2uqr45hxFPOuBvE/BXNfieDY6CsGMce85x5Bx3jHUUzsGFgCCCaPEVlzk+35AUsMThhxXs7QC7YghEbxCJkIhgiUCfJiSCsxE171C3G8ScMTAGRtSruYLNUVyTfpSwXTjj4W1AiBHeezjnYK2dDl+rafF3KlRSIfmC4CJyKUgpoY5jv5ZKgf7/8HtYtCwI1jgknxFSRMoZMSVIKd8ka9e/wGWOrwmDS/AhdLTWlVLgnL889NsVSiHgTeoJcy0otSKXjFor1pt1bz/l0ofUhjUMwwJsusfYpQ+SsecbQbcQXEOSghKmR04SJC2EMjDWQkkJwxkEGyCkhNK6QwqC5gMUZxfF54RKaaQwwmmPaHOPyngYX2BDRmkVxoDRGUSr+/dtXfROYkB1BsWZS3EGzpqJNlIrlFr6UMpYO2WKlai2TZlPbXEOxgl8am3CfI9xuvT/+lCIYIzF6XzGdn/o8XA8YbvdYpMCTjlgGxz20cEo1YcgZ7w/FKle+UbiZaJEor2xK4QtlHK9HtqZZcKJ9FPLQgoMnHWwBuI9WTuUOEfmvBtDmGO7VzmHbi+k3uplVtDzDReEtfH4EjY4+xF3rmKvHaqU2EqJryTwTQg8EeEPIfBdTL+/EcedlBiVwijlRV4rbB929BVP+yc8nh7x9eER94cTjrsd7nPAJjhopTqMknNU0FLCKQWvFOyyZU4c1nhs8hExFezuDtjsd9ge9rDOTgSeyIsV533ab8jN2NuWm2abOTTHiW7moXawvmBbK37kjJ8x4oezeDAKoVGq1q6khhhjI/hldqDnmzbh4DOsdggmwmnXiW1dwiElHGPAIQTsncVJCxStEVLqrhRyhg0BTNBleHUbAasU7tcjavDYpIR9ydjljH0p2JaM4gOyb4rZYgwZJ6f7MPwwwDOGzOmy5nyRUEpU31pt2nVwvlXouo6NMdBNu8pAGwfdzmiFICX+HIaOM2OXTUs42VerUOM8VtSYsY5rPKzX2MWINDCY21vo1Qp2GGCHFRxjsEtOEkHR3HJL2KUkJbyNsCbg5CL+KQU/U+oDeagjymYDFyJsrJBaTx65UA0taTNJT8NqC60sknHYxYC19x3VN8MNXe/aBrTz9J89I5a0mSq8il72yEi8LKMmQeINfMKL1umDJaU0clgj2YLkao82jFinhG2wcC4g+TrtmMV++eUabe6bcoJPsdu/8wEulGacCNb0RB9U9p59SShj+mJqdGmxUce2tWo1vDHd9j9ZVIuW9VRB23BX0BxnF/6sujcJ/wWU9DcMT0ThTQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;add_doctor_action&quot;
+        title=&quot;add_doctor_action&quot;
+        src=&quot;/static/2a2193cac7f6a7277975d49e771e51e7/854dc/add_doctor_action.png&quot;
+        srcset=&quot;/static/2a2193cac7f6a7277975d49e771e51e7/c26ae/add_doctor_action.png 158w,
+/static/2a2193cac7f6a7277975d49e771e51e7/6bdcf/add_doctor_action.png 315w,
+/static/2a2193cac7f6a7277975d49e771e51e7/854dc/add_doctor_action.png 569w&quot;
+        sizes=&quot;(max-width: 569px) 100vw, 569px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+DTO of input.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token php language-php&quot;&gt;&lt;span class=&quot;token delimiter important&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;declare&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;strict_types&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;token package&quot;&gt;App&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Action&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Input&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;token package&quot;&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Validator&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Constraints&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; Assert&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;AddDoctorInput&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;/**
+     * @Assert\NotBlank()
+     * @var string
+     */&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$firstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;/**
+     * @Assert\NotBlank()
+     * @var string
+     */&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$lastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$specialisation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$firstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$lastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$specialisation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$firstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$lastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;specialisation&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$specialisation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;getFirstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;string&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;getLastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;string&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;getSpecialisation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;string&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;specialisation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Dto of output. Very simple to use it to make an system response in each kind of: JSON, XML etc.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token php language-php&quot;&gt;&lt;span class=&quot;token delimiter important&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;declare&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;strict_types&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;token package&quot;&gt;App&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Action&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Output&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;AddDoctorOutput&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;getId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;int&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;How look controller now ? You have right - it’s not necessary.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token php language-php&quot;&gt;&lt;span class=&quot;token delimiter important&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;declare&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;strict_types&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;token package&quot;&gt;App&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Controller&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;token package&quot;&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Bundle&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;FrameworkBundle&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Controller&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;AbstractController&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;token package&quot;&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;HttpFoundation&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;JsonResponse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;Controller&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AbstractController&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name return-type&quot;&gt;JsonResponse&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;JsonResponse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;ReallyDirty API v1.0&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;This post is a some shortcut to memorize these things.
+It can looks a little chaotic but it’s first post for 2021.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Full presentation: &lt;a href=&quot;https://docs.google.com/presentation/d/1RkrPrKNUL1DVmHuRFA6RC5eHPRG0xUiNsZLEfI0CZzw/edit#slide=id.gaeea1ef32b_1_1&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The workshop was great! Thanks for all Docplanner team!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Marcin&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Summary 2020 - plans for 2021]]></title><description><![CDATA[This year - i mean 2020 was an unusual year for everyone - I think.
+Therefore each should summarize own actions. In this post I will write…]]></description><link>https://marcingladkowski.pl/summary-2020-plans-for-2021/</link><guid isPermaLink="false">https://marcingladkowski.pl/summary-2020-plans-for-2021/</guid><pubDate>Thu, 31 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This year - i mean 2020 was an unusual year for everyone - I think.
+Therefore each should summarize own actions. In this post I will write what i have achieved in 2020
+and what i want to achieve in 2021.&lt;/p&gt;
+&lt;p&gt;In last few days I created this blog. It’s another shoot to still practicing writing blog posts.&lt;/p&gt;
+&lt;p&gt;How looks this year on github ? Not bad, not good.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d43c10d4a849544d46f32e40d143b2f8/f7616/github.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 24.68354430379747%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAElEQVQY0y2Q246CQBBE+f//2lcfjFGDu4l3GWCk58IwOODZOFhJpeupuvsUStWcL1fqukE3mse9ou8DWe/v+M4lv7M/mucZEYM1DukMr1eiSCmR0swwRlRoMcFhB4/yLRItfuiJ44gOHS54xvFFCAMxjgxDJKYRFz1+CnlR0RmLkZ6yPfKjVmyrXx7SUD6PHOREawRthJ3+4ykW+VzzdS1PLlKxbves9X4pdM7jfc9Gl2ybA+vLjs7bXKqsxhiPMpqbKJwNdMZhrEeso7Ud4h0nuXOzKmMoxCcqCZw74ao9je+J08iQlnemNOUc0pDzgmjKvD6sSzmyum3oY8jM/wFloX6sdHyVlwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-center&quot;
+        title=&quot;image-center&quot;
+        src=&quot;/static/d43c10d4a849544d46f32e40d143b2f8/f058b/github.png&quot;
+        srcset=&quot;/static/d43c10d4a849544d46f32e40d143b2f8/c26ae/github.png 158w,
+/static/d43c10d4a849544d46f32e40d143b2f8/6bdcf/github.png 315w,
+/static/d43c10d4a849544d46f32e40d143b2f8/f058b/github.png 630w,
+/static/d43c10d4a849544d46f32e40d143b2f8/f7616/github.png 766w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I’ve got plan to fill the 2021 in green!&lt;/p&gt;
+&lt;h2&gt;2020&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The most important change - work!&lt;/li&gt;
+&lt;li&gt;I learning &lt;strong&gt;Python&lt;/strong&gt; from last few months - it’s some repo which I store some exercises &lt;a href=&quot;https://github.com/MarcinGladkowski/python&quot;&gt;python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;I learned a lot of AWS services - I done course of Sephane Maarek &lt;a href=&quot;https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/&quot;&gt;Ultimate AWS Certified Developer Associate 2021 - NEW!&lt;/a&gt;, but it’s to early to pass an exam without stress.&lt;/li&gt;
+&lt;li&gt;I got some basic knowledge about DDD techniques. I read Domain-Driven Design in PHP and Domain-Driven Design Distilled (Vaughn Vernon)&lt;/li&gt;
+&lt;li&gt;I have finished the one of the best book about programming (yep, today): ‘Zrozumieć programowanie’ (Gynvael Coldwind)&lt;/li&gt;
+&lt;li&gt;I training a lot of programming. Besides of repo i practiced resolving some golf (from Coding Dojo Silesia) and other exercises
+&lt;ul&gt;
+&lt;li&gt;Coding Dojo Silesia events:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski/gameoflife-kata&quot;&gt;Game of life - JS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski/sql-engine-kata&quot;&gt;Sql engine - JS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski/vending-machine-php&quot;&gt;Vending Machine - PHP - not finished&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;WarsawJS:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski/warsawjs-workshop-43&quot;&gt;WarsawJS workshop 43 - intermediate javascript training&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski/warsawjs-workshop-44-design-patterns&quot;&gt;WarsawJS Workshop #44 - Design Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski/warsawjs-workshop-46-piotrek&quot;&gt;WarsawJS workshop #46 - Unit testing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Docplanner Workshops:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski/Docplanner_Tech_Workshops_1&quot;&gt;Bank - my implementation of Event Sourcing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski/clean-code-architecture&quot;&gt;Clean Code workshop&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Others
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski/bash-training&quot;&gt;Basics of Bash&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I am sure, that was a lot of other things…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I participated in only one stationary conference (Boiling Frogs 2020) :/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2021&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Keep going with Python and AWS services&lt;/li&gt;
+&lt;li&gt;I want to create some IoT things (like magic mirror)&lt;/li&gt;
+&lt;li&gt;Keep training programming languages a lot!&lt;/li&gt;
+&lt;li&gt;And also practicing my speaking English.&lt;/li&gt;
+&lt;li&gt;Do something for open source.&lt;/li&gt;
+&lt;li&gt;Participate in some hackathon.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Marcin&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Bash training 2]]></title><description><![CDATA[Słowem wstępu W tym wpisie skupię się na możliwościach skryptów powłoki Bash, bezpieczeństwie i dobrych praktykach tworzenia skryptów…]]></description><link>https://marcingladkowski.pl/bash-training-2/</link><guid isPermaLink="false">https://marcingladkowski.pl/bash-training-2/</guid><pubDate>Sun, 31 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Słowem wstępu&lt;/h3&gt;
+&lt;p&gt;W tym wpisie skupię się na możliwościach skryptów powłoki Bash, bezpieczeństwie i dobrych praktykach tworzenia skryptów.&lt;/p&gt;
+&lt;p&gt;Oczywiście temat nie będzie prze zemnie wyczerpany, a jest jedynie podstawą dla początkujących tak aby tworzyć wystarczająco dobre skrypty oraz zapobiec pewnym powszechnym błędom.&lt;/p&gt;
+&lt;p&gt;W moim repozytoium &lt;a href=&quot;https://github.com/MarcinGladkowski/bash-training&quot;&gt;bash_training&lt;/a&gt; są podstawowe skrypty gdzie zapoznawałem się składnią języka.&lt;/p&gt;
+&lt;h3&gt;Bezpieczeństwo&lt;/h3&gt;
+&lt;h4&gt;Przytoczę najważniejsze zasady działania z różnymi skryptami, w momencie gdy mamy coś zrobić przy ich pomocy:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Musisz być ostrożnym co wykonujesz!&lt;/li&gt;
+&lt;li&gt;Nie uruchamiaj wszystkiego z uprawnieniami &lt;strong&gt;root&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Dodaj &lt;em&gt;alias&lt;/em&gt; na komendy systemowe, ktore mogą narobić najwięcej szkód! (np: alias=‘rm -i’)&lt;/li&gt;
+&lt;li&gt;Jest wiele możliwości ataku! - nie uruchamiaj skryptów o dziwnej dla Ciebie zawartości&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Jak napisać wystarczająco dobry skrypt powłoki ?&lt;/h3&gt;
+&lt;p&gt;Należy pamiętać, że dobrze napisany skrypt urchoni nas przed problemami. Gdy zrobimy to niedbale możemy stracić ważne dla nas pliki czy uszkodzić nasz system. Mniejszy problem, gdy będzie to tylko nasze lokalne środowisko.&lt;/p&gt;
+&lt;p&gt;Rady opisane poniżej będą zaczerpnięte z wpisu na blogu &lt;a href=&quot;https://devopsiarz.pl/bash/tutorial-kurs-pisania-dobrych-skryptow-bash-wstep-dobre-praktyki-shellcheck/&quot;&gt;https://devopsiarz.pl - wpis&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Po napisaniu własnego skryptu warto użyć narzędzia do sprawdzenia poprawności składni i potencjalnych problemów. Polecane jest narzędzie &lt;strong&gt;shellcheck&lt;/strong&gt;. Do instalacji na &lt;em&gt;Ubuntu&lt;/em&gt; wystarczy użyć standardowego managera paczek &lt;code class=&quot;language-text&quot;&gt;sudo apt-get install  -y shellcheck&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Użyjemy tego narzędzia do analizy skryptu, którego napisałem ostatnii na potrzeby dodawania nowego pliku z wpisem dla Jeckyll.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token shebang important&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;token assign-left variable&quot;&gt;POSTS_DIR&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${&lt;span class=&quot;token environment constant&quot;&gt;PWD&lt;/span&gt;}&lt;/span&gt;/_posts/&quot;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Create new post&quot;&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;+%Y-%m-%d&apos;&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Default time for post is &lt;span class=&quot;token variable&quot;&gt;$date&lt;/span&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Set title of post&quot;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; title &lt;span class=&quot;token comment&quot;&gt;# find idea to get title (set maximum arguments)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# parse setting -&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;postFile&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$date&lt;/span&gt;-&lt;span class=&quot;token variable&quot;&gt;${title&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;-}&lt;/span&gt;.md&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
+   &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Post with name &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; exists!&quot;&lt;/span&gt; 
+   &lt;span class=&quot;token comment&quot;&gt;# want to delete ?&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;fi&lt;/span&gt;
+
+&lt;span class=&quot;token assign-left variable&quot;&gt;NEW_POST_FILE&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${POSTS_DIR}&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;${postFile}&lt;/span&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;touch&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${POSTS_DIR}&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;${postFile}&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Created new post! &lt;span class=&quot;token variable&quot;&gt;${postFile}&lt;/span&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; -a &lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;HEADERS
+---
+layout: default
+title: &lt;span class=&quot;token variable&quot;&gt;${title}&lt;/span&gt;
+---
+HEADERS&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Wykonajmy teraz analizę przy pomocy &lt;code class=&quot;language-text&quot;&gt;shellcheck&lt;/code&gt; wykonując komendę: &lt;code class=&quot;language-text&quot;&gt;shellcheck ./scripts/newPost.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Output w wierszu poleceń:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; title &lt;span class=&quot;token comment&quot;&gt;# find idea to get title (set maximum arguments)&lt;/span&gt;
+^--^ SC2162: &lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; without -r will mangle backslashes.
+
+
+In ./scripts/newPost.sh line &lt;span class=&quot;token number&quot;&gt;13&lt;/span&gt;:
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
+        ^-------^ SC2086: Double quote to prevent globbing and word splitting.
+
+Did you mean: 
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
+
+
+In ./scripts/newPost.sh line &lt;span class=&quot;token number&quot;&gt;23&lt;/span&gt;:
+&lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; -a &lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;HEADERS
+       ^--------------^ SC2086: Double quote to prevent globbing and word splitting.
+
+Did you mean: 
+&lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; -a &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;HEADERS
+
+For &lt;span class=&quot;token function&quot;&gt;more&lt;/span&gt; information:
+  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+  https://www.shellcheck.net/wiki/SC2162 -- &lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; without -r will mangle backs&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Z powyższej analizy wystarczy, że jeśli dodamy cudzysłów w dwóch miejscach i parametr &lt;code class=&quot;language-text&quot;&gt;-r&lt;/code&gt; do odczytywania inputu możemy poprawić działanie skryptu. Oczywiście to jednak trochę za mało.&lt;/p&gt;
+&lt;p&gt;Z przyzwyczajenia często używałem zapisu zmiennych z postaci &lt;code class=&quot;language-text&quot;&gt;postFile&lt;/code&gt;, ale z tego co widzę lepiej z wygląda zapis w postaci &lt;code class=&quot;language-text&quot;&gt;POST_FILE&lt;/code&gt; lub &lt;code class=&quot;language-text&quot;&gt;post_file&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Z przytoczonego prze ze mnie wpisu można jednak wyciągnąć dużo więcej.&lt;/p&gt;
+&lt;p&gt;Jako, że nigdy nie pisałem za dużo skryptów &lt;code class=&quot;language-text&quot;&gt;Bash&lt;/code&gt; można się jeszcze dużo nauczyć.&lt;/p&gt;
+&lt;p&gt;Czego można by jeszcze opisać i nauczyć się, a jest jeszcze sporo tego. Mimo, że jest XXI skrypty &lt;code class=&quot;language-text&quot;&gt;Bash&lt;/code&gt; można spotkać wszędzie np. gdy tworzysz np swój obraz dokera w &lt;code class=&quot;language-text&quot;&gt;Dockerfile&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Co chciałym jeszcze opisać:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jak tworzyć odpowiednie warunki.&lt;/li&gt;
+&lt;li&gt;Sprawdznie odpowiednich oprawnień.&lt;/li&gt;
+&lt;li&gt;Tworzenie odpowiedniego skryptu z parametrami przy użyciu &lt;code class=&quot;language-text&quot;&gt;getopt&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Kody błędów oraz zwracanie ich, obsługa błędów.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pozdrawiam
+Marcin&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Bash training]]></title><description><![CDATA[I oto kolejny wpis. Tym razem o języku powłoki Bash. Nie będę rozpisywał się o jego historii czy specyfice. Wszystko można znaleźć bez…]]></description><link>https://marcingladkowski.pl/bash-training/</link><guid isPermaLink="false">https://marcingladkowski.pl/bash-training/</guid><pubDate>Thu, 28 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I oto kolejny wpis. Tym razem o języku powłoki Bash. Nie będę rozpisywał się o jego historii czy specyfice. Wszystko można znaleźć bez problemu w internecie.&lt;/p&gt;
+&lt;p&gt;Dlaczego zacząłem go trenować? Szybkie napisanie skyptu automatyzującego jakąś czynność jest bezcenna. Oczywiście do automatyzacji można polecić inne języki takie jak Python czy Go. Jednak taki skrypt powłoki zadziała prawie na każdym środowisku linuxowym (piszę prawie bo jestem przekonany, że mogą istnieć jakieś wyjątki). Mimo 2020 roku takie skrypty wykorzystywane są np. przez obrazy dockera gdzie to możemy wykorzystać do budowy naszego środowiska skrypty takie jak &lt;code class=&quot;language-text&quot;&gt;docker-entrypoint.sh&lt;/code&gt; &lt;code class=&quot;language-text&quot;&gt;wait-for-it.sh&lt;/code&gt;. Jak każda składania posiada swoje specyficzne komendy, czy triki. Jednak nie trzeba wiedzieć wszystkiego.&lt;/p&gt;
+&lt;p&gt;Ten tydzień/lub dłuższy okres czasu spędzam wolny czas na ćwiczeniu pisania dobrych skryptów Bash.&lt;/p&gt;
+&lt;p&gt;Znalazłem niezły przewodnik w j.polskim, oraz zaczęrpnąłem trochę wiedzy z bloga Devopsiarz, oraz utworzyłem swoje repozytorium na napisany kod.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://bash.0x1fff.com/&quot;&gt;przewodnik&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://devopsiarz.pl/bash/tutorial-kurs-pisania-dobrych-skryptow-bash-wstep-dobre-praktyki-shellcheck/&quot;&gt;devopsiarz.pl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski/bash-training&quot;&gt;trening_bash&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Jeden z moich skryptów napisany po tym krótkim treningu to skrypt w tym repozytorium do tworzenia szablonu nowego wpisu &lt;code class=&quot;language-text&quot;&gt;./scripts/newPost.sh&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;W następnych wpisach chciałbym zebrać najlepsze praktyki i pomysły na realizację pomocnych skryptów powłoki Bash.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pozdrawiam&lt;/em&gt;
+&lt;em&gt;Marcin&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[WarsawJs 44 Design patterns]]></title><description><![CDATA[Nadszedł czas na pierwszy wpis poza Hello World. Dziś brałem udział w kolejnych warsztatach WarsawJS. Tym razem głównym tematem były wzorce…]]></description><link>https://marcingladkowski.pl/warsawjs-desing-patterns/</link><guid isPermaLink="false">https://marcingladkowski.pl/warsawjs-desing-patterns/</guid><pubDate>Sun, 24 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nadszedł czas na pierwszy wpis poza Hello World.&lt;/p&gt;
+&lt;p&gt;Dziś brałem udział w kolejnych warsztatach WarsawJS. Tym razem głównym tematem były wzorce projektowe. To dla mnie temat, który co jakiś czas trzeba sobie odświeżyć.&lt;/p&gt;
+&lt;p&gt;Grupa do której się zapisałem była prowadzona przez Michała Bury &lt;a href=&quot;https://www.linkedin.com/in/michalbury/&quot;&gt;Linkedin&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Dla uczestników został przygodowany projekt w NodeJs wraz z frameworkiem Express, Knex (baza sqlite), szablony pug oraz kilka testów.&lt;/p&gt;
+&lt;p&gt;Wzorce, które udało nam się omówić podczas dzisiejszych warsztatów to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transaction script&lt;/li&gt;
+&lt;li&gt;Database gateway&lt;/li&gt;
+&lt;li&gt;Strategy&lt;/li&gt;
+&lt;li&gt;Factory&lt;/li&gt;
+&lt;li&gt;Pub Sub&lt;/li&gt;
+&lt;li&gt;Decorator&lt;/li&gt;
+&lt;li&gt;Domain model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Link z tym co udało się poczynić podczas warsztatów zostawiam tutaj -&gt; &lt;a href=&quot;https://github.com/MarcinGladkowski/warsawjs-workshop-44-design-patterns&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Jestem już stałym uczestnikiem tych warsztatów i bardzo mi się podobają, chociaż nic nie zastąpi warsztatów na żywo.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pozdrawiam&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;Marcin&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello world]]></title><description><![CDATA[Hello world, to musi być zawartość każdego pierwszego wpisu. Nie raz już blogowałem, ale zawsze wydawało mi się,
+że musi to być długa…]]></description><link>https://marcingladkowski.pl/hello-world/</link><guid isPermaLink="false">https://marcingladkowski.pl/hello-world/</guid><pubDate>Sat, 23 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Hello world&lt;/strong&gt;, to musi być zawartość każdego pierwszego wpisu. Nie raz już blogowałem, ale zawsze wydawało mi się,
+że musi to być długa rozbudowana forma. Za radami tagu #nocode postanowiłem znowu postawić blog jednak na krótsze i
+częstsze treści. Github + Jeckyll + Markdown idealnie się do tego nadają.&lt;/p&gt;
+&lt;p&gt;Marcin&lt;/p&gt;</content:encoded></item></channel></rss>
