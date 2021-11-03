@@ -8,7 +8,6 @@ module.exports = {
     description: `My blog about programming, my experiences, exercises, small thoughts`,
     siteUrl: `https://marcingladkowski.pl`,
     social: {
-      twitter: ``,
       linkedin: `https://www.linkedin.com/in/marcingladkowski`
     },
   },
