@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Think Big]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 12 Nov 2021 06:55:43 GMT</lastBuildDate><item><title><![CDATA[Simple test object factory]]></title><description><![CDATA[Today I want to present you very simple idea to creating entities objects for your tests.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Think Big]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 12 Nov 2021 17:29:07 GMT</lastBuildDate><item><title><![CDATA[Simple test object factory]]></title><description><![CDATA[Today I want to present you very simple idea to creating entities objects for your tests.
 In a lot of PHP projects we have entities in basic…]]></description><link>https://marcingladkowski.pl/simple-object-factory/</link><guid isPermaLink="false">https://marcingladkowski.pl/simple-object-factory/</guid><pubDate>Sat, 08 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Today I want to present you very simple idea to creating entities objects for your tests.
 In a lot of PHP projects we have entities in basic style. I mean these entities has many properties and getters,
 constuctor with many requirements parameters. To creating these entities for tests purposes you can create an
@@ -230,7 +230,7 @@ options.&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 49.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoklEQVQoz3WSS2/VMBCF+/9/CIg96gaxQWIDUlkgCkiIcnvvpUmcxI7fj7EPsp3bUiSONLJHznwzOfaVcR4hJlxUClCwR3nK/6fybFdwdaGUkpEzASW3fXmk9TMiQkoJqa2EnHOLelZFiXDz7ksHGuuwCI2Ja3DpwKWFNh5SG0jjMc4cP+6OuD8NGBaFcRYNzjeNTRlQzq3Jm+tPHSiUx69R4zg73D0IzFzChwjrKtThMErcTwrnkaNaVMUWgZ8nhsMg+tSUcf3+tgOV8TgxjRNTreujM/tSpzxPElKZltfiY20yCBweeJsuUsarm68dWP2JMWHhG1bef6c073pUhRAwLBLKhjbRKh2OzGJaVfM5EOHlt9snYOucEs6TAFvVbvhzKBMO51nvecHvRUMo2xtmwovD5w6sxReFSHAhNfi/qsV/PzG63HIpiJnwevzYgdZHCO0hdMBmAqQJrbA28iHB+di+4ZtCTAkxZWgXW2zagygjl4Tv/O3+bFzExA2YsJi4bft6u1JZMK4xbw6zsJi5xio0ls22nO1BVC0gWPMBfwCbzQeF3feMLgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 49.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAwCdASoUAAoAPtE4sFMoIiWjmAEAGgllAAEd6XXSWH1xlObAAP79y2lRpbXtQKAyB0riHQB//6mbGPTXV7Mng//fH3FeA3p5Z4AA&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -266,7 +266,7 @@ last step was a developing this app on Heroku, and was very interesting for me.&
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuUlEQVQoz62RCQ7DIAwE8/+3hhzc2CZbQUWbo0kVtZZWlhEevLibphnGWsSYQMRQwwQ1jEiJIDmDWb6KVuqwi9H4CnTewycGi0CEITUftSzLpr8rB00lmBnzPMNah0hS6yu1vsY4AGOMUEpBawMbCETXyjlvgeuiREoJ4zhVy4Hk1OrecssHYJmw73toc3/Cj8BySWv9XsqNPzwFlqX4EF5LkV+AoVnWBsb/wXJ51Tn3nEBybbjSfsIH92UT2N+LifwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACwAgCdASoUAAoAPtFUo0uoJKMhsAgBABoJaQAAeyAA/vIDioGAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -326,7 +326,7 @@ simple methods. Looks simple but there is a lot of patterns of refactoring like 
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 157.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAgCAYAAAASYli2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEqElEQVRIx5WUCY8jtxFG+///IQMBggRIAtvZdRx7Z0bakUZH3xfJvg/28QxSx2p21wjSwEMVqPq+rmJTdLpBMy/rO6ZpZhgnRj2h9cI4LjaadT0tDHpmmpdvdAZnWhbePytjP5DJAqEkZdUhpaasRuq+p2xaUlkyjCOrrX7/OGuuoOmgG6DroR9YuoEyFZRpjnAjxGZHtTuitgeaKINBwzjBOF/iTdv1OAe5Ja1jVC+QfY4acrI257P3RiA8ns4bfnz6Gx82/+Bfv/2VH/c/8UvwXz56/+Hf5w/8Hn5CtBlquOidioGRGc1yZ2ShnQa6SVPqgVzXCF2j5g6lG6TJdY0cK4qptfU3rbMWNQzjZQw7irZjT0WNjCpEJCnijMHUmfHmFaYF9PyFUd/1DvsjS5KxCnUHoVhyRb07MhxPiGNA6weMfow6+XRBxJLLa718p3XWtzNLKlhlAVdsbkxTiXxzEQeXxg/RSc4QZ4xxZg150NxwsIb53cRE2+XVeMoEhRvShQniHFKefIp9RnmKWIRgzpQ1N3VzJr9jeDO75aogO/iIU0B+DMgPLunngGzroQ4h+SZF7oPrS9OL4Xob+cHsS1Soc4i7OVhR6SWEuwNqH6BeM9QuRb0F15eXZg9P9w5XqR4omHPBmOZMuURnkjlXzA/jTam0I5u1m87h1YVEgCggvyIK2/Vi/hWphMwgIBU2Nx8L8w8T5UX3oHX87BVRxVSdpOoEZSeuuUR5B5T3hvR2KPc31PEj0v3E0+uWN3dH2V5qHzVOvChqesx5bxhsrNaesisoioxK17RzSzNVNLqk0RVqbCh0Q73edKONBseeer65cGCaWcv6cnG0HTQF1JK1KWmr+ttr5nbbqG6mG2f68Rr1TNOPNIO2uaEbpwuDpn3ArA3Tyjh/wdmLlVB2JKojKXpi1RJkFUFWWyLZEeYmtoSiJhSNJcgvuWxnygGKfrU43aht98tqWG3e1COlHKmUpio0Talp2sHW3C7VG/N6uamN1uAs5rYwP84L6/onG/N/PM5RB4ilpFxqiiq1qDqjqFOypiQuS6KyJKkq4rLAlRGuCi1elXMSIemgKGkp1gbnJ/2JwxziTgmnIeQ8RrhjZPPDEHEcYo59wkknnKeUo4446egSp8RGd07wyfDXDOejfuE0RUQIzrPgSZ3Ztz6bwmNXu5yMWZNyHmMi5FcIG0ME4SpsdD7oF45XQ3fKeE33HOWBTelxHkLcIWbXBpzGCH/JCdbvY8xMvHQ4R9c35Ph9zEuy51ke2VVnvDHh0EecdXwX3oiu8XHdGpoOjWFgDM3oU8q2cNl3EU/yxGvhsssTXgsfb07xdI4/Z7bOm7N3pvc9tIZm8frDs3LZNQHP8sxGnXhJAra5b01fs5hdFbCtPI599N7ww2OH10Uzyu/5kZ/9HdvSZVv6/Bp/5iU58xxEPAchm9y1WxR9PbI11NH9K3lLZo+Qv2ScdWqjGcuseTq7MBnSd53dO/x12eBj2pb4Zn/6EM+cOZ28+wDf49HsbvhD9sLfg4iE3G542HicmoBt6V0KHwR/dlQeX+L8RTzzzyggtoaZ7dQQXw/s14L/xR8XWok7BCWohgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 157.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBQCdASoUACAAPtFcqU2oJSQmKAqpABoJZQDE+P8BnduCXpOaqY9mmO/Zvt8m4lNwAP706/WNRN0VEghl5RjEAsoJexv3RsjFeSxCAJDREq7ez7I97eOyLAwGStRc9T7LLq5aMgZo3LaAOtu294AA&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -352,7 +352,7 @@ But we don’t forget about &lt;em&gt;return&lt;/em&gt; statement, because this 
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 99.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC00lEQVQ4y3WUi5abOAxA+f9PbHdPO50kEwIYg9+W7duDk51mZrpwLsK2JCQsa3jRjbc1MGnHreP5dVW8XhfO08Zl2jiPO5fJ8DpqfpxvnG+a823ndVQom7AZTGqdoYjw+dp2RwwR6xLeefwmRFswJqK3jeATwQo+JHLKd6N2F4MvkdyE0irSCqUKKQbGVaPtTqql69aHzf39v7v152FbuDN8kxcuMqGaYWFHtZ25aEY/McWZOc2sMqPSxCzzu87yhHrMHQwiQqvtQ9i0RvWesBmSMWzTFb9cMdOKs+HLL3oP/UhZitBae/hpdx56arOcRsV11syr4e2yoOYNoxNuF/Y1kCV/8N0jrJ8dPjzOauOflyt6t4yz5m0cmSfNcnVMZ8d83YkhI7kiUrrtUKQ8pfon5ZwzxoaO3h3OR3IW9GYIIeD2jDdCdAW/C97Fbjd8l1+8lZm1GRR3lmNTkmLFsWLRXd7fNxway4r5wmE7WPHEmnvJCIVUhegtYdPEHMlyROY7KXuCJHzOvdS6zSeGVspfdqyBCzQXwHuaXcEostGEkNhd5v+u4XVrTHtG28TqMst+P4bqMe7SC8oJqxOUiaz2IHXdY3zIgz1WhtNWmU1mcxn9QO2hG21euqF+WusfNpG9r0W0S33ucGwOh7WWv4bejlR9oIVD6p62+B0XIikLxnlCiARbcMfvedTaUEKkHaellI7EiMREy5mW5UGipUhNkZIzJQs5RnJISBCSD32eUhn4/oN6GUFp6qyQy5X070/kMtKuI/XtRL2ckcuFOM7YywLL2vW/sKwMRa1U6yAl6vEl56i7oW47dduoeukkrXDaYDdHDYEWIy08Ee8M3+orl7qgsMxtYzYji59Z/I3FnlD2xM29cQqKn3ZlPToLloU/B+GZIUikHEVZC7lI73FHf6vvHD3yzjH+uPaV3rH7DjX6AX9vRU8t6UPR85f5p8L+DUGeFTO8+sl/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 99.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAwCdASoUABQAPtFcqE4oJSQiKAqpABoJZ2p9ABvz2c8zCfkAAP7xOMIbA4rP3/vogj/gmic+EmnqR54D5Np5bWgFJB7BIAAAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -393,7 +393,7 @@ But we don’t forget about &lt;em&gt;return&lt;/em&gt; statement, because this 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 120.25316455696202%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAADp0lEQVQ4y43U6W7cNhSAUb3/YxVt0SI/2jiJHcdjj2fRSooUV0nU8hUjJ46XFiiBg0tS91ICRTCbpol1hXVdSZ1hNobRJ2zXY61DtAatNc45hJAYG5D6aW6eZy5tfVpgi1lKiRVYloUppac4TczLwpgSwzByyUnTdykxjiPDOG7jdav+viiQvZy8NGU9ZVlSlBWyVVRCUVYNrbDIxtFKh2w1ddlRFxbTxe0l26KsZJxKkJpwfUf31xfy3z5g7x/phWKoJaPQjEKRGsPUWCZhSaLbxkt7GRtWbcB4MI7MHndEWRNFjWsqys/XuDynynPq04Hi8YGuLjGVpD03qLxBFxJd1fRGklzHaDSjUZvsz/kzd9OZnJYCzSe/5yresZ9qdjFn5498cwf2Q8lDqHnwT/ah4SGWnFfBGfksq6YWuwTCOmxOruGbPJBLzb4q2RVnzrLEjB7TR5QP6HAR6QaPX/vn2ouMaeZtS37G1J5BSfq2YbaK4DzBe8YxbUdnmd/XbX9Zx5kwTPTj/CRNKB2QIlBJTSk6amkopaFzkTAkfJ+I40T8XneZ69PMOK9kuV2pu0hrAq3tN6Lz1K1DdAHth2fSBBrlaG1EdoFGO6SJVK1BuYGQIJvm6d1nGxWpDoH67LF6IPp5O+D/p2VrmmFeYflpGWeWYWEZF6Z+Jm3Sq5z/ktl8T1SCYTtPCl9X7K4+ke9viVYxOs14eeY6Bqtfu8y9kT2kE82k0ItDL4Y2tnxsdvzdXiNGTYfHvHAZ2+9Rr+6dbJmX9xsxLTg70HWG4HqcSng90sdh28vOhKc9Xf9lD5dzwaI0QUhCI7c4645eKnohGVvNIDpGqbf+qDS91CTVsVr3TsbXPZSCtVGsdcvatCA7xqIhHAvCqcQ+nvCHknAsGfKauRLbhbIR+mdfarKquUN3FT5ofHziguZUncmLRw7FkcNpT34uOBdHVFfTGYHzCh8U7o3sj/Wa3VJwpn12ouXGnfnqDlzbE1ftjlt34lYX3JgDh0W8yn8p64NlSgPzlF7pY9yEEInGMvY9aRiZ0sgyp3f5P2Sy3GF1TXCa6C6XgNqiFwUirzk+Flx/+JXj/Q22E0T/lPMj763sMFW0i8WuEcsPgS5Z9kKybwUfxS1lUpg14ulx9C9yX8soGtbOgg/gXvCRIa9Ipxy9L9BXN6RKoHKBrxtm497XuED2Nd6RDxVyUsj5tUafEPWeL/U9v9z/zlkfua0P7NWBapDIWSPe1P0DW50x4idN+CYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 120.25316455696202%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwBACdASoUABgAPtFepU6oJSMiKAqpABoJaQDN/BEz1f65XJO5hA853FgKqAD+9PUDJOo9C6L3xAWTeEDtS7umrMThDa8jvzfRobZpG9tEDqo3UOuyeA6qNYAAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -564,7 +564,7 @@ in 2014 using &lt;strong&gt;PHP&lt;/strong&gt;! oh yeah!&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 36.708860759493675%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA6ElEQVQoz2VRi46EIAzk/3/QO3UTH6ugl6y6cjzVubSJF3SbEArtDMNUIInjOHhReO+h9S+stXi9JszzzPl7XT960xBn4Sye+77v2PcDWmtUVYWmaRBjhLXu0pfiaYn0lZS4rmuU5QMhRhhrmcgYi3EcYYy5kKZ4kRKRKgqlFLIsuwBT5cMwYFmW/3OKFcvyZr+ccwghYNUaRVFcXr3n27bh+ey43/sA6xzfKTVAkIq+7yGlRNu2XAghfvh695iEkC2EoR8pKZHnJcQ0zRjHH/5G13U8BJrkneBOTJMnIU3TsjLy9us7xx8EcyEU0za3xgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 36.708860759493675%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAwCdASoUAAcAPtFWpEuoJKOhsAgBABoJaQAAXK/nY7qV+PTrAAD+9hEUQxcE32LqBjDYjOqsMAAA&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -595,7 +595,7 @@ And the MVC pattern
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABB0lEQVQoz42RYYuDMAyG9///mB/HtmNjOjadqxWc01aTpqm1BxbGHecd93wIbcpD3pJNCCE9nw77/cf+cLlcTsfjbrcrH48QwjzPsUbCDzYhBGsJAWkBF5g5PhtjrLXee+ccIq7Iq8RR4zjWdX2/34UQWutf5O+poum9l1Lebrc0TbMsE0I45/472VqrtVZKAUA8EJH3/i+ZF7quG4aBme1CbAJA27bxuiLP84yIxpjn82kW3r8gImtt3/fMjIje+xWZiK7Xa5IkRVEQ0Vtm5rZtt9ttVVXGmGmaVmIDgJQyz3MpZdM0MUjMMgxDWZZKKURcl8dx7PteKdV1HQB8jf16vWI/ru0TlQVEJgO2OEIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACQAwCdASoUAAoAPtFWo0uoJKMhsAgBABoJaQAAXK+4oBzomDAAAP71IibhX6vItpgz7/n5nCx6ThqoniAAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -631,7 +631,7 @@ This action looks very clear, the input and output are specified DTO classes.
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 144.9367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD8UlEQVRIx41V2W7cRhDUf2g503Pfw71XK8FQDMhwAsMvyb/rbxYVzJArUYlk+aHQXO6w2c2uqr45hxFPOuBvE/BXNfieDY6CsGMce85x5Bx3jHUUzsGFgCCCaPEVlzk+35AUsMThhxXs7QC7YghEbxCJkIhgiUCfJiSCsxE171C3G8ScMTAGRtSruYLNUVyTfpSwXTjj4W1AiBHeezjnYK2dDl+rafF3KlRSIfmC4CJyKUgpoY5jv5ZKgf7/8HtYtCwI1jgknxFSRMoZMSVIKd8ka9e/wGWOrwmDS/AhdLTWlVLgnL889NsVSiHgTeoJcy0otSKXjFor1pt1bz/l0ofUhjUMwwJsusfYpQ+SsecbQbcQXEOSghKmR04SJC2EMjDWQkkJwxkEGyCkhNK6QwqC5gMUZxfF54RKaaQwwmmPaHOPyngYX2BDRmkVxoDRGUSr+/dtXfROYkB1BsWZS3EGzpqJNlIrlFr6UMpYO2WKlai2TZlPbXEOxgl8am3CfI9xuvT/+lCIYIzF6XzGdn/o8XA8YbvdYpMCTjlgGxz20cEo1YcgZ7w/FKle+UbiZaJEor2xK4QtlHK9HtqZZcKJ9FPLQgoMnHWwBuI9WTuUOEfmvBtDmGO7VzmHbi+k3uplVtDzDReEtfH4EjY4+xF3rmKvHaqU2EqJryTwTQg8EeEPIfBdTL+/EcedlBiVwijlRV4rbB929BVP+yc8nh7x9eER94cTjrsd7nPAJjhopTqMknNU0FLCKQWvFOyyZU4c1nhs8hExFezuDtjsd9ge9rDOTgSeyIsV533ab8jN2NuWm2abOTTHiW7moXawvmBbK37kjJ8x4oezeDAKoVGq1q6khhhjI/hldqDnmzbh4DOsdggmwmnXiW1dwiElHGPAIQTsncVJCxStEVLqrhRyhg0BTNBleHUbAasU7tcjavDYpIR9ydjljH0p2JaM4gOyb4rZYgwZJ6f7MPwwwDOGzOmy5nyRUEpU31pt2nVwvlXouo6NMdBNu8pAGwfdzmiFICX+HIaOM2OXTUs42VerUOM8VtSYsY5rPKzX2MWINDCY21vo1Qp2GGCHFRxjsEtOEkHR3HJL2KUkJbyNsCbg5CL+KQU/U+oDeagjymYDFyJsrJBaTx65UA0taTNJT8NqC60sknHYxYC19x3VN8MNXe/aBrTz9J89I5a0mSq8il72yEi8LKMmQeINfMKL1umDJaU0clgj2YLkao82jFinhG2wcC4g+TrtmMV++eUabe6bcoJPsdu/8wEulGacCNb0RB9U9p59SShj+mJqdGmxUce2tWo1vDHd9j9ZVIuW9VRB23BX0BxnF/6sujcJ/wWU9DcMT0ThTQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 144.9367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRoQAAABXRUJQVlA4WAoAAAAQAAAAEwAAHAAAQUxQSBgAAAABFyAQSPwRk3mNiIgDIUHCePebI/of0AtWUDggRgAAAFADAJ0BKhQAHQA+0VqkTSglIyIwGAgBABoJZ2sJW9eJ2AMwAP7wIqhFz/af6y8X6SDjE3Gf37S/QQIxgTqWtVqTBayAAAA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -749,7 +749,7 @@ and what i want to achieve in 2021.&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 24.68354430379747%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAElEQVQY0y2Q246CQBBE+f//2lcfjFGDu4l3GWCk58IwOODZOFhJpeupuvsUStWcL1fqukE3mse9ou8DWe/v+M4lv7M/mucZEYM1DukMr1eiSCmR0swwRlRoMcFhB4/yLRItfuiJ44gOHS54xvFFCAMxjgxDJKYRFz1+CnlR0RmLkZ6yPfKjVmyrXx7SUD6PHOREawRthJ3+4ykW+VzzdS1PLlKxbves9X4pdM7jfc9Gl2ybA+vLjs7bXKqsxhiPMpqbKJwNdMZhrEeso7Ud4h0nuXOzKmMoxCcqCZw74ao9je+J08iQlnemNOUc0pDzgmjKvD6sSzmyum3oY8jM/wFloX6sdHyVlwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 24.68354430379747%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAwCdASoUAAUAPtFUo0uoJKMhsAgBABoJZwAAg/NFifAAAP7xQpbY59kx1TmxX13lvadetZQedAAA&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
