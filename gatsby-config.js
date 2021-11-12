@@ -64,12 +64,17 @@ module.exports = {
         stripMetadata: true,
         defaultQuality: 50,
       },
-    },
+    },   
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: `G-ZEP2JBBGT2`,
-        head: true,
+        trackingIds: [
+          "G-ZEP2JBBGT2", // Google Analytics / GA
+        ],
+       
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     {
