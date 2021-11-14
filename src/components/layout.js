@@ -7,9 +7,17 @@ const Layout = ({ location, title, children }) => {
   let header
 
   header = (
-    <h1 className="main-heading">
-      <Link to="/">{title}</Link>
-    </h1>
+    <div>
+      <h1 className="main-heading">
+        <Link to="/">{title}</Link>
+      </h1>
+      <ol className='main-menu'>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/experience">Experience</Link>
+        <Link to="/cooperation">Cooperation</Link>
+      </ol>
+    </div>
   )
 
   return (

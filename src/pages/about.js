@@ -11,9 +11,7 @@ const About = ({ data, location }) => {
         <Layout location={location} title={siteTitle}>
           <Seo title="All posts" />
           <p>
-            No blog posts found. Add markdown posts to "content/blog" (or the
-            directory you specified for the "gatsby-source-filesystem" plugin in
-            gatsby-config.js).
+          Hello everyone! I have been coding for the past few years and it's become my **passion**. I try to learn something new every day. I have been thinking about writing a blog about programming and this is the outcome of this thought. I hope these tips, based off of my experience, will help you want to learn about programming. If you read this description and you want help coding something new, please write to me.
           </p>
         </Layout>
       )
