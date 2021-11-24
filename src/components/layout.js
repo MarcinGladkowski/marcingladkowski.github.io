@@ -12,6 +12,7 @@ const Layout = ({ location, title, children }) => {
         <Link to="/">{title}</Link>
       </h1>
       <ol className='main-menu'>
+        <Link to="/">Blog</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/experience">Experience</Link>
@@ -25,7 +26,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}, Marcin Gładkowski, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>

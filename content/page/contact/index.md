@@ -1,11 +1,10 @@
 ---
 slug: contact
 title: Contact
-date: "2020-05-28"
 type: page
 ---
 
-This is custom contact page in **markdown**
+Contact with me on **marcingladkowski@gmail.com**
 
-_Pozdrawiam_
+_Regards_
 _Marcin_
