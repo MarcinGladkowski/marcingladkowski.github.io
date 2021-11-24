@@ -1,7 +1,8 @@
 ---
-layout: single
+slug: bash-training-2
 title: Bash training 2
 date: "2020-05-31"
+type: post
 ---
 
 ### Słowem wstępu

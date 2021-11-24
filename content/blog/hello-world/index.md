@@ -1,7 +1,8 @@
 ---
-layout: single
+slug: hello-world
 title: "Hello world"
 date: "2020-05-23"
+type: post
 ---
 
 **Hello world**, to musi być zawartość każdego pierwszego wpisu. Nie raz już blogowałem, ale zawsze wydawało mi się, 

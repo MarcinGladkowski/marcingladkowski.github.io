@@ -1,7 +1,8 @@
 ---
-layout: single
+slug: warsaw-design-patterns
 title: "WarsawJs 44 Design patterns"
 date: "2020-05-24"
+type: post
 ---
 
 Nadszedł czas na pierwszy wpis poza Hello World.

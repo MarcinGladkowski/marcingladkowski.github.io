@@ -1,7 +1,8 @@
 ---
-layout: single
+slug: python-crash-course
 title: "Python Crash Course (2nd Edition)"
 date: "2021-03-06"
+type: post
 ---
 
 ### Python Crash Course (2nd Edition) - Book review

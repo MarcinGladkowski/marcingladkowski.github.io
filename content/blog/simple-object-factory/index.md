@@ -1,7 +1,8 @@
 ---
-layout: single
+slug: simple-object-factory
 title: "Simple test object factory"
 date: "2021-05-08"
+type: post
 ---
 
 

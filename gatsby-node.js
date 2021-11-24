@@ -6,8 +6,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogPage = path.resolve(`./src/templates/blog-page.js`)
 
-  // Get all markdown blog posts sorted by date
+  // Get all markdown data source sorted by date
   const result = await graphql(
     `
       {
@@ -20,11 +21,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             fields {
               slug
             }
+            frontmatter {
+              type
+            }
           }
         }
       }
     `
   )
+
 
   if (result.errors) {
     reporter.panicOnBuild(
@@ -34,14 +39,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
-
+  const markdownPages = result.data.allMarkdownRemark.nodes
+  // filter posts
+  const posts = markdownPages.filter(page => page.frontmatter.type === 'post')
+  // filter custom pages
+  const pages = markdownPages.filter(post => post.frontmatter.type === 'page')
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
+      console.log(post)
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
@@ -52,6 +61,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.id,
           previousPostId,
           nextPostId,
+        },
+      })
+    })
+  }
+
+  // build custom pages from markdown form dir content/pages
+  if (pages.length > 0) {
+    pages.forEach((page) => {
+      createPage({
+        path: page.fields.slug,
+        component: blogPage,
+        context: {
+          id: page.id
         },
       })
     })

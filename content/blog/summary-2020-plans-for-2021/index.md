@@ -1,7 +1,8 @@
 ---
-layout: single
+slug: summary-2020
 title: "Summary 2020 - plans for 2021"
 date: "2020-12-31"
+type: post
 ---
 
 This year - i mean 2020 was an unusual year for everyone - I think.
