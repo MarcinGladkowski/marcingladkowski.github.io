@@ -1,7 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Nov 2021 16:58:28 GMT</lastBuildDate><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on marcingladkowski@gmail.com Regards
-Marcin]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on &lt;strong&gt;&lt;a href=&quot;mailto:marcingladkowski@gmail.com&quot;&gt;marcingladkowski@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Regards&lt;/em&gt;
-&lt;em&gt;Marcin&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Experience]]></title><description><![CDATA[Profile I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also…]]></description><link>https://marcingladkowski.pl/experience/</link><guid isPermaLink="false">https://marcingladkowski.pl/experience/</guid><content:encoded>&lt;h4&gt;Profile&lt;/h4&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Nov 2021 17:21:06 GMT</lastBuildDate><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on: marcingladkowski@gmail.com Linkedin Github]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;mailto:marcingladkowski@gmail.com&quot;&gt;marcingladkowski@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.linkedin.com/in/marcingladkowski&quot;&gt;Linkedin&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
+interesting issue, just write to me a message! I’m interesting into
+all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
+interesting issue, just write to me a message! I’m interesting into
+all kind of cooperation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start a new project&lt;/li&gt;
+&lt;li&gt;Create new library&lt;/li&gt;
+&lt;li&gt;Help with refactoring&lt;/li&gt;
+&lt;li&gt;Help with programming/coding problems&lt;/li&gt;
+&lt;li&gt;Do a workshop&lt;/li&gt;
+&lt;li&gt;And others…&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Experience]]></title><description><![CDATA[Profile I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also…]]></description><link>https://marcingladkowski.pl/experience/</link><guid isPermaLink="false">https://marcingladkowski.pl/experience/</guid><content:encoded>&lt;h4&gt;Profile&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also to spread it with others.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -9,7 +23,7 @@ Marcin]]></description><link>https://marcingladkowski.pl/contact/</link><guid is
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Xcaliber&lt;/strong&gt; / Programmer PHP (04.05.2020 - current, Katowice, Poland)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XCaliber Poland Sp. z o.o.&lt;/strong&gt; / Programmer PHP (04.05.2020 - current, Katowice, Poland)&lt;/p&gt;
 &lt;p&gt;Developing high scalability application in the gaming industry.&lt;/p&gt;
 &lt;p&gt;Technology stack: PHP (7+), JavaScript, Rest API, Soap, Soap UI, Unit Tests (PHPUnit), HTML, SCSS, Bootstrap, Postgres, GIT, SCRUM, Zend 2, Symfony, Zend Laminas, Doctrine ORM, AngularJS, Docker, Windows, Linux, DDD, Hexagonal Architecture, AWS, Business language: English.&lt;/p&gt;
 &lt;/li&gt;
@@ -17,7 +31,7 @@ Marcin]]></description><link>https://marcingladkowski.pl/contact/</link><guid is
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Swift Software Development&lt;/strong&gt; / Programmer PHP (02.01.2018 – 30.04.2020), Katowice, Poland)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Swift Software Development Sp. z o. o.&lt;/strong&gt; / Programmer PHP (02.01.2018 – 30.04.2020), Katowice, Poland)&lt;/p&gt;
 &lt;p&gt;Development application for outpatient clinic. Implementation for government solutions: Online Prescriptions, Online Sick Leave, Making Appointments, Notifications, Registrations&lt;/p&gt;
 &lt;p&gt;Technology stack: PHP, JavaScript, XML, Rest API, Soap, Soap UI, Unit Tests (PHPUnit), HTML, SCSS, Bootstrap, MariaDB, MongoDB, GIT, SCRUM, Zend 2, Doctrine ORM, AngularJS, Docker, Windows, Linux&lt;/p&gt;
 &lt;/li&gt;
@@ -36,8 +50,7 @@ Marcin]]></description><link>https://marcingladkowski.pl/contact/</link><guid is
 &lt;ul&gt;
 &lt;li&gt;AGH University of Science and Technology / Postgraduate Studies, Web Application Development&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;2017– 2018, Cracow, Poland&lt;/p&gt;
-&lt;hr&gt;
+&lt;p&gt;2017 – 2018, Cracow, Poland&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;University of Economics in Katowice / Master’s Degree, Financial Analyst&lt;/li&gt;
 &lt;/ul&gt;
@@ -46,23 +59,9 @@ Marcin]]></description><link>https://marcingladkowski.pl/contact/</link><guid is
 &lt;h4&gt;Additional activities/skills&lt;/h4&gt;
 &lt;hr&gt;
 &lt;ul&gt;
-&lt;li&gt;English (B1-B2), &lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github account&lt;/a&gt;, participant of Coding Dojo Silesia, participant  WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit, PHPcon, Hacktoberfest (2019).&lt;/li&gt;
+&lt;li&gt;English (B2), &lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github account&lt;/a&gt;, participant of Coding Dojo Silesia, participant  WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit, PHPcon, Hacktoberfest (2019).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Thanks you for reading this&lt;/em&gt; :)&lt;br&gt;
-&lt;em&gt;Marcin&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
-interesting issue, just write to me a message! I’m interesting into
-all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
-interesting issue, just write to me a message! I’m interesting into
-all kind of cooperation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Start a new project&lt;/li&gt;
-&lt;li&gt;Create new library&lt;/li&gt;
-&lt;li&gt;Help with refactoring&lt;/li&gt;
-&lt;li&gt;Help with programming/coding problems&lt;/li&gt;
-&lt;li&gt;Do a workshop&lt;/li&gt;
-&lt;li&gt;And others…&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Simple test object factory]]></title><description><![CDATA[Today I want to present you very simple idea to creating entities objects for your tests.
+&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Simple test object factory]]></title><description><![CDATA[Today I want to present you very simple idea to creating entities objects for your tests.
 In a lot of PHP projects we have entities in basic…]]></description><link>https://marcingladkowski.pl/simple-object-factory/</link><guid isPermaLink="false">https://marcingladkowski.pl/simple-object-factory/</guid><pubDate>Sat, 08 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Today I want to present you very simple idea to creating entities objects for your tests.
 In a lot of PHP projects we have entities in basic style. I mean these entities has many properties and getters,
 constuctor with many requirements parameters. To creating these entities for tests purposes you can create an
