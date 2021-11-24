@@ -1,16 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Nov 2021 16:50:23 GMT</lastBuildDate><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
-interesting issue, just write to me a message! I’m interesting into
-all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
-interesting issue, just write to me a message! I’m interesting into
-all kind of cooperation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Start a new project&lt;/li&gt;
-&lt;li&gt;Create new library&lt;/li&gt;
-&lt;li&gt;Help with refactoring&lt;/li&gt;
-&lt;li&gt;Help with programming/coding problems&lt;/li&gt;
-&lt;li&gt;Do a workshop&lt;/li&gt;
-&lt;li&gt;And others…&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on marcingladkowski@gmail.com Regards
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Nov 2021 16:58:28 GMT</lastBuildDate><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on marcingladkowski@gmail.com Regards
 Marcin]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on &lt;strong&gt;&lt;a href=&quot;mailto:marcingladkowski@gmail.com&quot;&gt;marcingladkowski@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Regards&lt;/em&gt;
 &lt;em&gt;Marcin&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Experience]]></title><description><![CDATA[Profile I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also…]]></description><link>https://marcingladkowski.pl/experience/</link><guid isPermaLink="false">https://marcingladkowski.pl/experience/</guid><content:encoded>&lt;h4&gt;Profile&lt;/h4&gt;
@@ -62,7 +50,19 @@ Marcin]]></description><link>https://marcingladkowski.pl/contact/</link><guid is
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Thanks you for reading this&lt;/em&gt; :)&lt;br&gt;
-&lt;em&gt;Marcin&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Simple test object factory]]></title><description><![CDATA[Today I want to present you very simple idea to creating entities objects for your tests.
+&lt;em&gt;Marcin&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
+interesting issue, just write to me a message! I’m interesting into
+all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
+interesting issue, just write to me a message! I’m interesting into
+all kind of cooperation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start a new project&lt;/li&gt;
+&lt;li&gt;Create new library&lt;/li&gt;
+&lt;li&gt;Help with refactoring&lt;/li&gt;
+&lt;li&gt;Help with programming/coding problems&lt;/li&gt;
+&lt;li&gt;Do a workshop&lt;/li&gt;
+&lt;li&gt;And others…&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Simple test object factory]]></title><description><![CDATA[Today I want to present you very simple idea to creating entities objects for your tests.
 In a lot of PHP projects we have entities in basic…]]></description><link>https://marcingladkowski.pl/simple-object-factory/</link><guid isPermaLink="false">https://marcingladkowski.pl/simple-object-factory/</guid><pubDate>Sat, 08 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Today I want to present you very simple idea to creating entities objects for your tests.
 In a lot of PHP projects we have entities in basic style. I mean these entities has many properties and getters,
 constuctor with many requirements parameters. To creating these entities for tests purposes you can create an
