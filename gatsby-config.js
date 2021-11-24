@@ -3,12 +3,13 @@ module.exports = {
     title: `Think Big`,
     author: {
       name: `Marcin Gładkowski`,
-      summary: `My Awesome World About Programming`,
+      summary: `This is the place where you can find some my toughts, ideas, summaries etc.`,
     },
     description: `My blog about programming, my experiences, exercises, small thoughts`,
     siteUrl: `https://marcingladkowski.pl`,
     social: {
-      linkedin: `https://www.linkedin.com/in/marcingladkowski`
+      linkedin: `https://www.linkedin.com/in/marcingladkowski`,
+      github: `https://github.com/MarcinGladkowski`
     },
   },
   plugins: [

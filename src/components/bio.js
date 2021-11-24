@@ -42,15 +42,14 @@ const Bio = () => {
         quality={95}
         alt="Profile picture"
       />
-      
+
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`${social?.linkedin || ``}`}>
-            My linkedin profile
-          </a>
-        </p>
+        <div>
+          <p>
+            Written by <strong>{author.name}</strong>
+          </p>
+          <p>{author?.summary || null}</p>
+        </div>
       )}
     </div>
   )

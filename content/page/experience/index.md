@@ -9,7 +9,7 @@ type: page
 
 #### Work experience
 ---
-* **Xcaliber** / Programmer PHP (04.05.2020 - current, Katowice, Poland)
+* **XCaliber Poland Sp. z o.o.** / Programmer PHP (04.05.2020 - current, Katowice, Poland)
 
     Developing high scalability application in the gaming industry.
 
@@ -17,7 +17,7 @@ type: page
 
 ---
 
-* **Swift Software Development** / Programmer PHP (02.01.2018 – 30.04.2020), Katowice, Poland)
+* **Swift Software Development Sp. z o. o.** / Programmer PHP (02.01.2018 – 30.04.2020), Katowice, Poland)
 
     Development application for outpatient clinic. Implementation for government solutions: Online Prescriptions, Online Sick Leave, Making Appointments, Notifications, Registrations
 
@@ -33,11 +33,14 @@ type: page
 ---
 #### Education
 ---
-* AGH University of Science and Technology / Postgraduate Studies, Web Application Development
-2017– 2018, Cracow, Poland  
 
----
-* University of Economics in Katowice / Master’s Degree, Financial Analyst
+* AGH University of Science and Technology / Postgraduate Studies, Web Application Development 
+
+2017 – 2018, Cracow, Poland  
+
+
+* University of Economics in Katowice / Master’s Degree, Financial Analyst 
+
 2013 – 2015, Katowice, Poland
 
 ---
@@ -45,9 +48,6 @@ type: page
 #### Additional activities/skills
 
 ---
-* English (B1-B2), [Github account](https://github.com/MarcinGladkowski), participant of Coding Dojo Silesia, participant  WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit, PHPcon, Hacktoberfest (2019).
+* English (B2), [Github account](https://github.com/MarcinGladkowski), participant of Coding Dojo Silesia, participant  WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit, PHPcon, Hacktoberfest (2019).
 
 ---
-
-_Thanks you for reading this_ :)  
-_Marcin_
