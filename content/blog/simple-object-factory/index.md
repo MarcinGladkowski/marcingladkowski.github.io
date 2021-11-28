@@ -5,13 +5,12 @@ date: "2021-05-08"
 type: post
 ---
 
-
-Today I want to present you very simple idea to creating entities objects for your tests. 
-In a lot of PHP projects we have entities in basic style. I mean these entities has many properties and getters, 
+Today I want to present you very simple idea to creating entities objects for your tests.
+In a lot of PHP projects we have entities in basic style. I mean these entities has many properties and getters,
 constuctor with many requirements parameters. To creating these entities for tests purposes you can create an
-instance using MockObject (from testing libraries like PHPunit), Object Mother or use simple static factory. 
+instance using MockObject (from testing libraries like PHPunit), Object Mother or use simple static factory.
 
-For example, we have an 'classic' entity. 
+For example, we have an 'classic' entity.
 
 ```php
 class User
@@ -68,7 +67,8 @@ class User
 ```
 
 Instead of creating and instance for testing in this way:
-```php 
+
+```php
 $user = new User('customName', 'customEmail', true)
 // ... over and over
 
@@ -84,13 +84,13 @@ class UserBuilder
     private string $email;
     private bool $isActive;
     // ...
-    
+
     public function __construct()
     {
         $this->name = 'CustomName';
         $this->email  = 'CustomEmail';
         $this->isActive = true;
-        // ... 
+        // ...
     }
 
     public function withAnName(string $name): self
@@ -125,7 +125,8 @@ class UserBuilder
     }
 }
 ```
-__Example of usage__
+
+**Example of usage**
 
 ```php
 UserBuilder::anUser()
@@ -141,7 +142,7 @@ try to initialize it directly by `new` keyword because it's not necessary.
 
 Look at this one idea:
 
-```php 
+```php
 class SimpleUserFactory
 {
     private User $user;
@@ -167,7 +168,9 @@ class SimpleUserFactory
     }
 }
 ```
-__Example of usage__
+
+**Example of usage**
+
 ```php
 
 $user = SimpleUserFactory::create();
@@ -179,7 +182,7 @@ $secondUser = SimpleUserFactory::create()
 ```
 
 Maybe, we want to generate other data in each case ? Not problem. The simple example with usage
-of `Faker` 
+of `Faker`
 
 ```php
 use Faker\Factory;
@@ -213,7 +216,7 @@ class SimpleFakerUserFactory
 SimpleFakerUserFactory::create();
 ```
 
-And other issue. What with the relations between objects ? I think we can easily inject 
+And other issue. What with the relations between objects ? I think we can easily inject
 objects with some relations together. In example below I added some relation with other object
 `Address`.
 
@@ -230,11 +233,11 @@ private function __construct()
             AddressSimpleFactory::create()
         );
     }
-// ...    
+// ...
 ```
 
 Of course, we can create this in many others ways. In this post I show how we can play with testing
-objects. The other thinks is creating more advanced factory to cover some object creation behind some 
+objects. The other thinks is creating more advanced factory to cover some object creation behind some
 interface to prevent some problems when the rules of initialization of tests object has change.
 
 _Thanks you for reading this_ :)  

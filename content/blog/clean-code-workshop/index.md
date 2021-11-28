@@ -4,9 +4,10 @@ title: "Clean Code workshop"
 date: "2021-01-24"
 type: post
 ---
+
 At the 13Th of December I participated in Clean Code and Architecture workshops done by Docplanner. Yep, very relevant topic
 for each developer. The practicing of writing the clean code is the one of most grateful think for you, colic and your business.
-The clean code allows you to make easy changes, maintainable things which you have time to forget. This is the skill to practicing 
+The clean code allows you to make easy changes, maintainable things which you have time to forget. This is the skill to practicing
 every day.
 
 Let's focus on workshop. The repository which was prepared by **Docplanner Tech** you can find [here](https://github.com/MarcinGladkowski/clean-code-architecture)
@@ -34,14 +35,14 @@ Below I described some examples of providing some of these rules on workshop and
 
 ### Only One Level Of Indentation Per Method
 
-It's a great advises except SOLID, KISS etc. I always try to avoid to many levels and **indentation** and 
+It's a great advises except SOLID, KISS etc. I always try to avoid to many levels and **indentation** and
 using **else** block.
 
-Too long methods and functions are not a very simple and clear to read. We should to try to extract block of codes to 
+Too long methods and functions are not a very simple and clear to read. We should to try to extract block of codes to
 simple methods. Looks simple but there is a lot of patterns of refactoring like **extract function** from [Refactoring Book](https://refactoring.com/)
 (Martin Fowler).
 
-*Pro tip: If you are using PhpStorm there is shortcut to [extract code as function](https://www.jetbrains.com/help/phpstorm/extract-method.html)*
+_Pro tip: If you are using PhpStorm there is shortcut to [extract code as function](https://www.jetbrains.com/help/phpstorm/extract-method.html)_
 
 Commit: [acb1aea](https://github.com/docplanner-workshop/clean-code-architecture/commit/acb1aea47fdbb802b2717b0c249ff6bcbeebedd5)
 ![diff_3](./diff_3.png)
@@ -49,12 +50,13 @@ Commit: [acb1aea](https://github.com/docplanner-workshop/clean-code-architecture
 ### Don't Use The ELSE Keyword
 
 This simple change cam simplify a code to read and testing it. Less cyclomatic and cognitive complexity.
-But we don't forget about *return* statement, because this technique allows us to safely execute code. 
+But we don't forget about _return_ statement, because this technique allows us to safely execute code.
 
 Commit: [a566791](https://github.com/docplanner-workshop/clean-code-architecture/commit/a566791fb121bc6469447a5ae400e682fe5a6bab)
 ![diff_2](./diff_2.png)
 
 Another example of this technique. It's mean to fast quit from method when relevant data are missing.
+
 ```php
 public function doSomething($params): ?someType
 {
@@ -63,7 +65,6 @@ public function doSomething($params): ?someType
     }
 }
 ```
-
 
 ### Don't Abbreviate
 
@@ -107,8 +108,8 @@ class Specialization
 
 ### No Getters/Setters/Properties
 
-  Since I trying to create immutable objects like **VO** there are any getters and setters. The state is usually 
-passing by *__constructor*. The same thing is about to *wrapping all primitives*. We can follow this rule by using DTOs. 
+Since I trying to create immutable objects like **VO** there are any getters and setters. The state is usually
+passing by _\_\_constructor_. The same thing is about to _wrapping all primitives_. We can follow this rule by using DTOs.
 
 ```php
 class Doctor
@@ -141,18 +142,17 @@ class Doctor
 }
 ```
 
-Some rules can be hard to follow them for example this one about *only two instance variables*. Usually in bigger project exist specialized services 
+Some rules can be hard to follow them for example this one about _only two instance variables_. Usually in bigger project exist specialized services
 doing to much things (the SRP - Single Responsibility Rule is break also) with a lot of some dependencies.
-
 
 # Architecture
 
-I am sure, all web developers knows at least one architecture pattern MVC (Model-View-Controller). When I write my first 
+I am sure, all web developers knows at least one architecture pattern MVC (Model-View-Controller). When I write my first
 code as a Junior developer I pasted a lot of code to controllers. I think a lot of developers made mistake like this.
-If you get some knowledge and experience, you will see the bad side of this solution. In my opinion each should meet this 
+If you get some knowledge and experience, you will see the bad side of this solution. In my opinion each should meet this
 problem to saw what's wrong with this architecture. I don't say it's bad patters but have some limitations. Many of developers
-cannot have idea *where should I put this code?* because they have only three official layers: *model, controller, view*.
-What's the most dangerous to put all logic code into controller? Then developers put business logic also to controller, 
+cannot have idea _where should I put this code?_ because they have only three official layers: _model, controller, view_.
+What's the most dangerous to put all logic code into controller? Then developers put business logic also to controller,
 model and view!. Developing in this way makes a lot off mess in our code and if we want to apply some little change
 we have to look it very careful! The code isn't reusable.
 
@@ -161,15 +161,16 @@ What we can do in this case ?
 I hope you heard about **SOLID** principles. These rules are independent from programming languages. Only interesting thing is
 this is the most popular requirement question for programmer. If you don't know this rules, hurry up! You should memorize it.
 
-Using SRP (Single Responsibility Principle) and DI (Dependency Inversion) we can easily decouple our logic and relation between 
-classes. 
+Using SRP (Single Responsibility Principle) and DI (Dependency Inversion) we can easily decouple our logic and relation between
+classes.
 
 Some steps of refactoring to make our code clean:
-* Moving methods to external class (service)
-* Not using lower level dependencies in a service
-* Depend in Abstractions, not on implementations (ex. create and interface)
-* Moving out Request handling out of the Controller
-* Entities refactoring (no getters/setters, guard invariants (valid domain state)...)
+
+- Moving methods to external class (service)
+- Not using lower level dependencies in a service
+- Depend in Abstractions, not on implementations (ex. create and interface)
+- Moving out Request handling out of the Controller
+- Entities refactoring (no getters/setters, guard invariants (valid domain state)...)
 
 Look at this example controller, please. Looks good, but can we do better ?
 
@@ -226,10 +227,11 @@ class Controller extends AbstractController
 ```
 
 What the cons of this solution:
-* If have a lot of endpoints it can be verrryy long class (thousands lines of code...)
-* The controller depends of Request class. 
-* We have to decide which type response we want JSON, XML or something else.
-* We have to parse incoming data, but maybe it not only from HTTP request ?
+
+- If have a lot of endpoints it can be verrryy long class (thousands lines of code...)
+- The controller depends of Request class.
+- We have to decide which type response we want JSON, XML or something else.
+- We have to parse incoming data, but maybe it not only from HTTP request ?
 
 There is a time for **Action Domain Responder**
 
@@ -244,11 +246,12 @@ And the MVC pattern
 I am not a super expert in Symfony framework but some Docplanner created a blog post about
 implementation ADR [here](https://medium.com/swlh/implementing-action-domain-responder-pattern-with-symfony-606539eea3a7)
 
-But the main core of ADR is above. The main action class has a dependency injection with are *Doctors* and *DoctorFactory*.
-Focus on remember to using *interfaces*. The one thing is strictly tie with framework is an this *annotation*. 
+But the main core of ADR is above. The main action class has a dependency injection with are _Doctors_ and _DoctorFactory_.
+Focus on remember to using _interfaces_. The one thing is strictly tie with framework is an this _annotation_.
 This action looks very clear, the input and output are specified DTO classes.
 ![add_doctor_action](./add_doctor_action.png)
 DTO of input.
+
 ```php
 <?php declare(strict_types=1);
 
@@ -294,6 +297,7 @@ final class AddDoctorInput
     }
 }
 ```
+
 Dto of output. Very simple to use it to make an system response in each kind of: JSON, XML etc.
 
 ```php
@@ -317,7 +321,6 @@ final class AddDoctorOutput
 }
 ```
 
-
 How look controller now ? You have right - it's not necessary.
 
 ```php
@@ -337,7 +340,7 @@ class Controller extends AbstractController
 }
 ```
 
-_This post is a some shortcut to memorize these things. 
+_This post is a some shortcut to memorize these things.
 It can looks a little chaotic but it's first post for 2021._
 
 Full presentation: [here](https://docs.google.com/presentation/d/1RkrPrKNUL1DVmHuRFA6RC5eHPRG0xUiNsZLEfI0CZzw/edit#slide=id.gaeea1ef32b_1_1)

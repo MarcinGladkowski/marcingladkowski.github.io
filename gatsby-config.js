@@ -9,7 +9,7 @@ module.exports = {
     siteUrl: `https://marcingladkowski.pl`,
     social: {
       linkedin: `https://www.linkedin.com/in/marcingladkowski`,
-      github: `https://github.com/MarcinGladkowski`
+      github: `https://github.com/MarcinGladkowski`,
     },
   },
   plugins: [
@@ -72,7 +72,7 @@ module.exports = {
         stripMetadata: true,
         defaultQuality: 50,
       },
-    },   
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

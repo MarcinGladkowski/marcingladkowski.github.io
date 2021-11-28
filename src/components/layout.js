@@ -11,7 +11,7 @@ const Layout = ({ location, title, children }) => {
       <h1 className="main-heading">
         <Link to="/">{title}</Link>
       </h1>
-      <ol className='main-menu'>
+      <ol className="main-menu">
         <Link to="/">Blog</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
@@ -25,9 +25,7 @@ const Layout = ({ location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Marcin Gładkowski
-      </footer>
+      <footer>© {new Date().getFullYear()}, Marcin Gładkowski</footer>
     </div>
   )
 }

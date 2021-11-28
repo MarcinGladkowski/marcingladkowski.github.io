@@ -1,8 +1,5 @@
 ---
-slug: about
 title: About
-date: "2020-05-28"
-type: page
 ---
 
 Hello everyone! I have been coding for the past few years and it's become my **passion**. I try to learn something new every day. I have been thinking about writing a blog about programming and this is the outcome of this thought. I hope these tips, based off of my experience, will help you want to learn about programming. If you read this description and you want help coding something new, please write to me.
@@ -32,5 +29,6 @@ I love to ride on bike, go swimming and running.
 
 Each year I learn new things and visit new places with my lovely girlfriend. And one more thing! - I love animals. My dog's name is JSON. :)
 
-_Regards_
-_Marcin_
+Best regards,
+
+Marcin

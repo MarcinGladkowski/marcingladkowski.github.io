@@ -14,9 +14,7 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <Seo title="All posts" />
         <Bio />
-        <p>
-          No blog posts found.
-        </p>
+        <p>No blog posts found.</p>
       </Layout>
     )
   }
@@ -70,9 +68,9 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: {frontmatter: {type: {eq: "post"}}}
+      filter: { frontmatter: { type: { eq: "post" } } }
       sort: { fields: [frontmatter___date], order: DESC }
-      ) {
+    ) {
       nodes {
         excerpt
         fields {
