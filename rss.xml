@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Nov 2021 17:21:06 GMT</lastBuildDate><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on: marcingladkowski@gmail.com Linkedin Github]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on:&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 27 Dec 2021 14:52:34 GMT</lastBuildDate><item><title><![CDATA[About]]></title><description><![CDATA[Hello everyone! I have been coding for the past few years and it’s become my passion. I try to learn something new every day. I have been…]]></description><link>https://marcingladkowski.pl/about/</link><guid isPermaLink="false">https://marcingladkowski.pl/about/</guid><content:encoded>&lt;p&gt;Hello everyone! I have been coding for the past few years and it’s become my &lt;strong&gt;passion&lt;/strong&gt;. I try to learn something new every day. I have been thinking about writing a blog about programming and this is the outcome of this thought. I hope these tips, based off of my experience, will help you want to learn about programming. If you read this description and you want help coding something new, please write to me.&lt;/p&gt;
+&lt;p&gt;I started coding with &lt;strong&gt;Javascript&lt;/strong&gt; and &lt;strong&gt;PHP&lt;/strong&gt;. Until today &lt;strong&gt;PHP&lt;/strong&gt; is my main programming language.
+Since 2020, I have also been trained in &lt;strong&gt;Python&lt;/strong&gt;. I really love to learn new programming languages and explore ones I am trained in!
+Usually I participate in Coding Dojo Silesia coding events. It’s great to code with others and
+discuss the codes afterwards. Kata’s are the best exercises to practice coding.&lt;/p&gt;
+&lt;p&gt;Another way I try to learn about programming is through reading books. Two of the best authors are Uncle Bob and Gynvael Coldwind.&lt;/p&gt;
+&lt;p&gt;I am also enroll to many programming events. I travel throughout Poland to hear about the newest features and ideas. For example: PHPers Summit (Poznań), 4Developers (Warsaw), BoilingFrogs (Wroclaw) etc.&lt;/p&gt;
+&lt;p&gt;I have also been inspired to create IoT projects. I built my own air pollution sensor - &lt;a href=&quot;https://marcin.aqi.eco/en&quot;&gt;current sensor data&lt;/a&gt;
+according with &lt;a href=&quot;http://luftdaten.org.pl/&quot;&gt;luftdaten&lt;/a&gt; data.&lt;/p&gt;
+&lt;p&gt;My other plans are to contribute to open source projects and to join in hackathona.&lt;/p&gt;
+&lt;p&gt;Now I can describe myself from different angle.&lt;/p&gt;
+&lt;p&gt;But I do not like only sitting behind computer screen!&lt;/p&gt;
+&lt;p&gt;I am a really big fan of motorsports of every kind ex.
+formula one, rallying, racing - doesn’t matter! I very often practicing on indoor and outdoor go karts. I very often practice at indoor and outdoor go karting tracks.&lt;/p&gt;
+&lt;p&gt;I love to ride on bike, go swimming and running.&lt;/p&gt;
+&lt;p&gt;Each year I learn new things and visit new places with my lovely girlfriend. And one more thing! - I love animals. My dog’s name is JSON. :)&lt;/p&gt;
+&lt;p&gt;Best regards,&lt;/p&gt;
+&lt;p&gt;Marcin&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on: marcingladkowski@gmail.com Linkedin Github]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;mailto:marcingladkowski@gmail.com&quot;&gt;marcingladkowski@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.linkedin.com/in/marcingladkowski&quot;&gt;Linkedin&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
@@ -59,9 +76,58 @@ all kind of cooperation:&lt;/p&gt;
 &lt;h4&gt;Additional activities/skills&lt;/h4&gt;
 &lt;hr&gt;
 &lt;ul&gt;
-&lt;li&gt;English (B2), &lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github account&lt;/a&gt;, participant of Coding Dojo Silesia, participant  WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit, PHPcon, Hacktoberfest (2019).&lt;/li&gt;
+&lt;li&gt;English (B2), &lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github account&lt;/a&gt;, participant of Coding Dojo Silesia, participant WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit, PHPcon, Hacktoberfest (2019).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Simple test object factory]]></title><description><![CDATA[Today I want to present you very simple idea to creating entities objects for your tests.
+&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Symfony where is your TDD?]]></title><description><![CDATA[Last months I trying to following on rule “Write tests first!“. Even if the task is small or trivial I trying to test it. Why I didn’t…]]></description><link>https://marcingladkowski.pl/where-is-TDD/</link><guid isPermaLink="false">https://marcingladkowski.pl/where-is-TDD/</guid><pubDate>Mon, 27 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last months I trying to following on rule “Write tests first!“. Even if the task is small or trivial I trying to test it. Why I didn’t working like this ?
+I have a mindset about tests: I have to setup framework for it - it takes time, I have to write a lot of extra code and keep it SOLID as production code - it takes time,
+I have to maintain it - it takes time! and so on… But what you receive ? What is a holy grail of having tests ? It’s also time! You save it when you have change
+business rules, or you fixed a bug. One command and status of application is displaying for you - SUCCES or FAILURE.&lt;/p&gt;
+&lt;p&gt;but … Let’s start writing tests for new class (service)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;SomeService&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name return-type&quot;&gt;boolean&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Oh it’s look great!&lt;/p&gt;
+&lt;p&gt;Now, we will write tests for it. Usually, I writing tests for instantiating class by autowiting from Symfony framework.&lt;/p&gt;
+&lt;p&gt;ok! Challenge accepted!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;
+&lt;span class=&quot;token keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;token package&quot;&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Bundle&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;FrameworkBundle&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Test&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;KernelTestCase&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;SomeServiceTest&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;KernelTestCase&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;setUp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;void&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword static-context&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bootKernel&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;testShouldReturnInstanceOfService&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;void&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword static-context&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;assertInstanceOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;token class-name static-context&quot;&gt;SomeService&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token keyword static-context&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$container&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name static-context&quot;&gt;SomeService&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And let’s try to run this test by&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;php bin/console --env&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then we get:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;DependencyInjection&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Exception&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;ServiceNotFoundException &lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt;
+The &lt;span class=&quot;token string&quot;&gt;&quot;App\Service\SomeService&quot;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;service&lt;/span&gt; or &lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; has been removed or inlined when the container was compiled.
+You should either &lt;span class=&quot;token function&quot;&gt;make&lt;/span&gt; it public, or stop using the container directly and use dependency injection instead.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;First time, when I received this exception I tried to find an error in services configuration but I found nothing, because everyting should be configured automaticaly (autowiring).&lt;/p&gt;
+&lt;p&gt;How to resolve it fast and efficiently ?&lt;/p&gt;
+&lt;p&gt;Just add this testing class to some other, where it will be using.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name-definition class-name&quot;&gt;IndexController&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AbstractController&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token attribute&quot;&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;#[&lt;/span&gt;&lt;span class=&quot;token attribute-content&quot;&gt;&lt;span class=&quot;token attribute-class-name class-name&quot;&gt;Route&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token attribute-class-name class-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;index&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token delimiter punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name type-declaration&quot;&gt;SomeService&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$service&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name return-type&quot;&gt;Response&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;OK&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And then tests will start working and autowiring start returning this service!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Simple test object factory]]></title><description><![CDATA[Today I want to present you very simple idea to creating entities objects for your tests.
 In a lot of PHP projects we have entities in basic…]]></description><link>https://marcingladkowski.pl/simple-object-factory/</link><guid isPermaLink="false">https://marcingladkowski.pl/simple-object-factory/</guid><pubDate>Sat, 08 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Today I want to present you very simple idea to creating entities objects for your tests.
 In a lot of PHP projects we have entities in basic style. I mean these entities has many properties and getters,
 constuctor with many requirements parameters. To creating these entities for tests purposes you can create an
@@ -130,13 +196,13 @@ instance using MockObject (from testing libraries like PHPunit), Object Mother o
     &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword type-declaration&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$isActive&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
-    
+
     &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;CustomName&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
         &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;email&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;CustomEmail&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
         &lt;span class=&quot;token variable&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token comment&quot;&gt;// ... &lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
     &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;withAnName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword type-hint&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;self&lt;/span&gt;
@@ -258,7 +324,7 @@ objects with some relations together. In example below I added some relation wit
             &lt;span class=&quot;token class-name static-context&quot;&gt;AddressSimpleFactory&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// ...    &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Of course, we can create this in many others ways. In this post I show how we can play with testing
 objects. The other thinks is creating more advanced factory to cover some object creation behind some
 interface to prevent some problems when the rules of initialization of tests object has change.&lt;/p&gt;
@@ -894,7 +960,7 @@ and what i want to achieve in 2021.&lt;/p&gt;
 &lt;h3&gt;Jak napisać wystarczająco dobry skrypt powłoki ?&lt;/h3&gt;
 &lt;p&gt;Należy pamiętać, że dobrze napisany skrypt urchoni nas przed problemami. Gdy zrobimy to niedbale możemy stracić ważne dla nas pliki czy uszkodzić nasz system. Mniejszy problem, gdy będzie to tylko nasze lokalne środowisko.&lt;/p&gt;
 &lt;p&gt;Rady opisane poniżej będą zaczerpnięte z wpisu na blogu &lt;a href=&quot;https://devopsiarz.pl/bash/tutorial-kurs-pisania-dobrych-skryptow-bash-wstep-dobre-praktyki-shellcheck/&quot;&gt;https://devopsiarz.pl - wpis&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Po napisaniu własnego skryptu warto użyć narzędzia do sprawdzenia poprawności składni i potencjalnych problemów. Polecane jest narzędzie &lt;strong&gt;shellcheck&lt;/strong&gt;. Do instalacji na &lt;em&gt;Ubuntu&lt;/em&gt; wystarczy użyć standardowego managera paczek &lt;code class=&quot;language-text&quot;&gt;sudo apt-get install  -y shellcheck&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Po napisaniu własnego skryptu warto użyć narzędzia do sprawdzenia poprawności składni i potencjalnych problemów. Polecane jest narzędzie &lt;strong&gt;shellcheck&lt;/strong&gt;. Do instalacji na &lt;em&gt;Ubuntu&lt;/em&gt; wystarczy użyć standardowego managera paczek &lt;code class=&quot;language-text&quot;&gt;sudo apt-get install -y shellcheck&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Użyjemy tego narzędzia do analizy skryptu, którego napisałem ostatnii na potrzeby dodawania nowego pliku z wpisem dla Jeckyll.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token shebang important&quot;&gt;#!/bin/bash&lt;/span&gt;
 
@@ -909,7 +975,7 @@ and what i want to achieve in 2021.&lt;/p&gt;
 &lt;span class=&quot;token assign-left variable&quot;&gt;postFile&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$date&lt;/span&gt;-&lt;span class=&quot;token variable&quot;&gt;${title&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;-}&lt;/span&gt;.md&quot;&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
-   &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Post with name &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; exists!&quot;&lt;/span&gt; 
+   &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Post with name &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; exists!&quot;&lt;/span&gt;
    &lt;span class=&quot;token comment&quot;&gt;# want to delete ?&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;fi&lt;/span&gt;
 
@@ -934,7 +1000,7 @@ In ./scripts/newPost.sh line &lt;span class=&quot;token number&quot;&gt;13&lt;/s
 &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
         ^-------^ SC2086: Double quote to prevent globbing and word splitting.
 
-Did you mean: 
+Did you mean:
 &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
 
 
@@ -942,7 +1008,7 @@ In ./scripts/newPost.sh line &lt;span class=&quot;token number&quot;&gt;23&lt;/s
 &lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; -a &lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;HEADERS
        ^--------------^ SC2086: Double quote to prevent globbing and word splitting.
 
-Did you mean: 
+Did you mean:
 &lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; -a &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;HEADERS
 
 For &lt;span class=&quot;token function&quot;&gt;more&lt;/span&gt; information:
@@ -1011,4 +1077,4 @@ formula one, rallying, racing - doesn’t matter! I very often practicing on ind
 że musi to być długa…]]></description><link>https://marcingladkowski.pl/hello-world/</link><guid isPermaLink="false">https://marcingladkowski.pl/hello-world/</guid><pubDate>Sat, 23 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Hello world&lt;/strong&gt;, to musi być zawartość każdego pierwszego wpisu. Nie raz już blogowałem, ale zawsze wydawało mi się,
 że musi to być długa rozbudowana forma. Za radami tagu #nocode postanowiłem znowu postawić blog jednak na krótsze i
 częstsze treści. Github + Jeckyll + Markdown idealnie się do tego nadają.&lt;/p&gt;
-&lt;p&gt;Marcin&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;Marcin&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Where yours api doc?]]></title><link>https://marcingladkowski.pl/where-your-api-doc/</link><guid isPermaLink="false">https://marcingladkowski.pl/where-your-api-doc/</guid><pubDate>Invalid Date</pubDate><content:encoded></content:encoded></item></channel></rss>
