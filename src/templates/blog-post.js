@@ -14,8 +14,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
   let disqusConfig = {
     url: `${data.site.siteMetadata.siteUrl+location.pathname}`,
-    identifier: post.id,
-    title: post.title,
+    identifier: post.id
   }
 
   return (
