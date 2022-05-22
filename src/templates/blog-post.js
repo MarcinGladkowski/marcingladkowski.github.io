@@ -67,8 +67,6 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
-
-      <CommentCount config={disqusConfig} placeholder={'...'} />
       <Disqus config={disqusConfig} />
     </Layout>
   )
@@ -84,7 +82,8 @@ export const pageQuery = graphql`
   ) {
     site {
       siteMetadata {
-        title
+        title,
+        siteUrl
       }
     }
     markdownRemark(id: { eq: $id }) {
