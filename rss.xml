@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 22 May 2022 16:16:56 GMT</lastBuildDate><item><title><![CDATA[About]]></title><description><![CDATA[Hello everyone! I have been coding for the past few years and it’s become my passion. I try to learn something new every day. I have been…]]></description><link>https://marcingladkowski.pl/about/</link><guid isPermaLink="false">https://marcingladkowski.pl/about/</guid><content:encoded>&lt;p&gt;Hello everyone! I have been coding for the past few years and it’s become my &lt;strong&gt;passion&lt;/strong&gt;. I try to learn something new every day. I have been thinking about writing a blog about programming and this is the outcome of this thought. I hope these tips, based off of my experience, will help you want to learn about programming. If you read this description and you want help coding something new, please write to me.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 22 May 2022 18:43:10 GMT</lastBuildDate><item><title><![CDATA[About]]></title><description><![CDATA[Hello everyone! I have been coding for the past few years and it’s become my passion. I try to learn something new every day. I have been…]]></description><link>https://marcingladkowski.pl/about/</link><guid isPermaLink="false">https://marcingladkowski.pl/about/</guid><content:encoded>&lt;p&gt;Hello everyone! I have been coding for the past few years and it’s become my &lt;strong&gt;passion&lt;/strong&gt;. I try to learn something new every day. I have been thinking about writing a blog about programming and this is the outcome of this thought. I hope these tips, based off of my experience, will help you want to learn about programming. If you read this description and you want help coding something new, please write to me.&lt;/p&gt;
 &lt;p&gt;I started coding with &lt;strong&gt;Javascript&lt;/strong&gt; and &lt;strong&gt;PHP&lt;/strong&gt;. Until today &lt;strong&gt;PHP&lt;/strong&gt; is my main programming language.
 Since 2020, I have also been trained in &lt;strong&gt;Python&lt;/strong&gt;. I really love to learn new programming languages and explore ones I am trained in!
 Usually I participate in Coding Dojo Silesia coding events. It’s great to code with others and
@@ -78,7 +78,106 @@ all kind of cooperation:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;English (B2), &lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github account&lt;/a&gt;, participant of Coding Dojo Silesia, participant WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit, PHPcon, Hacktoberfest (2019).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</content:encoded></item><item><title><![CDATA[DW Gym - 3 day python challenge]]></title><description><![CDATA[Today I reveived certyficate of finish 3 day python challenge organized by Data Workshop. The challenge was in december of previous year but…]]></description><link>https://marcingladkowski.pl/dw_gym/</link><guid isPermaLink="false">https://marcingladkowski.pl/dw_gym/</guid><pubDate>Tue, 18 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Symfony Fast Track]]></title><description><![CDATA[Continuing learn the Symfony framework I’m always looking for new possibilities and ideas. Learning the Symfony framework we have, as in…]]></description><link>https://marcingladkowski.pl/symfony-fast-track/</link><guid isPermaLink="false">https://marcingladkowski.pl/symfony-fast-track/</guid><pubDate>Sat, 21 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Continuing learn the Symfony framework I’m always looking for new possibilities and ideas. Learning the Symfony framework we have, as in other
+tools a few ideas how to get main features/good practices. We can read great &lt;a href=&quot;https://symfony.com/doc/current/index.html&quot;&gt;documentation&lt;/a&gt;, register in &lt;a href=&quot;https://symfonycasts.com/&quot;&gt;SymfonyCasts&lt;/a&gt;,
+do own project, watch a lot of videos from Symfony conferences, and of course attend in these conferences but we have also another way to get some knowledge and get main features.&lt;/p&gt;
+&lt;p&gt;It’s &lt;a href=&quot;https://symfony.com/book&quot;&gt;Symfony Fast Track book&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 301px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ac0d200d679052e99876dacfd6075e55/fb933/symfony_fast_track.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 150.63291139240508%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAABQBQCdASoUAB4APsVQoUunpKMhsAwA8BiJZgCdAYyU3FHBzJ+vpAkKcw6aRbOha9/I/oAA/u0QOJXcvi0PW/QeuUPlzEmb7z0wPQWjcNbMGoY8rE2Zrll9KH6K+nFqrHUpS7AxaDcZkHjo0Morf74TOvdJ+hhZeEVDvwngKFDCT2QHHpJeDFXr1I7Rl+cS4W67C6u9jRaHZ2QjeIj2DLmPsym8nEELzsdLSxJEBmhqv3dpTcrekebjpQRHL8kfaOjNOVcJkUgEKL5Qt0kGyx6r5xZnpWK1UyaKuB9wxXUAAA==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;symfony_fast_track_book&quot;
+        title=&quot;symfony_fast_track_book&quot;
+        src=&quot;/static/ac0d200d679052e99876dacfd6075e55/fb933/symfony_fast_track.png&quot;
+        srcset=&quot;/static/ac0d200d679052e99876dacfd6075e55/c26ae/symfony_fast_track.png 158w,
+/static/ac0d200d679052e99876dacfd6075e55/fb933/symfony_fast_track.png 301w&quot;
+        sizes=&quot;(max-width: 301px) 100vw, 301px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I decided to go through everything step by step. What I learned/reminded?&lt;/p&gt;
+&lt;h3&gt;Xdebug extra option&lt;/h3&gt;
+&lt;p&gt;By adding &lt;code class=&quot;language-text&quot;&gt;xdebug.file_link_format&lt;/code&gt; option you can specify your IDE, and when Symfony displays error stack trace you can go to file and line straight away.&lt;/p&gt;
+&lt;h3&gt;Recipes additional behavioral&lt;/h3&gt;
+&lt;p&gt;Marks like for ex: &lt;code class=&quot;language-text&quot;&gt;###&amp;lt; doctrine/doctrine-bundle ###&lt;/code&gt; were added by the recipes/packages. Then is easy to remove also when package will be removed.&lt;/p&gt;
+&lt;p&gt;The recipes also adding &lt;code class=&quot;language-text&quot;&gt;docker-compose&lt;/code&gt; configuration for new containers when we need a database.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;###&gt; symfony/mailer ###&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;mailer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; schickling/mailcatcher
+    &lt;span class=&quot;token key atrule&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1025&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1080&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;###&amp;lt; symfony/mailer ###&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Packages are upgrading&lt;/h3&gt;
+&lt;p&gt;In a lot of projects I’m using older packages. Now I realized the some common packages have some major upgrades. Sometime is good to start new project to know the newest changes. It can be frustrating sometimes.&lt;/p&gt;
+&lt;p&gt;Execute migrations with newer version on command &lt;code class=&quot;language-text&quot;&gt;php bin/console doctrine:migrations:execute &apos;DoctrineMigrations\Version20220418170145&apos; --up&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Previously was (version 2):
+&lt;code class=&quot;language-text&quot;&gt;php bin/console doctrine:migrations:execute 20220418170145 --up&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;Dependency Injection Container&lt;/h3&gt;
+&lt;p&gt;Entities are Data Object and its not be right to inject them as services&lt;/p&gt;
+&lt;p&gt;Previously auto generated event subscriber was instantiated by framework because of the interface which class implements. Interface tells the framework how to create the service.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/andreia/symfony-cheat-sheets/blob/master/Symfony4/services_en_42.pdf&quot;&gt;Symfony Services Cheat Sheet&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Testing&lt;/h3&gt;
+&lt;p&gt;Writing &lt;strong&gt;dataProviders&lt;/strong&gt; functions You haven’t returned a simple array. It’s an iterable type hint. It’s mean you can simply write a more readable generator using the yield keyword instead of associative arrays. For ex.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;php&quot;&gt;&lt;pre class=&quot;language-php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;someDataProvider&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword return-type&quot;&gt;iterable&lt;/span&gt;&lt;span class=&quot;token string backtick-quoted-string&quot;&gt;``&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// buid some data&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;key&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;data1&apos;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;key&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token string single-quoted-string&quot;&gt;&apos;data2&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In Symfony components like http you can find classes to mock it easily. For ex. &lt;code class=&quot;language-text&quot;&gt;MockHttpClient&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Creating a separate DB for tests, for development just create new database on db container.
+Command: &lt;code class=&quot;language-text&quot;&gt;php bin/console doctrine:database:create --env=test&lt;/code&gt; creates test database&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Created database &lt;span class=&quot;token string&quot;&gt;&quot;app_test&quot;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; connection named default&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;then you can execute migrations:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt; php bin/console doctrine:migrations:migrate -n --env&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Caching&lt;/h3&gt;
+&lt;p&gt;Method &lt;code class=&quot;language-text&quot;&gt;setSharedMaxAge()&lt;/code&gt; using for reverse proxy cache&lt;/p&gt;
+&lt;p&gt;Method &lt;code class=&quot;language-text&quot;&gt;setMaxAge()&lt;/code&gt; is usable for browser cache\&lt;/p&gt;
+&lt;p&gt;Cache header x-symfony-cache: on statuses: &lt;code class=&quot;language-text&quot;&gt;:miss, :fresh, :store&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Http method &lt;code class=&quot;language-text&quot;&gt;PURGE&lt;/code&gt;. This method doesn’t exists in RFC but is implemented caching tools like Varnish&lt;/p&gt;
+&lt;h3&gt;Explore Symfony components&lt;/h3&gt;
+&lt;p&gt;In this tutorial I had a chance to try the component &lt;a href=&quot;https://symfony.com/doc/current/components/workflow.html&quot;&gt;Workflow&lt;/a&gt;. It’s very
+helpful to manage workflow or finite state machine. This example shows me there are a lot of Symfony Components which resolved the most common problems. Don’t reinvent the wheel and check if someone implement what you want to achieve.&lt;/p&gt;
+&lt;h3&gt;Be lazy and use MakerBundle&lt;/h3&gt;
+&lt;p&gt;Instead of writing classes/services by hand, it’s great do generate them. If the class is relatively easily there is no problem. What if you want to create
+specialized event listener? It’s an elegant solution which really helps you.&lt;/p&gt;
+&lt;p&gt;Component with interactive prompts show you all possibilities:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt; Choose a class name &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; your event subscriber &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e.g. ExceptionSubscriber&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+ &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; ExampleSubscriber
+
+ Suggested Events:
+ * kernel.controller &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;HttpKernel&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Event&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;ControllerEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+ * kernel.controller_arguments &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;HttpKernel&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Event&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;ControllerArgumentsEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+ * kernel.exception &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;HttpKernel&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Event&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;ExceptionEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+ * kernel.finish_request &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;HttpKernel&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Event&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;FinishRequestEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+ * kernel.request &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;HttpKernel&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Event&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;RequestEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+ * kernel.response &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;HttpKernel&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Event&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;ResponseEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+ * kernel.terminate &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;HttpKernel&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Event&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;TerminateEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+ * kernel.view &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;HttpKernel&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Event&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;ViewEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  What event &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; you want to subscribe to?:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Additional tools like ApiPlatform and EasyAdminBundle&lt;/h3&gt;
+&lt;p&gt;Are you creating API or management panel, which is a common implementation ? Don’t write it from a scratch.
+Check the most powerful packages like &lt;a href=&quot;https://api-platform.com/&quot;&gt;API Platform&lt;/a&gt; or &lt;a href=&quot;https://github.com/EasyCorp/EasyAdminBundle&quot;&gt;EasyAdminBundle&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Regards
+Marcin&lt;/p&gt;</content:encoded></item><item><title><![CDATA[DW Gym - 3 day python challenge]]></title><description><![CDATA[Today I reveived certyficate of finish 3 day python challenge organized by Data Workshop. The challenge was in december of previous year but…]]></description><link>https://marcingladkowski.pl/dw_gym/</link><guid isPermaLink="false">https://marcingladkowski.pl/dw_gym/</guid><pubDate>Tue, 18 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
     &gt;
