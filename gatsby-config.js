@@ -13,7 +13,14 @@ module.exports = {
     },
   },
   plugins: [
+    
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+          shortname: `marcingladkowski`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
