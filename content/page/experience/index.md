@@ -12,15 +12,15 @@ type: page
 
 ---
 
-- **XCaliber Poland Sp. z o.o.** / Programmer PHP (04.05.2020 - current, Katowice, Poland)
+- **Omarsys Poland Sp. z o.o. - [Comeon Group](https://pl.linkedin.com/company/comeon-group)** / Senior Programmer PHP (04.05.2020 - current, Katowice, Poland)
 
   Developing high scalability application in the gaming industry.
 
-  Technology stack: PHP (7+), JavaScript, Rest API, Soap, Soap UI, Unit Tests (PHPUnit), HTML, SCSS, Bootstrap, Postgres, GIT, SCRUM, Zend 2, Symfony, Zend Laminas, Doctrine ORM, AngularJS, Docker, Windows, Linux, DDD, Hexagonal Architecture, AWS, Business language: English.
+  Technology stack: PHP (7+, 8.1), JavaScript, Rest API, Soap, Soap UI, Unit Tests (PHPUnit), HTML, SCSS, Bootstrap, Postgres, GIT, SCRUM, Zend 2, Symfony 5.4 and 6.1, Zend Laminas, Doctrine ORM, AngularJS, Docker, Windows, Linux, DDD, Hexagonal Architecture, AWS, Business language: English.
 
 ---
 
-- **Swift Software Development Sp. z o. o.** / Programmer PHP (02.01.2018 – 30.04.2020), Katowice, Poland)
+- **[Swift Software Development Sp. z o. o.](https://pl.linkedin.com/company/swift-software-development)** / Programmer PHP (02.01.2018 – 30.04.2020), Katowice, Poland)
 
   Development application for outpatient clinic. Implementation for government solutions: Online Prescriptions, Online Sick Leave, Making Appointments, Notifications, Registrations
 
@@ -28,7 +28,7 @@ type: page
 
 ---
 
-- **IT Agency Servaq Sp. z o.o.** / Programmer PHP (17.08.2016 – 31.12.2017, Oświęcim, Poland)
+- **[IT Agency Servaq Sp. z o.o.](https://pl.linkedin.com/in/itagency-servaq-952a05101)** / Programmer PHP (17.08.2016 – 31.12.2017, Oświęcim, Poland)
 
   Created solutions for interactive agency . Developed applications: Company CRM, Application to Manage Sales, Creating Surveys, Solutions for e-Commerce.
 
@@ -54,6 +54,6 @@ type: page
 
 ---
 
-- English (B2), [Github account](https://github.com/MarcinGladkowski), participant of Coding Dojo Silesia, participant WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit, PHPcon, Hacktoberfest (2019).
+- English (B2), [Github account](https://github.com/MarcinGladkowski), participant of Coding Dojo Silesia, participant WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit (2021, 2022), PHPcon (2019), Hacktoberfest (2019)
 
 ---
