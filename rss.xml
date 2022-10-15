@@ -1,21 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 28 Jun 2022 19:51:14 GMT</lastBuildDate><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
-interesting issue, just write to me a message! I’m interesting into
-all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
-interesting issue, just write to me a message! I’m interesting into
-all kind of cooperation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Start a new project&lt;/li&gt;
-&lt;li&gt;Create new library&lt;/li&gt;
-&lt;li&gt;Help with refactoring&lt;/li&gt;
-&lt;li&gt;Help with programming/coding problems&lt;/li&gt;
-&lt;li&gt;Do a workshop&lt;/li&gt;
-&lt;li&gt;And others…&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on: marcingladkowski@gmail.com Linkedin Github]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;mailto:marcingladkowski@gmail.com&quot;&gt;marcingladkowski@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.linkedin.com/in/marcingladkowski&quot;&gt;Linkedin&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Experience]]></title><description><![CDATA[Profile I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also…]]></description><link>https://marcingladkowski.pl/experience/</link><guid isPermaLink="false">https://marcingladkowski.pl/experience/</guid><content:encoded>&lt;h4&gt;Profile&lt;/h4&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 15 Oct 2022 08:27:41 GMT</lastBuildDate><item><title><![CDATA[Experience]]></title><description><![CDATA[Profile I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also…]]></description><link>https://marcingladkowski.pl/experience/</link><guid isPermaLink="false">https://marcingladkowski.pl/experience/</guid><content:encoded>&lt;h4&gt;Profile&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also to spread it with others.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -23,15 +6,15 @@ all kind of cooperation:&lt;/p&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;XCaliber Poland Sp. z o.o.&lt;/strong&gt; / Programmer PHP (04.05.2020 - current, Katowice, Poland)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Omarsys Poland Sp. z o.o. - &lt;a href=&quot;https://pl.linkedin.com/company/comeon-group&quot;&gt;Comeon Group&lt;/a&gt;&lt;/strong&gt; / Senior Programmer PHP (04.05.2020 - current, Katowice, Poland)&lt;/p&gt;
 &lt;p&gt;Developing high scalability application in the gaming industry.&lt;/p&gt;
-&lt;p&gt;Technology stack: PHP (7+), JavaScript, Rest API, Soap, Soap UI, Unit Tests (PHPUnit), HTML, SCSS, Bootstrap, Postgres, GIT, SCRUM, Zend 2, Symfony, Zend Laminas, Doctrine ORM, AngularJS, Docker, Windows, Linux, DDD, Hexagonal Architecture, AWS, Business language: English.&lt;/p&gt;
+&lt;p&gt;Technology stack: PHP (7+, 8.1), JavaScript, Rest API, Soap, Soap UI, Unit Tests (PHPUnit), HTML, SCSS, Bootstrap, Postgres, GIT, SCRUM, Zend 2, Symfony 5.4 and 6.1, Zend Laminas, Doctrine ORM, AngularJS, Docker, Windows, Linux, DDD, Hexagonal Architecture, AWS, Business language: English.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Swift Software Development Sp. z o. o.&lt;/strong&gt; / Programmer PHP (02.01.2018 – 30.04.2020), Katowice, Poland)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://pl.linkedin.com/company/swift-software-development&quot;&gt;Swift Software Development Sp. z o. o.&lt;/a&gt;&lt;/strong&gt; / Programmer PHP (02.01.2018 – 30.04.2020), Katowice, Poland)&lt;/p&gt;
 &lt;p&gt;Development application for outpatient clinic. Implementation for government solutions: Online Prescriptions, Online Sick Leave, Making Appointments, Notifications, Registrations&lt;/p&gt;
 &lt;p&gt;Technology stack: PHP, JavaScript, XML, Rest API, Soap, Soap UI, Unit Tests (PHPUnit), HTML, SCSS, Bootstrap, MariaDB, MongoDB, GIT, SCRUM, Zend 2, Doctrine ORM, AngularJS, Docker, Windows, Linux&lt;/p&gt;
 &lt;/li&gt;
@@ -39,7 +22,7 @@ all kind of cooperation:&lt;/p&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;IT Agency Servaq Sp. z o.o.&lt;/strong&gt; / Programmer PHP (17.08.2016 – 31.12.2017, Oświęcim, Poland)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://pl.linkedin.com/in/itagency-servaq-952a05101&quot;&gt;IT Agency Servaq Sp. z o.o.&lt;/a&gt;&lt;/strong&gt; / Programmer PHP (17.08.2016 – 31.12.2017, Oświęcim, Poland)&lt;/p&gt;
 &lt;p&gt;Created solutions for interactive agency . Developed applications: Company CRM, Application to Manage Sales, Creating Surveys, Solutions for e-Commerce.&lt;/p&gt;
 &lt;p&gt;Technology stack: PHP, JavaScript, Rest API, Symfony, Doctrine ORM, MySQL, GIT, HTML, CSS, Bootstrap, Windows&lt;/p&gt;
 &lt;/li&gt;
@@ -59,9 +42,26 @@ all kind of cooperation:&lt;/p&gt;
 &lt;h4&gt;Additional activities/skills&lt;/h4&gt;
 &lt;hr&gt;
 &lt;ul&gt;
-&lt;li&gt;English (B2), &lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github account&lt;/a&gt;, participant of Coding Dojo Silesia, participant WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit, PHPcon, Hacktoberfest (2019).&lt;/li&gt;
+&lt;li&gt;English (B2), &lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github account&lt;/a&gt;, participant of Coding Dojo Silesia, participant WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit (2021, 2022), PHPcon (2019), Hacktoberfest (2019)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</content:encoded></item><item><title><![CDATA[The next step is... AWS Step Functions]]></title><description><![CDATA[Last time I participated in workshops about AWS Step Functions. This service provided by AWS was created for implementing flow of
+&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on: marcingladkowski@gmail.com Linkedin Github]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;mailto:marcingladkowski@gmail.com&quot;&gt;marcingladkowski@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.linkedin.com/in/marcingladkowski&quot;&gt;Linkedin&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
+interesting issue, just write to me a message! I’m interesting into
+all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
+interesting issue, just write to me a message! I’m interesting into
+all kind of cooperation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start a new project&lt;/li&gt;
+&lt;li&gt;Create new library&lt;/li&gt;
+&lt;li&gt;Help with refactoring&lt;/li&gt;
+&lt;li&gt;Help with programming/coding problems&lt;/li&gt;
+&lt;li&gt;Do a workshop&lt;/li&gt;
+&lt;li&gt;And others…&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[The next step is... AWS Step Functions]]></title><description><![CDATA[Last time I participated in workshops about AWS Step Functions. This service provided by AWS was created for implementing flow of
 our…]]></description><link>https://marcingladkowski.pl/step-functions-workshop/</link><guid isPermaLink="false">https://marcingladkowski.pl/step-functions-workshop/</guid><pubDate>Tue, 28 Jun 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last time I participated in workshops about &lt;a href=&quot;&quot;&gt;AWS Step Functions&lt;/a&gt;. This service provided by AWS was created for implementing flow of
 our application and close the paths in &lt;a href=&quot;https://en.wikipedia.org/wiki/Finite-state_machine&quot;&gt;state machine&lt;/a&gt;. This service can be created and maintained from Serverless Framework which
 is one of the most popular frameworks to manage cloud resources and applications. The mentors created a repository to start our journey and resolve tasks during 2 days workshop.&lt;/p&gt;
