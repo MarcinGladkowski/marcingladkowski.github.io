@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Nov 2022 12:46:25 GMT</lastBuildDate><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 21 Nov 2023 16:07:57 GMT</lastBuildDate><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
 interesting issue, just write to me a message! I’m interesting into
 all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
 interesting issue, just write to me a message! I’m interesting into
@@ -75,12 +75,12 @@ all kind of cooperation:&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABQBACdASoUAA8APtFUo0uoJKMhsAgBABoJQBOmUGMACMTBSK3upMgQJvgAAM3gmy9PECIRsD2aN68W9BaQl8itvS5iibmAj7uUKSz6kcaoaOacD4p8TSbmGEkf9sifVOokMZJQcrQe1wXK96okOlPoKq50Jp9uSwsqJC2mxQkbLwuB5HW7caK8aRR4FBuJzFg1AMAA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBACdASoUAA8APtFUo0uoJKMhsAgBABoJQBOmUGMACMTRM3vxFKAFcADN4Ju02+b2zjwJJBPd47vI7CP+VGUvIVnGoNoQdd6gt/tHODbVwHE2EaW+UV0S87zr6REzc3t/KQqydUj4FlozfTILCR7aLcY81dgAETRURTotW0Zz7QVECDEcugTWrvUG4nMWDUAwAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;presentation_1&quot;
-        title=&quot;presentation_1&quot;
+        title=&quot;&quot;
         src=&quot;/static/b4d0055fe31a890293612fef3ec4d444/828fb/presentation_1.jpg&quot;
         srcset=&quot;/static/b4d0055fe31a890293612fef3ec4d444/ff44c/presentation_1.jpg 158w,
 /static/b4d0055fe31a890293612fef3ec4d444/a6688/presentation_1.jpg 315w,
@@ -112,12 +112,12 @@ of see.&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQAwCdASoUAA8APtFWpEuoJKOhsAgBABoJZwC7AAw4pFMrFtAAANnJK6WvznvpOZQ5glxlXajATUL6LTvUD7eqZXSNsUpW91rA3ySp5oaZQuUHHzRNEAAA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoUAA8APtFUpEuoJKOhsAgBABoJZwC7AAw4pFY1oUKDAADbocGcmmvOe+k5lDmCXGVdqMBNQvotO9QOOE9c0Nsq1B88458rFT4kBcyC8VHBuI5/RNEAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;presentation_2&quot;
-        title=&quot;presentation_2&quot;
+        title=&quot;&quot;
         src=&quot;/static/f3d23b6d0dee6a15a7dde4b49fab2622/828fb/presentation_2.jpg&quot;
         srcset=&quot;/static/f3d23b6d0dee6a15a7dde4b49fab2622/ff44c/presentation_2.jpg 158w,
 /static/f3d23b6d0dee6a15a7dde4b49fab2622/a6688/presentation_2.jpg 315w,
@@ -246,12 +246,12 @@ to &lt;strong&gt;calculateScore&lt;/strong&gt; at once, like one event in lambda
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACQBACdASoUABQAPtFcok2oJSKiKA1RABoJagAALa5tUUF4dDybifpejmhoVZAA/vYJxyIhqtfcNLat+IMrXVJV6EBZkJJgqccxnNhvPz5LfrzDaksNZ/axdXjrj66Q/nnjUKm3x67gCxjcQWrcGXH+DDwX2sP2kRR0B6ycO/6F6sXV6xoH7L4WYIK8SsfAAAA=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAwBACdASoUABQAPtFep0+oJKMiKAgBABoJagC/Sf/gHf6+hBJGvNn9nOQA/vYJxwMFfEvtHUSGz+1czfFInQp197mC9ndK34XJsqDyzdZvZDeDPaEaQ//IZ7WFZ0TULD1xr8GbXHaAmr4/Y94rf4yOz3OayO4fMrx/2NcY/LOxSvon5t1DXl0lp+ds7nd1nggAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;step_functions_1&quot;
-        title=&quot;step_functions_1&quot;
+        title=&quot;&quot;
         src=&quot;/static/dddc482f54ece7bfbbb1f7c912a96449/f058b/step_functions_1.png&quot;
         srcset=&quot;/static/dddc482f54ece7bfbbb1f7c912a96449/c26ae/step_functions_1.png 158w,
 /static/dddc482f54ece7bfbbb1f7c912a96449/6bdcf/step_functions_1.png 315w,
@@ -283,12 +283,12 @@ do own project, watch a lot of videos from Symfony conferences, and of course at
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 150.63291139240508%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAABQBQCdASoUAB4APsVQoUunpKMhsAwA8BiJZgCdAYyU3FHBzJ+vpAkKcw6aRbOha9/I/oAA/u0QOJXcvi0PW/QeuUPlzEmb7z0wPQWjcNbMGoY8rE2Zrll9KH6K+nFqrHUpS7AxaDcZkHjo0Morf74TOvdJ+hhZeEVDvwngKFDCT2QHHpJeDFXr1I7Rl+cS4W67C6u9jRaHZ2QjeIj2DLmPsym8nEELzsdLSxJEBmhqv3dpTcrekebjpQRHL8kfaOjNOVcJkUgEKL5Qt0kGyx6r5xZnpWK1UyaKuB9wxXUAAA==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 150.63291139240508%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAACQBQCdASoUAB4APsVSoUunpSMhsAwA8BiJZgCsBAgOWwhI9jCOBGylMsIjGz4oUIQAxr8TGAD+7Q8yQgd7ItQUYG3qk17L1itdesy3LPXF4wo6N9+h8Kdw3PEkMhQKomm9s6pzMrT8abOMkEOoTU3r61ZafZE8hFUZQUSCL0NVGyAvp33AVmqS83a/uwGK2GB1LvcMyUWDeIKVeXmyU80RHCt7Ivvonnaz46EItkh3WHyJPw93b3+wsJ+wjwQhXgz+acIkhn0jsjDwDKATT+loHLspfFcD9dYjAOHw0AA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;symfony_fast_track_book&quot;
-        title=&quot;symfony_fast_track_book&quot;
+        title=&quot;&quot;
         src=&quot;/static/ac0d200d679052e99876dacfd6075e55/fb933/symfony_fast_track.png&quot;
         srcset=&quot;/static/ac0d200d679052e99876dacfd6075e55/c26ae/symfony_fast_track.png 158w,
 /static/ac0d200d679052e99876dacfd6075e55/fb933/symfony_fast_track.png 301w&quot;
@@ -333,7 +333,7 @@ do own project, watch a lot of videos from Symfony conferences, and of course at
 Command: &lt;code class=&quot;language-text&quot;&gt;php bin/console doctrine:database:create --env=test&lt;/code&gt; creates test database&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Created database &lt;span class=&quot;token string&quot;&gt;&quot;app_test&quot;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; connection named default&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;then you can execute migrations:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt; php bin/console doctrine:migrations:migrate -n --env&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt; php bin/console doctrine:migrations:migrate &lt;span class=&quot;token parameter variable&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--env&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Caching&lt;/h3&gt;
 &lt;p&gt;Method &lt;code class=&quot;language-text&quot;&gt;setSharedMaxAge()&lt;/code&gt; using for reverse proxy cache&lt;/p&gt;
 &lt;p&gt;Method &lt;code class=&quot;language-text&quot;&gt;setMaxAge()&lt;/code&gt; is usable for browser cache\&lt;/p&gt;
@@ -378,12 +378,12 @@ Marcin&lt;/p&gt;</content:encoded></item><item><title><![CDATA[DW Gym - 3 day py
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 70.88607594936708%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBACdASoUAA4APtFUo0uoJKMhsAgBABoJaACdACLviMKGfAtWH8f6AAD+wqWGMNWAsGvXWhMvsMSZrEEyJAV72RLL64f/5QjFi6mbmzDSAMRPNCfWRN7i8f1SXD6v8l5nv38lg27GIuY6PjEWlzvxJDTDwbc7eLzxDww1XDlq2w+03WzS/jjjiGAAAA==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 70.88607594936708%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBACdASoUAA4APtFUo0uoJKMhsAgBABoJZgCdACLvgRr3t48NXQJkwAD+wqWGMNWAsGvXWhMvsMSZrEEyJAV72RLL64gCtUtAgEvX4oVdbiI0VOEJsI/8Dg7ov+S8z37+SwbdjEXPEvgYi0qhhKBtqZ/iy/qKYAWkfW2vc7ZzjBZSyMZc0L5A3wAAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;certyficate&quot;
-        title=&quot;certyficate&quot;
+        title=&quot;&quot;
         src=&quot;/static/fa8784c6cbcbf849e8cb84b6c3375de8/f058b/certyficate.png&quot;
         srcset=&quot;/static/fa8784c6cbcbf849e8cb84b6c3375de8/c26ae/certyficate.png 158w,
 /static/fa8784c6cbcbf849e8cb84b6c3375de8/6bdcf/certyficate.png 315w,
@@ -404,7 +404,7 @@ and try to execute these commands.&lt;/p&gt;
 &lt;p&gt;Firstly, we need some data and environment A lot of datasets we can find on &lt;strong&gt;kaggle.com&lt;/strong&gt;. I choosed set with &lt;a href=&quot;https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings&quot;&gt;video games&lt;/a&gt;.
 To eaisly work with data we can choose Jupyter. The fastest way is using it with docker.&lt;/p&gt;
 &lt;p&gt;How to run it ? Just execute a command:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;docker run --rm -p &lt;span class=&quot;token number&quot;&gt;8888&lt;/span&gt;:8888 -e &lt;span class=&quot;token assign-left variable&quot;&gt;JUPYTER_ENABLE_LAB&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;yes -v &lt;span class=&quot;token variable&quot;&gt;${&lt;span class=&quot;token environment constant&quot;&gt;PWD&lt;/span&gt;}&lt;/span&gt;:/home/jovyan/work jupyter/datascience-notebook&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;docker&lt;/span&gt; run &lt;span class=&quot;token parameter variable&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8888&lt;/span&gt;:8888 &lt;span class=&quot;token parameter variable&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;JUPYTER_ENABLE_LAB&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;yes &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${&lt;span class=&quot;token environment constant&quot;&gt;PWD&lt;/span&gt;}&lt;/span&gt;:/home/jovyan/work jupyter/datascience-notebook&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;em&gt;Remember: ${PWD} evaluated to current directory. I execute command in directory when I save dataset file.&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;Working with Pandas&lt;/h3&gt;
 &lt;p&gt;With short explanations.&lt;/p&gt;
@@ -427,12 +427,12 @@ df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 24.68354430379747%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAgCdASoUAAUAPtFWo0uoJKMhsAgBABoJaQAAfj4AAP7xP6YUx3Ipmu5gAA==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 24.68354430379747%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAgCdASoUAAUAPtFUo0uoJKMhsAgBABoJaQAAfj4AAP7xP6YUdMima7mAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_1&quot;
-        title=&quot;dw_gym_1&quot;
+        title=&quot;&quot;
         src=&quot;/static/2f6d3c00a76451cc4e388e5071ff20d5/f058b/dw_gym_1.png&quot;
         srcset=&quot;/static/2f6d3c00a76451cc4e388e5071ff20d5/c26ae/dw_gym_1.png 158w,
 /static/2f6d3c00a76451cc4e388e5071ff20d5/6bdcf/dw_gym_1.png 315w,
@@ -463,12 +463,12 @@ df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 11.39240506329114%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAgCdASoUAAIAPtFUo0uoJKMhsAgBABoJaQAAlYgAAP7xPKBc+zcr0Y7wSCSAAAA=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 11.39240506329114%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAAAQAwCdASoUAAIAPtFUo0uoJKMhsAgBABoJaQAAetFFnAAA/vEWmJF4l+fTrfiAAAA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_2&quot;
-        title=&quot;dw_gym_2&quot;
+        title=&quot;&quot;
         src=&quot;/static/f78dd4e87e576a8aebe5e08824b221d9/f058b/dw_gym_2.png&quot;
         srcset=&quot;/static/f78dd4e87e576a8aebe5e08824b221d9/c26ae/dw_gym_2.png 158w,
 /static/f78dd4e87e576a8aebe5e08824b221d9/6bdcf/dw_gym_2.png 315w,
@@ -503,12 +503,12 @@ df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 13.29113924050633%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAABwAwCdASoUAAMAPtFWo0uoJKMhsAgBABoJaQAAW+oBkRTVLAAA/vNwQkf6C09wqT2qT1IQAAA=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 13.29113924050633%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAABQAwCdASoUAAMAPtFWo0uoJKMhsAgBABoJaQAAW+xItQIUAAD+83Kl6i4ojR0qNZ5OAAAA&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_3&quot;
-        title=&quot;dw_gym_3&quot;
+        title=&quot;&quot;
         src=&quot;/static/f851028585ec12cb5eb1e2811d9d57cc/d8f62/dw_gym_3.png&quot;
         srcset=&quot;/static/f851028585ec12cb5eb1e2811d9d57cc/c26ae/dw_gym_3.png 158w,
 /static/f851028585ec12cb5eb1e2811d9d57cc/6bdcf/dw_gym_3.png 315w,
@@ -536,12 +536,12 @@ df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 183.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoUACUAPtFeqE4oJSQiKrgKAQAaCWkAABw07UTXDb3+CQgAAP7z/j4Wj/OUeUN7rJlxWsaJFsnohIdJ7vBwyP4qPk/VOLNhgAAAAA==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 183.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoUACUAPtFgp04oJaOiKrgKAQAaCWkAABw02icQFqdqiXKAAP7z4TjKmz5X6OXt3PbN1MtZXxLeZvn9Ib1PvE9lsbbIUfmylOBpR9Iav9AAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_4&quot;
-        title=&quot;dw_gym_4&quot;
+        title=&quot;&quot;
         src=&quot;/static/0a73cb8d29a53bf2a74a0adfede9b4f4/ca501/dw_gym_4.png&quot;
         srcset=&quot;/static/0a73cb8d29a53bf2a74a0adfede9b4f4/c26ae/dw_gym_4.png 158w,
 /static/0a73cb8d29a53bf2a74a0adfede9b4f4/ca501/dw_gym_4.png 298w&quot;
@@ -568,12 +568,12 @@ df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 23.417721518987342%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAgCdASoUAAUAPtFWo0uoJKMhsAgBABoJaQAAfj4AAP7xP6R52gebWC3AvFAA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 23.417721518987342%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAgCdASoUAAUAPtFWo0uoJKMhsAgBABoJaQAAfj4AAP7xh8kBugdcYLcC8UAA&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_5&quot;
-        title=&quot;dw_gym_5&quot;
+        title=&quot;&quot;
         src=&quot;/static/b9c9ead9e233f3c541a83da9b6a92017/f058b/dw_gym_5.png&quot;
         srcset=&quot;/static/b9c9ead9e233f3c541a83da9b6a92017/c26ae/dw_gym_5.png 158w,
 /static/b9c9ead9e233f3c541a83da9b6a92017/6bdcf/dw_gym_5.png 315w,
@@ -604,12 +604,12 @@ df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 43.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAgCdASoUAAkAPtFWpEuoJKOhsAgBABoJaQAAeyAA/vD3nYu//dol2AR1D1X/AAGVPDjPfZneAAAA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 43.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAABwAwCdASoUAAkAPtFWpEwoJKOiMAgBABoJaQAAW+1KyySkYAAA/vO7Zgwh6+rMQK9P/ij1RvJAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_6&quot;
-        title=&quot;dw_gym_6&quot;
+        title=&quot;&quot;
         src=&quot;/static/d04cf3c7dec7fa4f54f2f21df5000532/a4d88/dw_gym_6.png&quot;
         srcset=&quot;/static/d04cf3c7dec7fa4f54f2f21df5000532/c26ae/dw_gym_6.png 158w,
 /static/d04cf3c7dec7fa4f54f2f21df5000532/6bdcf/dw_gym_6.png 315w,
@@ -637,12 +637,12 @@ df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 54.43037974683544%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAgCdASoUAAsAPtFUo0uoJKMhsAgBABoJaQAAeyAA/vFD3TdjVrOZe3dgnjJRjVa3avmusAA=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 54.43037974683544%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAAAwAwCdASoUAAsAPtFUo0uoJKMhsAgBABoJaQAAW+/fHlUAAP72EUr9aZYG2VFztNAAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_7&quot;
-        title=&quot;dw_gym_7&quot;
+        title=&quot;&quot;
         src=&quot;/static/3209a3eda257f1ca94a7326cade67c14/00a4e/dw_gym_7.png&quot;
         srcset=&quot;/static/3209a3eda257f1ca94a7326cade67c14/c26ae/dw_gym_7.png 158w,
 /static/3209a3eda257f1ca94a7326cade67c14/6bdcf/dw_gym_7.png 315w,
@@ -670,12 +670,12 @@ df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 60.75949367088608%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAABQAwCdASoUAAwAPtFUo0uoJKMhsAgBABoJaQAAW/AYEiaQAAD+9TIi3d6z70oYtvJJXcAAAAA=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 60.75949367088608%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAAAwAwCdASoUAAwAPtFUo0uoJKMhsAgBABoJaQAAW+9u10fAAP72EUr8MZ0TO6USmyDdKAAA&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_8&quot;
-        title=&quot;dw_gym_8&quot;
+        title=&quot;&quot;
         src=&quot;/static/7ff1cf53294e9f22e26b876a55e0ca0f/4e786/dw_gym_8.png&quot;
         srcset=&quot;/static/7ff1cf53294e9f22e26b876a55e0ca0f/c26ae/dw_gym_8.png 158w,
 /static/7ff1cf53294e9f22e26b876a55e0ca0f/6bdcf/dw_gym_8.png 315w,
@@ -704,12 +704,12 @@ df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 20.253164556962027%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAwAwCdASoUAAQAPtFWpEuoJKOhsAgBABoJaQAAW+lsYSAAAP7zhH5pyI+SOUSU7/9AnG40x+2SkcIAAAA=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 20.253164556962027%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACQAwCdASoUAAQAPtFWpUwoJKOiMAgBABoJaQAAW+xWDuN+jK8AAP7zhH/h02j2/Qm3XuKSG8aAAAAA&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_9&quot;
-        title=&quot;dw_gym_9&quot;
+        title=&quot;&quot;
         src=&quot;/static/ce14b1d42c8089bb9a6dad74684fd4aa/f8dc5/dw_gym_9.png&quot;
         srcset=&quot;/static/ce14b1d42c8089bb9a6dad74684fd4aa/c26ae/dw_gym_9.png 158w,
 /static/ce14b1d42c8089bb9a6dad74684fd4aa/6bdcf/dw_gym_9.png 315w,
@@ -740,12 +740,12 @@ top_ten_genre_values&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 43.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAABQAwCdASoUAAkAPtFUo0uoJKMhsAgBABoJaQAAYcs73gFYAAD+8+MJ9ujF7yGHBoJxQwXUrEogAAAA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 43.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAgCdASoUAAkAPtFUo0uoJKMhsAgBABoJaQAAlYgAAP7xQ4Ds6a/XHVe+iFdo1FbE1WhuQAA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_10&quot;
-        title=&quot;dw_gym_10&quot;
+        title=&quot;&quot;
         src=&quot;/static/9cba43451fde13b5afd51d7d2bcdacfc/00a4e/dw_gym_10.png&quot;
         srcset=&quot;/static/9cba43451fde13b5afd51d7d2bcdacfc/c26ae/dw_gym_10.png 158w,
 /static/9cba43451fde13b5afd51d7d2bcdacfc/6bdcf/dw_gym_10.png 315w,
@@ -774,12 +774,12 @@ genre_norm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;value_co
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAwAwCdASoUAAsAPtFUo0uoJKMhsAgBABoJaQAAUrf0lCAAAP7x997MSJyRkDKbhC5pOYanHkIXuueqhdWpGaHAAAA=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABwAwCdASoUAAsAPtFUo0uoJKMhsAgBABoJaQAAW/BwdddcnAAA/vJSkINFeBQY42hgEJUSgdmY7w40L6IAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_11&quot;
-        title=&quot;dw_gym_11&quot;
+        title=&quot;&quot;
         src=&quot;/static/f401a439c5b42015b5717abe79456e20/04a86/dw_gym_11.png&quot;
         srcset=&quot;/static/f401a439c5b42015b5717abe79456e20/c26ae/dw_gym_11.png 158w,
 /static/f401a439c5b42015b5717abe79456e20/04a86/dw_gym_11.png 294w&quot;
@@ -806,12 +806,12 @@ genre_norm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;value_co
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 74.68354430379746%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAwCdASoUAA8APtFUo0uoJKMhsAgBABoJaQAAW+svUxqG/mgAAP72B5nDqCiamfGD+XFL48ibkBqeGo0+u+W7O75gAAAA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 74.68354430379746%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAwCdASoUAA8APtFUo0uoJKMhsAgBABoJaQAAW+s+mS+aaqYAAP72B5nDqCiamgsNNKJotzdCjdmMn82TpVTtroAAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_12&quot;
-        title=&quot;dw_gym_12&quot;
+        title=&quot;&quot;
         src=&quot;/static/6fe3cc3287776bd5de46c8779d1c8e4f/2fd48/dw_gym_12.png&quot;
         srcset=&quot;/static/6fe3cc3287776bd5de46c8779d1c8e4f/c26ae/dw_gym_12.png 158w,
 /static/6fe3cc3287776bd5de46c8779d1c8e4f/6bdcf/dw_gym_12.png 315w,
@@ -840,12 +840,12 @@ genre_norm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;value_co
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 101.8987341772152%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwBACdASoUABQAPtFcpE6oJSMiKAqpABoJaQAMKqBsHEsegbQzSxSetDt3wAD+9R19rZwOptjUwxkaMlP988u631ZyAsrWOrF7Xep6vOrVUOY55OYiAAAA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 101.8987341772152%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwBACdASoUABQAPtFgqE+oJSOiKAgBABoJaQAMLMBqpaY2YThBZNSPIwAA/vUdfa1TX4ur+eV+Q7AXt10LASM06B8cgn1VE+Fs98Zwn6pa2ZR5EhPVO8CGHDnfQRGpoAA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;dw_gym_13&quot;
-        title=&quot;dw_gym_13&quot;
+        title=&quot;&quot;
         src=&quot;/static/884b912146102df6a757c3174279e2b1/409e6/dw_gym_13.png&quot;
         srcset=&quot;/static/884b912146102df6a757c3174279e2b1/c26ae/dw_gym_13.png 158w,
 /static/884b912146102df6a757c3174279e2b1/6bdcf/dw_gym_13.png 315w,
@@ -880,25 +880,25 @@ have to prepare different images for some features/branches/deploys.&lt;/p&gt;
 &lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;COPY&lt;/span&gt; index.html /usr/share/nginx/html/index.html&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;OK, It’s time to building. Build first version by command &lt;code class=&quot;language-text&quot;&gt;docker build .&lt;/code&gt; Then we want to something change in the our website and build again by &lt;code class=&quot;language-text&quot;&gt;build&lt;/code&gt; command. Which images we have ?&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Console output:&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;root@local:~/project$ docker images
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;root@local:~/project$ &lt;span class=&quot;token function&quot;&gt;docker&lt;/span&gt; images
 REPOSITORY   TAG       IMAGE ID       CREATED              SIZE
-&amp;lt;none&amp;gt;       &amp;lt;none&amp;gt;    c8af32463c20   5 seconds ago        141MB
-&amp;lt;none&amp;gt;       &amp;lt;none&amp;gt;    f1663715c693   About a minute ago   141MB
-nginx        latest    605c77e624dd   8 days ago           141MB&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;none&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;       &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;none&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;    c8af32463c20   &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt; seconds ago        141MB
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;none&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;       &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;none&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;    f1663715c693   About a minute ago   141MB
+nginx        latest    605c77e624dd   &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt; days ago           141MB&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;As you see there are a &lt;code class=&quot;language-text&quot;&gt;&amp;lt;none&gt;&lt;/code&gt; words. It’s not helpful when you want to pick up specific image.
 Why we have images without &lt;strong&gt;REPOSITORY&lt;/strong&gt; and &lt;strong&gt;TAG&lt;/strong&gt; ? It’s caused by build image without &lt;code class=&quot;language-text&quot;&gt;-t&lt;/code&gt; option These images were built by command &lt;code class=&quot;language-text&quot;&gt;docker build . &lt;/code&gt; How we can fix it or how we can build images ? Firstival we can &lt;code class=&quot;language-text&quot;&gt;tag&lt;/code&gt; image after build by command &lt;code class=&quot;language-text&quot;&gt;docker tag&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;For example &lt;code class=&quot;language-text&quot;&gt;docker tag f1663715c693 website:1.0&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;docker tag f1663715c693 website:1.2&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Console output&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;root@local:~/project$ docker images
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;root@local:~/project$ &lt;span class=&quot;token function&quot;&gt;docker&lt;/span&gt; images
 REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
-&amp;lt;none&amp;gt;       &amp;lt;none&amp;gt;    c8af32463c20   16 minutes ago   141MB
-website      1.2       c8af32463c20   21 minutes ago   141MB
-website      1.0       f1663715c693   22 minutes ago   141MB
-nginx        latest    605c77e624dd   8 days ago       141MB&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;none&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;       &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;none&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;    c8af32463c20   &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt; minutes ago   141MB
+website      &lt;span class=&quot;token number&quot;&gt;1.2&lt;/span&gt;       c8af32463c20   &lt;span class=&quot;token number&quot;&gt;21&lt;/span&gt; minutes ago   141MB
+website      &lt;span class=&quot;token number&quot;&gt;1.0&lt;/span&gt;       f1663715c693   &lt;span class=&quot;token number&quot;&gt;22&lt;/span&gt; minutes ago   141MB
+nginx        latest    605c77e624dd   &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt; days ago       141MB&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;But this needs from us additional action. Remember, we can do it while building an new image.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;docker build -t website:1.3 .&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;docker&lt;/span&gt; build &lt;span class=&quot;token parameter variable&quot;&gt;-t&lt;/span&gt; website:1.3 &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Very interesting option is adding multiple specific tags at once. The case with &lt;code class=&quot;language-text&quot;&gt;latest&lt;/code&gt; is very helpful to tag a version of image and set it at latest.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;docker build -t website:1.3 -t website:latest .&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;docker&lt;/span&gt; build &lt;span class=&quot;token parameter variable&quot;&gt;-t&lt;/span&gt; website:1.3 &lt;span class=&quot;token parameter variable&quot;&gt;-t&lt;/span&gt; website:latest &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Full documentation about tagging we can find on &lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/tag&quot;&gt;https://docs.docker.com/engine/reference/commandline/tag&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Symfony where is your TDD?]]></title><description><![CDATA[Last months I trying to following on rule “Write tests first!“. Even if the task is small or trivial I trying to test it. Why I didn’t…]]></description><link>https://marcingladkowski.pl/where-is-TDD/</link><guid isPermaLink="false">https://marcingladkowski.pl/where-is-TDD/</guid><pubDate>Mon, 27 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last months I trying to following on rule “Write tests first!“. Even if the task is small or trivial I trying to test it. Why I didn’t working like this ?
 I have a mindset about tests: I have to setup framework for it - it takes time, I have to write a lot of extra code and keep it SOLID as production code - it takes time,
 I have to maintain it - it takes time! and so on… But what you receive ? What is a holy grail of having tests ? It’s also time! You save it when you have change
@@ -931,7 +931,7 @@ business rules, or you fixed a bug. One command and status of application is dis
 
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And let’s try to run this test by&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;php bin/console --env&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;php bin/console &lt;span class=&quot;token parameter variable&quot;&gt;--env&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Then we get:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;Symfony&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;DependencyInjection&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;Exception&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;ServiceNotFoundException &lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt;
 The &lt;span class=&quot;token string&quot;&gt;&quot;App\Service\SomeService&quot;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;service&lt;/span&gt; or &lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; has been removed or inlined when the container was compiled.
@@ -1180,12 +1180,12 @@ options.&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 49.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAwCdASoUAAoAPtE4sFMoIiWjmAEAGgllAAEd6XXSWH1xlObAAP79y2lRpbXtQKAyB0riHQB//6mbGPTXV7Mng//fH3FeA3p5Z4AA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 49.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABwAwCdASoUAAoAPtFcpkyoJSOiMAgBABoJZV2AWIeTjbx/o0AA/vE4/y21IDKiw17ZJPkNLmucr1Dc2OAqadzm7pJGsgXAAAA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;crash_course_1&quot;
-        title=&quot;crash_course_1&quot;
+        title=&quot;&quot;
         src=&quot;/static/039cc2fc6e7fdb9afb2c780bb0800241/f058b/crash_course_1.png&quot;
         srcset=&quot;/static/039cc2fc6e7fdb9afb2c780bb0800241/c26ae/crash_course_1.png 158w,
 /static/039cc2fc6e7fdb9afb2c780bb0800241/6bdcf/crash_course_1.png 315w,
@@ -1216,12 +1216,12 @@ last step was a developing this app on Heroku, and was very interesting for me.&
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACwAgCdASoUAAoAPtFUo0uoJKMhsAgBABoJaQAAeyAA/vIDioGAAA==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACwAgCdASoUAAoAPtFUpEuoJKOhsAgBABoJaQAAeyAA/vJZQkFAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;crash_course_2&quot;
-        title=&quot;crash_course_2&quot;
+        title=&quot;&quot;
         src=&quot;/static/875aa321124570a4e3154738c7b65349/f058b/crash_course_2.png&quot;
         srcset=&quot;/static/875aa321124570a4e3154738c7b65349/c26ae/crash_course_2.png 158w,
 /static/875aa321124570a4e3154738c7b65349/6bdcf/crash_course_2.png 315w,
@@ -1276,12 +1276,12 @@ simple methods. Looks simple but there is a lot of patterns of refactoring like 
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 157.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBQCdASoUACAAPtFcqU2oJSQmKAqpABoJZQDE+P8BnduCXpOaqY9mmO/Zvt8m4lNwAP706/WNRN0VEghl5RjEAsoJexv3RsjFeSxCAJDREq7ez7I97eOyLAwGStRc9T7LLq5aMgZo3LaAOtu294AA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 157.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBQCdASoUACAAPtFcqk2oJSQmKAqpABoJZQDIBSABnSmbaNPkfHoZ82LFaSqOyKRAAAD+9OvvCJx5kRJyeeZsbLTS0Ze6OjT4jfvVA75XcEh71kfN9/oFgS5bmxCXxrVQPFTyzq4KmuQfQVAio5owAAA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;diff_3&quot;
-        title=&quot;diff_3&quot;
+        title=&quot;&quot;
         src=&quot;/static/220475983d0a56780bd9fdb586e4a2d8/854dc/diff_3.png&quot;
         srcset=&quot;/static/220475983d0a56780bd9fdb586e4a2d8/c26ae/diff_3.png 158w,
 /static/220475983d0a56780bd9fdb586e4a2d8/6bdcf/diff_3.png 315w,
@@ -1302,12 +1302,12 @@ But we don’t forget about &lt;em&gt;return&lt;/em&gt; statement, because this 
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 99.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAwCdASoUABQAPtFcqE4oJSQiKAqpABoJZ2p9ABvz2c8zCfkAAP7xOMIbA4rP3/vogj/gmic+EmnqR54D5Np5bWgFJB7BIAAAAA==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 99.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAwCdASoUABQAPtFcqE4oJSQiKAqpABoJZ2p9ABvz2XMIgqiAAP7xgSJgTCcP3/vogj/glxGb4+hlnL66HybTuXKXZcKUskAAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;diff_2&quot;
-        title=&quot;diff_2&quot;
+        title=&quot;&quot;
         src=&quot;/static/83d1231b211c82617e1b824e1f34253f/e4c9a/diff_2.png&quot;
         srcset=&quot;/static/83d1231b211c82617e1b824e1f34253f/c26ae/diff_2.png 158w,
 /static/83d1231b211c82617e1b824e1f34253f/6bdcf/diff_2.png 315w,
@@ -1343,12 +1343,12 @@ But we don’t forget about &lt;em&gt;return&lt;/em&gt; statement, because this 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 120.25316455696202%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwBACdASoUABgAPtFepU6oJSMiKAqpABoJaQDN/BEz1f65XJO5hA853FgKqAD+9PUDJOo9C6L3xAWTeEDtS7umrMThDa8jvzfRobZpG9tEDqo3UOuyeA6qNYAAAA==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 120.25316455696202%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwBACdASoUABgAPtFcpk6oJSMiKAqpABoJZwDL4BF+RMjARU7uzabynSAA/vT02mE0MUzM21Fd/WlhHZvF5rcTbo/PQm00B73fS/E6nA+w+PLknN4K63w0+rOFThaGAAA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;diff_1&quot;
-        title=&quot;diff_1&quot;
+        title=&quot;&quot;
         src=&quot;/static/30ad31f500f906bf25a97b1381cc2c9b/b06ae/diff_1.png&quot;
         srcset=&quot;/static/30ad31f500f906bf25a97b1381cc2c9b/c26ae/diff_1.png 158w,
 /static/30ad31f500f906bf25a97b1381cc2c9b/6bdcf/diff_1.png 315w,
@@ -1514,12 +1514,12 @@ in 2014 using &lt;strong&gt;PHP&lt;/strong&gt;! oh yeah!&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 36.708860759493675%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAwCdASoUAAcAPtFWpEuoJKOhsAgBABoJaQAAXK/nY7qV+PTrAAD+9hEUQxcE32LqBjDYjOqsMAAA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 36.708860759493675%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAwCdASoUAAcAPtFUpEuoJKOhsAgBABoJaQAAXK/nqsINnpjmwAD+9hETYLgMmdb5FDG7atXdJIAA&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;adr&quot;
-        title=&quot;adr&quot;
+        title=&quot;&quot;
         src=&quot;/static/c7220b06b32003e6713307713bb26d22/4af8e/adr.png&quot;
         srcset=&quot;/static/c7220b06b32003e6713307713bb26d22/c26ae/adr.png 158w,
 /static/c7220b06b32003e6713307713bb26d22/6bdcf/adr.png 315w,
@@ -1545,12 +1545,12 @@ And the MVC pattern
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACQAwCdASoUAAoAPtFWo0uoJKMhsAgBABoJaQAAXK+4oBzomDAAAP71IibhX6vItpgz7/n5nCx6ThqoniAAAA==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAwCdASoUAAoAPtFUo0uoJKMhsAgBABoJaQAAXlUphICo9BBHgAD+9QLw6jhFVd/CNfE7rrZcLxS1QAAAAA==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;mvc&quot;
-        title=&quot;mvc&quot;
+        title=&quot;&quot;
         src=&quot;/static/35deb37d4147917f77b7b68ee9358fe5/f058b/mvc.png&quot;
         srcset=&quot;/static/35deb37d4147917f77b7b68ee9358fe5/c26ae/mvc.png 158w,
 /static/35deb37d4147917f77b7b68ee9358fe5/6bdcf/mvc.png 315w,
@@ -1581,12 +1581,12 @@ This action looks very clear, the input and output are specified DTO classes.
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 144.9367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRoQAAABXRUJQVlA4WAoAAAAQAAAAEwAAHAAAQUxQSBgAAAABFyAQSPwRk3mNiIgDIUHCePebI/of0AtWUDggRgAAAFADAJ0BKhQAHQA+0VqkTSglIyIwGAgBABoJZ2sJW9eJ2AMwAP7wIqhFz/af6y8X6SDjE3Gf37S/QQIxgTqWtVqTBayAAAA=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 144.9367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRn4AAABXRUJQVlA4WAoAAAAQAAAAEwAAHAAAQUxQSBMAAAABF/Dw/4iIQUiQMN795oj+B/QCAFZQOCBEAAAAMAMAnQEqFAAdAD7RWqRNKCUjojAYCAEAGgllAM50FqhEsAD+8CKoStYLib+DP1GM4xNxn9+0vzNtBjZDBbGjBzpAAAA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;add_doctor_action&quot;
-        title=&quot;add_doctor_action&quot;
+        title=&quot;&quot;
         src=&quot;/static/2a2193cac7f6a7277975d49e771e51e7/854dc/add_doctor_action.png&quot;
         srcset=&quot;/static/2a2193cac7f6a7277975d49e771e51e7/c26ae/add_doctor_action.png 158w,
 /static/2a2193cac7f6a7277975d49e771e51e7/6bdcf/add_doctor_action.png 315w,
@@ -1699,12 +1699,12 @@ and what i want to achieve in 2021.&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 24.68354430379747%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAwCdASoUAAUAPtFUo0uoJKMhsAgBABoJZwAAg/NFifAAAP7xQpbY59kx1TmxX13lvadetZQedAAA&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 24.68354430379747%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAQAwCdASoUAAUAPtFUo0uoJKMhsAgBABoJZwAAg++FVmAA/vGKp5maoZEJa9TI76q0n1cyAAA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;image-center&quot;
-        title=&quot;image-center&quot;
+        title=&quot;&quot;
         src=&quot;/static/d43c10d4a849544d46f32e40d143b2f8/f058b/github.png&quot;
         srcset=&quot;/static/d43c10d4a849544d46f32e40d143b2f8/c26ae/github.png 158w,
 /static/d43c10d4a849544d46f32e40d143b2f8/6bdcf/github.png 315w,
@@ -1795,7 +1795,7 @@ and what i want to achieve in 2021.&lt;/p&gt;
 &lt;span class=&quot;token comment&quot;&gt;# parse setting -&lt;/span&gt;
 &lt;span class=&quot;token assign-left variable&quot;&gt;postFile&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$date&lt;/span&gt;-&lt;span class=&quot;token variable&quot;&gt;${title&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;-}&lt;/span&gt;.md&quot;&lt;/span&gt;
 
-&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
    &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Post with name &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; exists!&quot;&lt;/span&gt;
    &lt;span class=&quot;token comment&quot;&gt;# want to delete ?&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;fi&lt;/span&gt;
@@ -1805,7 +1805,7 @@ and what i want to achieve in 2021.&lt;/p&gt;
 &lt;span class=&quot;token function&quot;&gt;touch&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${POSTS_DIR}&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;${postFile}&lt;/span&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Created new post! &lt;span class=&quot;token variable&quot;&gt;${postFile}&lt;/span&gt;&quot;&lt;/span&gt;
 
-&lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; -a &lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;HEADERS
+&lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;HEADERS
 ---
 layout: default
 title: &lt;span class=&quot;token variable&quot;&gt;${title}&lt;/span&gt;
@@ -1814,27 +1814,27 @@ HEADERS&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Wykonajmy teraz analizę przy pomocy &lt;code class=&quot;language-text&quot;&gt;shellcheck&lt;/code&gt; wykonując komendę: &lt;code class=&quot;language-text&quot;&gt;shellcheck ./scripts/newPost.sh&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Output w wierszu poleceń:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; title &lt;span class=&quot;token comment&quot;&gt;# find idea to get title (set maximum arguments)&lt;/span&gt;
-^--^ SC2162: &lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; without -r will mangle backslashes.
+^--^ SC2162: &lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; without &lt;span class=&quot;token parameter variable&quot;&gt;-r&lt;/span&gt; will mangle backslashes.
 
 
 In ./scripts/newPost.sh line &lt;span class=&quot;token number&quot;&gt;13&lt;/span&gt;:
-&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
         ^-------^ SC2086: Double quote to prevent globbing and word splitting.
 
 Did you mean:
-&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$postFile&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
 
 
 In ./scripts/newPost.sh line &lt;span class=&quot;token number&quot;&gt;23&lt;/span&gt;:
-&lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; -a &lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;HEADERS
+&lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;HEADERS
        ^--------------^ SC2086: Double quote to prevent globbing and word splitting.
 
 Did you mean:
-&lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; -a &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;HEADERS
+&lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${NEW_POST_FILE}&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;HEADERS
 
 For &lt;span class=&quot;token function&quot;&gt;more&lt;/span&gt; information:
   https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
-  https://www.shellcheck.net/wiki/SC2162 -- &lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; without -r will mangle backs&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  https://www.shellcheck.net/wiki/SC2162 -- &lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; without &lt;span class=&quot;token parameter variable&quot;&gt;-r&lt;/span&gt; will mangle backs&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Z powyższej analizy wystarczy, że jeśli dodamy cudzysłów w dwóch miejscach i parametr &lt;code class=&quot;language-text&quot;&gt;-r&lt;/code&gt; do odczytywania inputu możemy poprawić działanie skryptu. Oczywiście to jednak trochę za mało.&lt;/p&gt;
 &lt;p&gt;Z przyzwyczajenia często używałem zapisu zmiennych z postaci &lt;code class=&quot;language-text&quot;&gt;postFile&lt;/code&gt;, ale z tego co widzę lepiej z wygląda zapis w postaci &lt;code class=&quot;language-text&quot;&gt;POST_FILE&lt;/code&gt; lub &lt;code class=&quot;language-text&quot;&gt;post_file&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Z przytoczonego prze ze mnie wpisu można jednak wyciągnąć dużo więcej.&lt;/p&gt;
