@@ -78,7 +78,7 @@ module.exports = {
         useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
         stripMetadata: true,
         defaultQuality: 50,
-        checkSupportedExtensions: false,
+        // checkSupportedExtensions: false,
       },
     },
     {
@@ -123,7 +123,7 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { frontmatter: { date: DESC }},
                 ) {
                   nodes {
                     excerpt
