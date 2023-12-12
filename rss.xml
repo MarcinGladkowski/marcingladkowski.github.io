@@ -1,21 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 21 Nov 2023 16:07:57 GMT</lastBuildDate><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
-interesting issue, just write to me a message! I’m interesting into
-all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
-interesting issue, just write to me a message! I’m interesting into
-all kind of cooperation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Start a new project&lt;/li&gt;
-&lt;li&gt;Create new library&lt;/li&gt;
-&lt;li&gt;Help with refactoring&lt;/li&gt;
-&lt;li&gt;Help with programming/coding problems&lt;/li&gt;
-&lt;li&gt;Do a workshop&lt;/li&gt;
-&lt;li&gt;And others…&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on: marcingladkowski@gmail.com Linkedin Github]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;mailto:marcingladkowski@gmail.com&quot;&gt;marcingladkowski@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.linkedin.com/in/marcingladkowski&quot;&gt;Linkedin&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Experience]]></title><description><![CDATA[Profile I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also…]]></description><link>https://marcingladkowski.pl/experience/</link><guid isPermaLink="false">https://marcingladkowski.pl/experience/</guid><content:encoded>&lt;h4&gt;Profile&lt;/h4&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 12 Dec 2023 18:55:39 GMT</lastBuildDate><item><title><![CDATA[Experience]]></title><description><![CDATA[Profile I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also…]]></description><link>https://marcingladkowski.pl/experience/</link><guid isPermaLink="false">https://marcingladkowski.pl/experience/</guid><content:encoded>&lt;h4&gt;Profile&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also to spread it with others.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -61,7 +44,63 @@ all kind of cooperation:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;English (B2), &lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github account&lt;/a&gt;, participant of Coding Dojo Silesia, participant WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit (2021, 2022), PHPcon (2019), Hacktoberfest (2019)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</content:encoded></item><item><title><![CDATA[PHPcon Poland 2022]]></title><description><![CDATA[This year conference PHPcon Poland 2022 was so special for me. Everything because I presented a topic
+&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
+interesting issue, just write to me a message! I’m interesting into
+all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
+interesting issue, just write to me a message! I’m interesting into
+all kind of cooperation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start a new project&lt;/li&gt;
+&lt;li&gt;Create new library&lt;/li&gt;
+&lt;li&gt;Help with refactoring&lt;/li&gt;
+&lt;li&gt;Help with programming/coding problems&lt;/li&gt;
+&lt;li&gt;Do a workshop&lt;/li&gt;
+&lt;li&gt;And others…&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on: marcingladkowski@gmail.com Linkedin Github]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;mailto:marcingladkowski@gmail.com&quot;&gt;marcingladkowski@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.linkedin.com/in/marcingladkowski&quot;&gt;Linkedin&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Compromises]]></title><description><![CDATA[Last time, I read a great title “Software Architecture: The Hard Parts: Modern Tradeoff Analysis for Distributed Architectures”  ‘Compromise…]]></description><link>https://marcingladkowski.pl/architecture-hard-parts/</link><guid isPermaLink="false">https://marcingladkowski.pl/architecture-hard-parts/</guid><pubDate>Tue, 12 Dec 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last time, I read a great title “Software Architecture: The Hard Parts: Modern Tradeoff Analysis for Distributed Architectures”&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b8b67d0f569b57c7afc73ee96d46d134/bc459/hard_parts.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 131.0126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAADwBACdASoUABoAPtFcqU2oJSQiKAqpABoJZwDI1YyAcDnlspf5bIB9bG8gi5gsJAAA/vIznGKK7mX44oR7K+wyfl8FKG0105SX3uOfGKMXmWGmspQ5XFULjhqfhMqnrbTQWzD48AuvkK9J+ZfO2RP4qVenVkT8KHaVhNpl4WbV0FlEiK6MXkYi68J88aveT6nz6OrHVa0xvjsP4wC13sGI1tZs7iLzXSjXoIti9bQ3nKzxftSEPtqUWk9cIfDzFclmnT0UWBO+HSDJFf+SYE5DYOgAAA==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;presentation_1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b8b67d0f569b57c7afc73ee96d46d134/828fb/hard_parts.jpg&quot;
+        srcset=&quot;/static/b8b67d0f569b57c7afc73ee96d46d134/ff44c/hard_parts.jpg 158w,
+/static/b8b67d0f569b57c7afc73ee96d46d134/a6688/hard_parts.jpg 315w,
+/static/b8b67d0f569b57c7afc73ee96d46d134/828fb/hard_parts.jpg 630w,
+/static/b8b67d0f569b57c7afc73ee96d46d134/0ede0/hard_parts.jpg 945w,
+/static/b8b67d0f569b57c7afc73ee96d46d134/bc459/hard_parts.jpg 1143w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;‘Compromise’ is one of the main thoughts that runs through while reading this book. Is the choice we make the best one ? We need to consider a number of parameters that are important to us in order to make a choice that fits the challenge we are solving.&lt;/p&gt;
+&lt;p&gt;Is scalability, consistency or perhaps time efficiency important to us ?&lt;/p&gt;
+&lt;p&gt;Will we achieve this through choreography or orchestration ?&lt;/p&gt;
+&lt;p&gt;Which of our ideas is best ?&lt;/p&gt;
+&lt;p&gt;This book took me on a journey through the decisions that programmers in smaller and larger teams make. Sometimes we also make them ourselves. Before coding, it’s worthwhile to look at the problem from various angles and try to choose the best “compromise”.&lt;/p&gt;
+&lt;p&gt;Where to buy it ? &lt;a href=&quot;https://www.amazon.pl/Software-Architecture-Tradeoff-Distributed-Architectures/dp/1492086894&quot;&gt;ENG&lt;/a&gt;
+&lt;a href=&quot;https://helion.pl/ksiazki/zlozone-zagadnienia-architektury-oprogramowania-jak-analizowac-kompromisy-i-podejmowac-trudne-decyz-neal-ford-mark-richards-pramod-sadalage-zhamak,zlozag.htm#format/d&quot;&gt;PL&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[PHPcon Poland 2022]]></title><description><![CDATA[This year conference PHPcon Poland 2022 was so special for me. Everything because I presented a topic
 “Memory leaks in long processes…]]></description><link>https://marcingladkowski.pl/phpcon-2022/</link><guid isPermaLink="false">https://marcingladkowski.pl/phpcon-2022/</guid><pubDate>Tue, 15 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
