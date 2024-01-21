@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 12 Dec 2023 18:55:39 GMT</lastBuildDate><item><title><![CDATA[Experience]]></title><description><![CDATA[Profile I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also…]]></description><link>https://marcingladkowski.pl/experience/</link><guid isPermaLink="false">https://marcingladkowski.pl/experience/</guid><content:encoded>&lt;h4&gt;Profile&lt;/h4&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[My blog about programming, my experiences, exercises, small thoughts]]></description><link>https://marcingladkowski.pl</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 21 Jan 2024 19:19:01 GMT</lastBuildDate><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
+interesting issue, just write to me a message! I’m interesting into
+all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
+interesting issue, just write to me a message! I’m interesting into
+all kind of cooperation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start a new project&lt;/li&gt;
+&lt;li&gt;Create new library&lt;/li&gt;
+&lt;li&gt;Help with refactoring&lt;/li&gt;
+&lt;li&gt;Help with programming/coding problems&lt;/li&gt;
+&lt;li&gt;Do a workshop&lt;/li&gt;
+&lt;li&gt;And others…&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on: marcingladkowski@gmail.com Linkedin Github]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;mailto:marcingladkowski@gmail.com&quot;&gt;marcingladkowski@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.linkedin.com/in/marcingladkowski&quot;&gt;Linkedin&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Experience]]></title><description><![CDATA[Profile I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also…]]></description><link>https://marcingladkowski.pl/experience/</link><guid isPermaLink="false">https://marcingladkowski.pl/experience/</guid><content:encoded>&lt;h4&gt;Profile&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I’m a person who enjoys to creating new innovative solutions. I really like to improve skills and want to obtain new ones, and also to spread it with others.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -44,24 +61,141 @@
 &lt;ul&gt;
 &lt;li&gt;English (B2), &lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github account&lt;/a&gt;, participant of Coding Dojo Silesia, participant WarsawJS, volunteer SpreadIT, participated ind a course Angular in Space (2018), participant in 4Developers, PHPSummit (2021, 2022), PHPcon (2019), Hacktoberfest (2019)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Cooperation]]></title><description><![CDATA[I’am open to new projects and problems to resolve. If you have some
-interesting issue, just write to me a message! I’m interesting into
-all…]]></description><link>https://marcingladkowski.pl/cooperation/</link><guid isPermaLink="false">https://marcingladkowski.pl/cooperation/</guid><content:encoded>&lt;p&gt;I’am open to new projects and problems to resolve. If you have some
-interesting issue, just write to me a message! I’m interesting into
-all kind of cooperation:&lt;/p&gt;
+&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Meetup Kafka Kraków]]></title><description><![CDATA[Let’s kick off meetups in 2024! In this brief post, I aim to provide a snapshot of the presentations. The tools and infrastructure for these…]]></description><link>https://marcingladkowski.pl/kafka-meetup/</link><guid isPermaLink="false">https://marcingladkowski.pl/kafka-meetup/</guid><pubDate>Sun, 21 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Let’s kick off meetups in 2024!&lt;/p&gt;
+&lt;p&gt;In this brief post, I aim to provide a snapshot of the presentations. The tools and infrastructure for these solutions constitute a vast topic, and a single post cannot do justice to its explanation.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/192aae8a54c2eb55dae7235a64731957/93719/meetup-kafka-krakow.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAQBQCdASoUAA8APtFUo0uoJKMhsAgBABoJYgCdMoMYPX/JANz/Ac/2WPslqeCofIgAAP7s0Kub8FCcbhFAByPHnfY4wJJFXBz7Nt7KCFAneDpYYDcBUfE4tUVEyTgW1iuD5dROPogTZ1PH7TCGwDHt8Ik/rSD8Jq4Ha0HBqqME6e2dEr4t/tAq1l3M8jTW7l2WgtoEAzrzdwsOdzHu8AAA&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;presentation_1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/192aae8a54c2eb55dae7235a64731957/828fb/meetup-kafka-krakow.jpg&quot;
+        srcset=&quot;/static/192aae8a54c2eb55dae7235a64731957/ff44c/meetup-kafka-krakow.jpg 158w,
+/static/192aae8a54c2eb55dae7235a64731957/a6688/meetup-kafka-krakow.jpg 315w,
+/static/192aae8a54c2eb55dae7235a64731957/828fb/meetup-kafka-krakow.jpg 630w,
+/static/192aae8a54c2eb55dae7235a64731957/0ede0/meetup-kafka-krakow.jpg 945w,
+/static/192aae8a54c2eb55dae7235a64731957/3ac88/meetup-kafka-krakow.jpg 1260w,
+/static/192aae8a54c2eb55dae7235a64731957/93719/meetup-kafka-krakow.jpg 4000w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I had a opportunity to visit Kraków for Kafka meetup and listen to curious presentations from great two professionalist.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Building an Event Analytics Pipeline with Kafka, ksqlDB, and Druid.&lt;/h4&gt;
+&lt;h5&gt;Stack:&lt;/h5&gt;
 &lt;ul&gt;
-&lt;li&gt;Start a new project&lt;/li&gt;
-&lt;li&gt;Create new library&lt;/li&gt;
-&lt;li&gt;Help with refactoring&lt;/li&gt;
-&lt;li&gt;Help with programming/coding problems&lt;/li&gt;
-&lt;li&gt;Do a workshop&lt;/li&gt;
-&lt;li&gt;And others…&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Contact]]></title><description><![CDATA[Contact with me on: marcingladkowski@gmail.com Linkedin Github]]></description><link>https://marcingladkowski.pl/contact/</link><guid isPermaLink="false">https://marcingladkowski.pl/contact/</guid><content:encoded>&lt;p&gt;Contact with me on:&lt;/p&gt;
+&lt;li&gt;&lt;a href=&quot;https://druid.apache.org/&quot;&gt;Apache Druid&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ksqldb.io/&quot;&gt;ksqlDB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kafka.apache.org/&quot;&gt;kafka&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s assume you are using a traditional ETL (Extract - Transform - Load) architecture. What solution to analyse data do you have ? There are many of tools that can help you to visualize loaded data. It’s not an issue to use tools like Apache Spark to run query and e.g. aggregate data over some period of time.&lt;/p&gt;
+&lt;p&gt;What’s about to analyze data directly form Kafka topic’s ? What possible by using Apache Druid.&lt;/p&gt;
+&lt;h5&gt;Let’s see what you can use for Apache Druid&lt;/h5&gt;
+&lt;p&gt;The picture below presents possible solutions of architecture and where Apache Druid can be placed.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/37dc0a7f446eb44c5133e357d8659eb2/6f278/apache-druid-possibilites.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.0379746835443%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoUAAkAPtFUo0uoJKMhsAgBABoJZQCw7CHf+jzE3y+AjhgAAP7ydh1gvRoOSiKOUZVhR3KodqIpfUHTknAOR7SV8e9LV71PN/wRgGD9Hz+FiDUwPOzUYJQAAAA=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;https://blog.hellmar-becker.de/2021/11/19/apache-druid-in-the-publishing-industry/&quot;
+        title=&quot;&quot;
+        src=&quot;/static/37dc0a7f446eb44c5133e357d8659eb2/f058b/apache-druid-possibilites.png&quot;
+        srcset=&quot;/static/37dc0a7f446eb44c5133e357d8659eb2/c26ae/apache-druid-possibilites.png 158w,
+/static/37dc0a7f446eb44c5133e357d8659eb2/6bdcf/apache-druid-possibilites.png 315w,
+/static/37dc0a7f446eb44c5133e357d8659eb2/f058b/apache-druid-possibilites.png 630w,
+/static/37dc0a7f446eb44c5133e357d8659eb2/40601/apache-druid-possibilites.png 945w,
+/static/37dc0a7f446eb44c5133e357d8659eb2/78612/apache-druid-possibilites.png 1260w,
+/static/37dc0a7f446eb44c5133e357d8659eb2/6f278/apache-druid-possibilites.png 1488w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;source: &lt;a href=&quot;https://blog.hellmar-becker.de/2021/11/19/apache-druid-in-the-publishing-industry/&quot;&gt;https://blog.hellmar-becker.de/2021/11/19/apache-druid-in-the-publishing-industry/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Let’s go with simple example presented by Hellmar Becker.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Example that was presented by using Docker Compose that you can easily run it in your’s local environment.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 316px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ccf39cda9e7b0000ba00bf5fecfa7f5b/67145/kafka_ksqlDB_apache_druid.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 155.69620253164555%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwBACdASoUAB8APtFSo0uoJCMhsBgMAQAaCWcAzcAQ+Gkr373+MKQsubHIrv+Qs7AA/vYSbPALyRn4D1kjzNZHA2kTdLsJnc+g64mbIGV3gs1Y6EgUb96ADtOLkrxA4AAAAA==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;presentation_3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ccf39cda9e7b0000ba00bf5fecfa7f5b/67145/kafka_ksqlDB_apache_druid.png&quot;
+        srcset=&quot;/static/ccf39cda9e7b0000ba00bf5fecfa7f5b/c26ae/kafka_ksqlDB_apache_druid.png 158w,
+/static/ccf39cda9e7b0000ba00bf5fecfa7f5b/6bdcf/kafka_ksqlDB_apache_druid.png 315w,
+/static/ccf39cda9e7b0000ba00bf5fecfa7f5b/67145/kafka_ksqlDB_apache_druid.png 316w&quot;
+        sizes=&quot;(max-width: 316px) 100vw, 316px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Than we can use our instance of Apache Druid to analyze data.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Migration with MirrorMaker 2.0&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;mailto:marcingladkowski@gmail.com&quot;&gt;marcingladkowski@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.linkedin.com/in/marcingladkowski&quot;&gt;Linkedin&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/MarcinGladkowski&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Compromises]]></title><description><![CDATA[Last time, I read a great title “Software Architecture: The Hard Parts: Modern Tradeoff Analysis for Distributed Architectures”  ‘Compromise…]]></description><link>https://marcingladkowski.pl/architecture-hard-parts/</link><guid isPermaLink="false">https://marcingladkowski.pl/architecture-hard-parts/</guid><pubDate>Tue, 12 Dec 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last time, I read a great title “Software Architecture: The Hard Parts: Modern Tradeoff Analysis for Distributed Architectures”&lt;/p&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.aws.amazon.com/whitepapers/latest/amazon-msk-migration-guide/mirrormaker-2.0-mm2.html&quot;&gt;AWS about migration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/azure/hdinsight/kafka/kafka-mirrormaker-2-0-guide&quot;&gt;Microsoft Learn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Second presentation focused on migrating Kafka cluster from one to another cloud provider. Thanks to the tool like is MirrorMaker, this process has become remarkably straightforward. In general, tool replicates topics, ACL (version 2.0 only) and synchronizing offsets. Thats allows to connect consumers to replicated cluster and then move producing to new one and then remove old cluster.&lt;/p&gt;
+&lt;h4&gt;What’s interested to dive deppper&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ksqlDB&lt;/code&gt; - during researching links and materials for this post I found a plenty of interesting knowledge.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://talks.rmoff.net/LjZAS7/intr&quot;&gt;Introduction to ksqkDB&lt;/a&gt; - video presentationm, demo code, eBook and more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That’s was fruitful meetup. Thanks to organizers and hope to see next time!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Compromises]]></title><description><![CDATA[Last time, I read a great title “Software Architecture: The Hard Parts: Modern Tradeoff Analysis for Distributed Architectures”  ‘Compromise…]]></description><link>https://marcingladkowski.pl/architecture-hard-parts/</link><guid isPermaLink="false">https://marcingladkowski.pl/architecture-hard-parts/</guid><pubDate>Tue, 12 Dec 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last time, I read a great title “Software Architecture: The Hard Parts: Modern Tradeoff Analysis for Distributed Architectures”&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
