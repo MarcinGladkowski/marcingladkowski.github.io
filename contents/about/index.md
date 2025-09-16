@@ -1,55 +1,36 @@
 ---
-title: "This is about page ✋"
+slug: about
+title: About
+date: "2020-05-28"
+type: page
 ---
 
-## English Guide
+Hello everyone! I have been coding for the past few years and it's become my **passion**. I try to learn something new every day. I have been thinking about writing a blog about programming and this is the outcome of this thought. I hope these tips, based off of my experience, will help you want to learn about programming. If you read this description and you want help coding something new, please write to me.
 
-Hello! This section is dedicated to introducing your blog. Here, you can showcase various information to your visitors, such as a blog introduction, personal profile, resume, portfolio, and more.
+I started coding with **Javascript** and **PHP**. Until today **PHP** is my main programming language.
+Since 2020, I have also been trained in **Python**. I really love to learn new programming languages and explore ones I am trained in!
+Usually I participate in Coding Dojo Silesia coding events. It's great to code with others and
+discuss the codes afterwards. Kata's are the best exercises to practice coding.
 
-### Writing Guide
+Another way I try to learn about programming is through reading books. Two of the best authors are Uncle Bob and Gynvael Coldwind.
 
-To edit this page, modify the `/contents/about/index.md` file. You can write it in the same way as any other post. The path to this file cannot be changed.
+I am also enroll to many programming events. I travel throughout Poland to hear about the newest features and ideas. For example: PHPers Summit (Poznań), 4Developers (Warsaw), BoilingFrogs (Wroclaw) etc.
 
-The Markdown document for the About page only contains a single frontmatter called `title`. The `title` frontmatter will be displayed as the title at the top of the About page.
+I have also been inspired to create IoT projects. I built my own air pollution sensor - [current sensor data](https://marcin.aqi.eco/en)
+according with [luftdaten](http://luftdaten.org.pl/) data.
 
-### Disabling the About Page
+My other plans are to contribute to open source projects and to join in hackathona.
 
-```json
-module.exports = {
+Now I can describe myself from different angle.
 
-  // ...
+But I do not like only sitting behind computer screen!
 
-  useAbout: false, // 👈
+I am a really big fan of motorsports of every kind ex.
+formula one, rallying, racing - doesn't matter! I very often practicing on indoor and outdoor go karts. I very often practice at indoor and outdoor go karting tracks.
 
-  // ...
+I love to ride on bike, go swimming and running.
 
-}
-```
+Each year I learn new things and visit new places with my lovely girlfriend. And one more thing! - I love animals. My dog's name is JSON. :)
 
-You can disable the About page by setting the `useAbout` value to false in the `blog-config.js` file. If disabled, the tab in the blog header will be hidden, and visitors will not be able to access this page via the `/about` URL.
-
-## 한국어 가이드
-
-안녕하세요. 이 곳은 블로그를 소개하기 위한 공간입니다. 블로그 또는 자신에 대한 소개부터 이력서, 포트폴리오 등 다양한 정보를 이곳에서 방문자들에게 보여줄 수 있습니다.
-
-### 작성 가이드
-
-이 페이지를 편집하려면, `/contents/about/index.md` 파일을 수정하면 됩니다. 다른 포스팅을 작성하는 것과 동일한 방식으로 작성할 수 있습니다. 이 파일의 경로는 변경할 수 없습니다.
-
-About 페이지의 마크다운 문서는 오직 `title` 이라는 하나의 frontmatter 만 가지고 있습니다. `title` frontmatter 는 About 페이지 상단 제목으로 표시됩니다.
-
-### 비활성화
-
-```json
-module.exports = {
-
-  // ...
-
-  useAbout: false, // 👈
-
-  // ...
-
-}
-```
-
-`blog-config.js` 파일의 `useAbout` 값을 `false` 로 설정하여 About 페이지를 비활성화 할 수 있습니다. 비활성화 된다면, 블로그 상단에 존재하는 탭이 숨겨지고, `/about` 경로로 이 페이지에 접속할 수도 없게 됩니다.
+_Regards_
+_Marcin_
