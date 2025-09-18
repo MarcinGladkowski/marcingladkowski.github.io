@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://marcingladkowski.pl/sitemap-index.xml
-Host: https://marcingladkowski.pl
+Sitemap: https://marcingladkowski.com/sitemap-index.xml
+Host: https://marcingladkowski.com
