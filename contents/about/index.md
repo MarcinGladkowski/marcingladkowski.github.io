@@ -5,32 +5,19 @@ date: "2020-05-28"
 type: page
 ---
 
-Hello everyone! I have been coding for the past few years and it's become my **passion**. I try to learn something new every day. I have been thinking about writing a blog about programming and this is the outcome of this thought. I hope these tips, based off of my experience, will help you want to learn about programming. If you read this description and you want help coding something new, please write to me.
+Hey there!
 
-I started coding with **Javascript** and **PHP**. Until today **PHP** is my main programming language.
-Since 2020, I have also been trained in **Python**. I really love to learn new programming languages and explore ones I am trained in!
-Usually I participate in Coding Dojo Silesia coding events. It's great to code with others and
-discuss the codes afterwards. Kata's are the best exercises to practice coding.
+I've been coding for a few years now, and I can honestly say it's become my biggest passion. I love learning something new every single day. This blog is a place where I'll be sharing the lessons and tips I've picked up along the way, and I hope they inspire you to dive into the world of programming. If you've got a project you need help with, just send me a message!
 
-Another way I try to learn about programming is through reading books. Two of the best authors are Uncle Bob and Gynvael Coldwind.
+I started my journey with JavaScript and PHP, and to this day, PHP is still my go-to language. Back in 2020, I also started learning Python, and I'm always on the lookout for a new language to explore. I love attending Coding Dojo Silesia events; it's so much fun to code with other people and talk through our solutions afterward. I'm a big believer that katas are the best way to practice your skills.
 
-I am also enroll to many programming events. I travel throughout Poland to hear about the newest features and ideas. For example: PHPers Summit (Poznań), 4Developers (Warsaw), BoilingFrogs (Wroclaw) etc.
+Reading is another huge part of my learning process. I've learned a ton from incredible authors like Uncle Bob and Gynvael Coldwind. I also love traveling around Poland to attend conferences like PHPers Summit (Poznań), 4Developers (Warsaw), and BoilingFrogs (Wrocław) to stay up-to-date on all the latest tech and ideas.
 
-I have also been inspired to create IoT projects. I built my own air pollution sensor - [current sensor data](https://marcin.aqi.eco/en)
-according with [luftdaten](http://luftdaten.org.pl/) data.
+I also get a kick out of building my own IoT projects. A while back, I even built an air pollution sensor that shares its data with the Luftdaten network. My next goals? I want to contribute to some open-source projects and get in on a few hackathons.
 
-My other plans are to contribute to open source projects and to join in hackathona.
+Of course, I'm not always glued to a computer screen! I'm a huge fan of motorsports—Formula 1, rallying, you name it! I love the thrill of go-karting, and you can often find me on a track. When I'm not on wheels, I'm on two feet, a bike, or in the water.
 
-Now I can describe myself from different angle.
-
-But I do not like only sitting behind computer screen!
-
-I am a really big fan of motorsports of every kind ex.
-formula one, rallying, racing - doesn't matter! I very often practicing on indoor and outdoor go karts. I very often practice at indoor and outdoor go karting tracks.
-
-I love to ride on bike, go swimming and running.
-
-Each year I learn new things and visit new places with my lovely girlfriend. And one more thing! - I love animals. My dog's name is JSON. :)
+When I'm not working, I'm usually traveling and exploring new places with my amazing girlfriend. And one more thing—I'm a big animal lover!
 
 _Regards_
 _Marcin_
