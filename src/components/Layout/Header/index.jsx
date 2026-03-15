@@ -49,7 +49,7 @@ const BlogTitle = styled.span`
   font-family: "Source Code Pro", sans-serif;
   font-weight: 700;
   font-size: 22px;
-  color: ${props => props.theme.colors.accentColor};
+  color: ${props => props.theme.colors.text};
 
   & > a {
     text-decoration: none;
