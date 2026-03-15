@@ -21,3 +21,7 @@ When I'm not working, I'm usually traveling and exploring new places with my ama
 
 _Regards_
 _Marcin_
+
+---
+
+📄 [Download my CV](/files/CV_Marcin_Gladkowski_EN.pdf)
