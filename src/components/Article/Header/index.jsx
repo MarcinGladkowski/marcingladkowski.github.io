@@ -15,33 +15,43 @@ const Wrapper = styled.div`
 `
 
 const ArticleTitle = styled.h1`
-  margin-bottom: 25.6px;
-  line-height: 1.2;
-  font-size: 44.8px;
+  margin-bottom: 20px;
+  line-height: 1.15;
+  font-size: 42px;
   font-weight: 700;
+  letter-spacing: -0.5px;
   color: ${props => props.theme.colors.text};
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `
 
 const Information = styled.div`
-  margin-bottom: 32px;
-  font-size: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  margin-bottom: 24px;
+  font-size: 14.5px;
 `
 
 const Author = styled.span`
   & > a {
-    font-weight: 700;
-    color: ${props => props.theme.colors.text};
+    font-weight: 600;
+    color: ${props => props.theme.colors.accentColor};
     text-decoration: none;
+    transition: opacity 0.2s;
   }
 
   & > a:hover {
-    text-decoration: underline;
+    opacity: 0.75;
   }
 `
 
 const Date = styled.span`
-  font-weight: 300;
-  color: ${props => props.theme.colors.secondaryText};
+  font-weight: 400;
+  color: ${props => props.theme.colors.tertiaryText};
 `
 
 const Header = ({ title, date, tags, minToRead }) => {

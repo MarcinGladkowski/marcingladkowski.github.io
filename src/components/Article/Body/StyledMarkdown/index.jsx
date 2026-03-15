@@ -89,9 +89,12 @@ const StyledMarkdown = styled.div`
   }
 
   & blockquote {
-    padding: 18px 24px;
-    border-left: 4px solid ${props => props.theme.colors.blockQuoteBorder};
+    padding: 16px 20px;
+    border-left: 3px solid ${props => props.theme.colors.blockQuoteBorder};
+    border-radius: 0 8px 8px 0;
     background-color: ${props => props.theme.colors.blockQuoteBackground};
+    color: ${props => props.theme.colors.secondaryText};
+    font-style: italic;
 
     & *:last-child {
       margin-bottom: 0;
@@ -141,11 +144,12 @@ const StyledMarkdown = styled.div`
   & table code.language-text {
     position: relative;
     top: -1px;
-    padding: 3px 5px 3px 5px;
+    padding: 2px 6px;
+    border-radius: 5px;
     font-size: 13px;
     background-color: ${props => props.theme.colors.inlineCodeBackground};
-    font-weight: bold;
-    color: ${props => props.theme.colors.text};
+    font-weight: 600;
+    color: ${props => props.theme.colors.accentColor};
   }
 
   & h2 > code.language-text,
@@ -230,13 +234,18 @@ const StyledMarkdown = styled.div`
   }
 
   & a {
-    padding: 1.6px 0;
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.accentColor};
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s, opacity 0.2s;
   }
 
   & a:hover:not(.heading-anchor) {
-    background-color: ${props => props.theme.colors.text};
-    color: ${props => props.theme.colors.hoveredLinkText};
+    text-decoration-color: ${props => props.theme.colors.accentColor};
+    opacity: 0.8;
+    background-color: transparent;
+    color: ${props => props.theme.colors.accentColor};
   }
 
   & sup {

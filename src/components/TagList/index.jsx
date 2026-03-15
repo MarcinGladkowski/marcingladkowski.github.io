@@ -9,27 +9,38 @@ const TagListWrapper = styled.div`
 
 const TagLink = styled.div`
   display: inline-block;
-  padding: 9.6px 11.2px;
-  margin-right: 8px;
+  padding: 6px 13px;
+  margin-right: 6px;
   margin-bottom: 8px;
   border-radius: 50px;
+  border: 1.5px solid ${props =>
+    props.selected
+      ? props.theme.colors.selectedTagBackground
+      : props.theme.colors.border};
   background-color: ${props =>
     props.selected
       ? props.theme.colors.selectedTagBackground
-      : props.theme.colors.tagBackground};
+      : "transparent"};
   color: ${props =>
     props.selected
       ? props.theme.colors.selectedTagText
-      : props.theme.colors.tagText};
+      : props.theme.colors.tertiaryText};
   text-decoration: none;
-  font-size: 14.4px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   transition: all 0.2s;
 
   &:hover {
+    border-color: ${props => props.theme.colors.accentColor};
     background-color: ${props =>
       props.selected
         ? props.theme.colors.hoveredSelectedTagBackground
-        : props.theme.colors.hoveredTagBackground};
+        : props.theme.colors.accentColorBg};
+    color: ${props =>
+      props.selected
+        ? props.theme.colors.selectedTagText
+        : props.theme.colors.accentColor};
   }
 `
 

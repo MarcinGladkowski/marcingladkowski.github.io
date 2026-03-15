@@ -17,15 +17,16 @@ import {
 const HeaderWrapper = styled.header`
   display: block;
   position: fixed;
-  top: ${props => (props.isHidden ? -60 : 0)}px;
+  top: ${props => (props.isHidden ? -64 : 0)}px;
   left: 0;
   right: 0;
-  padding: 16px;
+  padding: 18px 16px;
   background-color: ${props => props.theme.colors.headerBackground};
-  box-shadow: 0 0 8px ${props => props.theme.colors.headerShadow};
-  backdrop-filter: blur(5px);
+  border-bottom: 1px solid ${props => props.theme.colors.divider};
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   opacity: ${props => (props.isHidden ? 0 : 1)};
-  transition: top 0.5s, opacity 0.5s;
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
   z-index: 999;
 
   @media (max-width: 768px) {
@@ -44,15 +45,20 @@ const Inner = styled.div`
 `
 
 const BlogTitle = styled.span`
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   font-family: "Source Code Pro", sans-serif;
   font-weight: 700;
-  font-size: 24px;
-  color: ${props => props.theme.colors.text};
+  font-size: 22px;
+  color: ${props => props.theme.colors.accentColor};
 
   & > a {
     text-decoration: none;
     color: inherit;
+    transition: opacity 0.2s;
+  }
+
+  & > a:hover {
+    opacity: 0.8;
   }
 `
 
@@ -62,19 +68,19 @@ const Menu = styled.div`
   align-items: center;
 
   & svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+    margin-right: 18px;
     cursor: pointer;
   }
 
   & svg path {
     fill: ${props => props.theme.colors.icon};
-    transition: fill 0.3s;
+    transition: fill 0.2s;
   }
 
   & svg:hover path {
-    fill: ${props => props.theme.colors.text};
+    fill: ${props => props.theme.colors.accentColor};
   }
 `
 

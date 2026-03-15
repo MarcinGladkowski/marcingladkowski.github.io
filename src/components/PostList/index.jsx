@@ -16,26 +16,35 @@ const PostListWrapper = styled.div`
 
 const PostWrapper = styled.div`
   position: relative;
-  top: 0;
-  transition: all 0.5s;
+  padding: 28px 24px;
+  margin: 0 -24px;
+  border-radius: 12px;
+  transition: background 0.2s, transform 0.2s;
+
+  &:hover {
+    background: ${props => props.theme.colors.background};
+    transform: translateY(-2px);
+  }
 
   @media (max-width: 768px) {
-    padding: 0 5px;
+    padding: 20px 10px;
+    margin: 0 -10px;
   }
 `
 
 const Date = styled.p`
-  margin-bottom: 16px;
-  font-size: 14.4px;
+  margin-bottom: 12px;
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
   color: ${props => props.theme.colors.tertiaryText};
 `
 
 const Excerpt = styled.p`
-  margin-bottom: 32px;
-  line-height: 1.7;
+  margin-bottom: 20px;
+  line-height: 1.75;
   font-size: 15px;
   color: ${props => props.theme.colors.secondaryText};
-  word-break: break-all;
+  word-break: break-word;
 `
 
 const checkIsScrollAtBottom = () => {
