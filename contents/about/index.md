@@ -24,4 +24,4 @@ _Marcin_
 
 ---
 
-📄 [Download my CV](/files/CV_Marcin_Gladkowski_EN.pdf)
+### 📄 Interested ? [download my CV](/files/CV_Marcin_Gladkowski_EN.pdf)
