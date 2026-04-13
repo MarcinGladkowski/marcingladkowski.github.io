@@ -33,8 +33,10 @@ jobs:
           yarn serve &
           SERVER_PID=$!
           sleep 10
-          curl --fail --silent --max-time 15 http://localhost:9000 || (kill $SERVER_PID; exit 1)
-          kill $SERVER_PID
+          curl --fail --silent --max-time 15 http://localhost:9000
+          CURL_EXIT=$?
+          kill $SERVER_PID 2>/dev/null || true
+          exit $CURL_EXIT
 
       - name: Open Pull Request
         uses: peter-evans/create-pull-request@v7
