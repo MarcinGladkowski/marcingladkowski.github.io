@@ -33,7 +33,7 @@ jobs:
           yarn serve &
           SERVER_PID=$!
           sleep 10
-          curl --fail --silent --max-time 15 http://localhost:9000
+          curl --fail --silent --max-time 15 -o /dev/null http://localhost:9000
           CURL_EXIT=$?
           kill $SERVER_PID 2>/dev/null || true
           exit $CURL_EXIT
