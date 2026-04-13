@@ -1,0 +1,52 @@
+name: Dependency Update
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # Every Monday at 08:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install npm-check-updates
+        run: npm install -g npm-check-updates
+
+      - name: Bump dependencies in package.json
+        run: ncu -u
+
+      - name: Install updated dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Serve and health-check
+        run: |
+          yarn serve &
+          SERVER_PID=$!
+          sleep 10
+          curl --fail --silent --max-time 15 http://localhost:9000 || (kill $SERVER_PID; exit 1)
+          kill $SERVER_PID
+
+      - name: Open Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: chore/dependency-update
+          commit-message: "chore: bump dependencies"
+          title: "chore: bump dependencies"
+          body: |
+            Automated dependency update.
+
+            - Updated all dependencies to their latest semver-compatible versions using `ncu -u`.
+            - Build and serve health-check passed.
+          labels: dependencies
+          delete-branch: true
